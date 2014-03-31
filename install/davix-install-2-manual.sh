@@ -26,7 +26,7 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS NVisionIP InetVis processing PyInline Rumint gltail Rstudio RPackages FlowTag tcpdump INAV NetGrok SeedsOfContempt
+mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS NVisionIP InetVis processing PyInline Rumint gltail FlowTag tcpdump INAV NetGrok SeedsOfContempt
 
 
 # pause 'Press [Enter] key to continue...'
@@ -361,41 +361,11 @@ su davix -c "wine ./setup.exe"
 
 # pause 'Press [Enter] key to continue...'
 
-## R Project
-## Installs FactoMineR, Leaps, HH and dependencies required (ellipse, plyr, RColorBrewer, reshape)
-cd ../RPackages
-wget -c http://cran.r-project.org/src/contrib/FactoMineR_1.25.tar.gz
-wget -c http://stat.ethz.ch/CRAN/src/contrib/leaps_2.9.tar.gz
-wget -c http://stat.ethz.ch/CRAN/src/contrib/HH_2.3-42.tar.gz
-wget -c http://stat.ethz.ch/CRAN/src/contrib/latticeExtra_0.6-26.tar.gz
-wget -c http://stat.ethz.ch/CRAN/src/contrib/reshape_0.8.4.tar.gz
-wget -c http://stat.ethz.ch/CRAN/src/contrib/RColorBrewer_1.0-5.tar.gz
-wget -c http://cran.r-project.org/src/contrib/plyr_1.8.tar.gz
-wget -c http://cran.r-project.org/src/contrib/ellipse_0.3-8.tar.gz
-R CMD INSTALL ellipse_0.3-8.tar.gz
-R CMD INSTALL FactoMineR_1.25.tar.gz
-R CMD INSTALL leaps_2.9.tar.gz
-R CMD INSTALL latticeExtra_0.6-26.tar.gz
-R CMD INSTALL plyr_1.8.tar.gz
-R CMD INSTALL reshape_0.8.4.tar.gz  
-R CMD INSTALL RColorBrewer_1.0-5.tar.gz
-R CMD INSTALL HH_2.3-42.tar.gz
-# requires latticeExtra reshape RColorBrewer
-
-# pause 'Press [Enter] key to continue...'
-
 ## InetVis
 cd ../InetVis
 wget -c http://www.cs.ru.ac.za/research/g02v2468/inetvis/0.9.3/inetvis-0.9.3.1.tar.gz
 tar -xvpf inetvis-0.9.3.1.tar.gz
 ln -s /usr/lib/x86_64-linux-gnu/libpcap.so.0.8
-
-# pause 'Press [Enter] key to continue...'
-
-## Shoki Packet Hustler
-## TODO Add this package
-## http://shoki.sourceforge.net/hustler/ 
-## http://raffy.ch/blog/2006/01/16/shoki-packet-hustler/
 
 # pause 'Press [Enter] key to continue...'
 
