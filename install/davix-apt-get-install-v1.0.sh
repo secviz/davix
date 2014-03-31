@@ -15,11 +15,12 @@ apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 16126D3A3E5C1192
 apt-get -y remove ubuntu-minimal
 
 ## OS Basics
-apt-get -y install cvs geeqie gnome-desktop-environment openjdk-6-jre-lib openjdk-6-jdk recode sharutils sqlite3 \
-           terminator udns-utils default-jre subversion unrar
+apt-get -y install geeqie gnome-desktop-environment openjdk-6-jre-lib openjdk-6-jdk recode sharutils sqlite3 \
+           terminator udns-utils default-jre unrar
+apt-get -y install cvs subversion git
 apt-get -y install dns-browse exuberant-ctags java3ds-fileloader
 apt-get -y install joe vim
-apt-get -y install ftpd lftp lynx ncftp
+apt-get -y install ftpd lftp lynx ncftp curl
 apt-get -y install python python-geoip python-gnuplot
 apt-get -y install tor winbind wine
 
