@@ -147,7 +147,8 @@ apt-get -y install build-essential
 mkdir $DH/INAV
 wget -c https://github.com/secviz/davix/tree/master/tools/inav/INAV-0.13.jar -o $DH/INAV/INAV-0.13.jar
 cd INAV-Server-0.3.7/server
- make -f makefile
+cp $XXX/makefile .
+make 
 
 
 ## InetVis
