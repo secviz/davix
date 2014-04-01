@@ -12,35 +12,11 @@
 wget -c http://cran.us.r-project.org/bin/linux/ubuntu/saucy/r-base-core_3.0.3-1saucy0_i386.deb
 dpkg -i r-base-core_3.0.3-1saucy0_i386.deb
 
-apt-get -y install r-cran-bayesm
-apt-get -y install r-cran-date
-apt-get -y install r-cran-gmaps
-apt-get -y install r-cran-int64
-apt-get -y install r-cran-its
-apt-get -y install r-cran-latticeextra
-apt-get -y install r-cran-mapdata
-apt-get -y install r-cran-maptools
-apt-get -y install r-cran-mcmcpack
-apt-get -y install r-cran-plotrix
-apt-get -y install r-cran-plyr
-apt-get -y install r-cran-rcmdr
-apt-get -y install r-cran-reshape2
-apt-get -y install r-cran-rggobi
-apt-get -y install r-cran-rmysql
-apt-get -y install r-cran-rodbc
-apt-get -y install r-cran-rquantlib
-apt-get -y install r-cran-rserve
-apt-get -y install r-cran-sandwich
-apt-get -y install r-cran-scatterplot3d
-apt-get -y install r-cran-teachingdemos
-apt-get -y install r-cran-timeseries
-apt-get -y install r-cran-tseries
-apt-get -y install r-cran-vcd
-apt-get -y install r-cran-xml
-apt-get -y install r-doc-html
-apt-get -y install r-doc-pdf
-apt-get -y install r-mathlib
-apt-get -y install r-recommended
+apt-get -y install r-cran-bayesm r-cran-date r-cran-gmaps r-cran-int64 r-cran-its r-cran-latticeextra
+apt-get -y install r-cran-mapdata r-cran-maptools r-cran-mcmcpack r-cran-plotrix r-cran-plyr
+apt-get -y install r-cran-rcmdr r-cran-reshape2 r-cran-rggobi r-cran-rmysql r-cran-rodbc r-cran-rquantlib
+apt-get -y install r-cran-rserve r-cran-sandwich r-cran-scatterplot3d r-cran-teachingdemos r-cran-timeseries r-cran-tseries
+apt-get -y install r-cran-vcd r-cran-xml r-doc-html r-doc-pdf r-mathlib r-recommended
 
 cd $DPMI/RPackages
 wget -c http://cran.r-project.org/src/contrib/FactoMineR_1.25.tar.gz
