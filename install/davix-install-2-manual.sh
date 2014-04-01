@@ -56,11 +56,10 @@ cd $DPMI/argus-clients-3.0.6.2/
 
 
 ## BroIDS (requires CMake)
-echo “Installing CMake”
+echo “Installing BroIDS”
+apt-get install cmake
 cd $DPMI/BroIDS
-git clone https://github.com/Kitware/CMake $DH/cmake
-# TODO Make this work - $ ./bootstrap && make && make install
-echo “Installing BroIDS”wget -c http://www.bro.org/downloads/release/bro-2.2.tar.gz
+wget -c http://www.bro.org/downloads/release/bro-2.2.tar.gz
 tar -xvpf bro-2.2.tar.gz
 cd bro-2.2
  ./configure --prefix=$DH/broids
