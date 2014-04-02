@@ -9,6 +9,14 @@
 ## DEVELOPMENT v1.1.03 22 APR 2014                ##
 ####################################################
 
+
+function check_root() {
+    if [[ "$USER" != "root" ]]; then
+        echo "please run as: sudo $0"
+        exit 1
+    fi
+}
+
 apt-get update
 apt-get -y -u upgrade
 apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 16126D3A3E5C1192
@@ -23,6 +31,11 @@ apt-get -y install joe vim git
 apt-get -y install ftpd lftp lynx ncftp curl
 apt-get -y install python python-geoip python-gnuplot
 apt-get -y install subversion tor winbind wine
+
+## Install Application Menu for Gnome
+apt-add-repository ppa:diesch/testing
+apt-get update 
+apt-get -y install classicmenu-indicator
 
 ## Required for Manual Installs
 apt-get -y install flex bison cmake ruby build-essential libjpeg62
