@@ -1,12 +1,5 @@
 #!/bin/bash
 
-function check_root() {
-    if [[ "$USER" != "root" ]]; then
-        echo "please run as: sudo $0"
-        exit 1
-    fi
-}
-
 ## Turning off services by default
 # byeybe apache
 update-rc.d apache2 disable

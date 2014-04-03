@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ####################################################
 ## DAVIX Installation Script                      ##
@@ -8,13 +8,20 @@
 ## DEVELOPMENT v1.0 27 APR 2014                   ##
 ####################################################
 
+if [[ "$USER" != "root" ]]; then
+    echo "please run as: sudo $0"
+    exit 1
+fi
 
-function check_root() {
-    if [[ "$USER" != "root" ]]; then
-        echo "please run as: sudo $0"
+# Checking for correct base version of Base OS
+. /etc/lsb-release
+if [[ "$DISTRIB_ID" -ne "Ubuntu" || "x$DISTRIB_RELEASE" != "x13.20" ]]; then
+    if [ -z "$OVERWRITE_VERSION" ]; then
+        echo "Please use Ubuntu 13.10 as a base release."
+        echo "You can overwrite this requirement by setting OVERWRITE_VERSION to 1"
         exit 1
     fi
-}
+fi 
 
 # Setup the directories
 mkdir -p /opt/davix
@@ -28,15 +35,14 @@ cd davix/install
 
 
 # Run the scripts
-bash davix-install-1-apt-get.sh
-bash davix-install-2-manual.sh
-bash davix-install-3-R.sh
-bash davix-config.sh
+sh ./davix-install-1-apt-get.sh
+sh ./davix-install-2-manual.sh
+sh ./davix-install-3-R.sh
+sh ./davix-config.sh
 
 
 # Cleanup Manual Directories
-cd /home/davix
-rm -rf davix-packages-manual-install
+rm -rf /home/davix/davix-packages-manual-install
 
 
 # Cleanup apt-get

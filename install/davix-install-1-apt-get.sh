@@ -9,14 +9,6 @@
 ## DEVELOPMENT v1.1.03 22 APR 2014                ##
 ####################################################
 
-
-function check_root() {
-    if [[ "$USER" != "root" ]]; then
-        echo "please run as: sudo $0"
-        exit 1
-    fi
-}
-
 apt-get update
 apt-get -y -u upgrade
 apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 16126D3A3E5C1192
