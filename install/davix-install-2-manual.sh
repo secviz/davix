@@ -153,11 +153,11 @@ mv inetvis-0.9.3.1 $DH
 echo "Installing Logstash"
 mkdir -p $DH/logstash
 cd $DH/logstash
-wget -c https://download.elasticsearch.org/logstash/logstash/logstash-1.4.0.tar.gz -o $DH/logstash/logstash-1.4.0.tar.gz
-tar -xzf logstash-1.4.0.tar.gz
+wget -c https://download.elasticsearch.org/logstash/logstash/packages/debian/logstash_1.4.0-1-c82dc09_all.deb
+dpkg -i logstash_1.4.0-1*.deb
 
 # Build the base configuration file
-cat << EOF > $DH/logstash/logstash.conf
+cat << EOF > /etc/logstash/conf.d/logstash.conf
 input {
   file {
     type => "syslog"
