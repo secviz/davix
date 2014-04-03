@@ -151,23 +151,24 @@ mv inetvis-0.9.3.1 $DH
 
 # Logstash
 echo "Installing Logstash"
-mkdir $DH/logstash
-wget -c https://download.elasticsearch.org/logstash/logstash/logstash-1.2.2-flatjar.jar -o $DH/logstash/logstash-1.2.2-flatjar.jar
-
+mkdir -p $DH/logstash
+cd $DH/logstash
+wget -c https://download.elasticsearch.org/logstash/logstash/logstash-1.4.0.tar.gz -o $DH/logstash/logstash-1.4.0.tar.gz
+tar -xzf logstash-1.4.0.tar.gz
 
 # Build the base configuration file
- echo "input {" >> $DH/logstash/logstash.conf
- echo "  file {" >> $DH/logstash/logstash.conf
- echo "    type => \"syslog\" " >> $DH/logstash/logstash.conf
- echo " " >> $DH/logstash/logstash.conf
- echo "    path => [ \"/var/log/syslog\" ]" >> $DH/logstash/logstash.conf 
- echo "  }" >> $DH/logstash/logstash.conf
- echo "}" >> $DH/logstash/logstash.conf
- echo " " >> $DH/logstash/logstash.conf
- echo "output {" >> $DH/logstash/logstash.conf
- echo " stdout { }" >> $DH/logstash/logstash.conf
- echo "  elasticsearch { embedded => true }" >> $DH/logstash/logstash.conf
- echo "}" >> $DH/logstash/logstash.conf
+cat << EOF > $DH/logstash/logstash.conf
+input {
+  file {
+    type => "syslog"
+    path => [ "/var/log/syslog" ]
+  }
+}
+output {
+  stdout { }
+  elasticsearch { embedded => true }
+}
+EOF
 
 
 ## Mondrian
