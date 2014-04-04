@@ -55,11 +55,11 @@ cd davix/install
 
 
 # Run the scripts
-sh ./davix-install-1-apt-get.sh
-sh ./davix-install-2-manual.sh
-sh ./davix-install-3-R.sh
-sh ./davix-install-4-menus.sh
-sh ./davix-config.sh
+bash ./davix-install-1-apt-get.sh
+bash ./davix-install-2-manual.sh
+bash ./davix-install-3-R.sh
+bash ./davix-install-4-menus.sh
+bash ./davix-config.sh
 
 
 # Cleanup Manual Directories
