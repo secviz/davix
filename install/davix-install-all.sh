@@ -51,15 +51,14 @@ apt-get -y install git
 # Clone the DAVIX repository
 cd $DPMI
 git clone https://github.com/secviz/davix/
-cd davix/install
 
 
 # Run the scripts
-. ./davix-install-1-apt-get.sh
-. ./davix-install-2-manual.sh
-. ./davix-install-3-R.sh
-. ./davix-install-4-menus.sh
-. ./davix-config.sh
+. $DPMI/davix/install/davix-install-1-apt-get.sh
+. $DPMI/davix/install/davix-install-2-manual.sh
+. $DPMI/davix/install/davix-install-3-R.sh
+. $DPMI/davix/install/davix-install-4-menus.sh
+. $DPMI/davix/install/davix-config.sh
 
 
 # Cleanup Manual Directories
