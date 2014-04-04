@@ -23,12 +23,21 @@ if [[ "$DISTRIB_ID" -ne "Ubuntu" || "x$DISTRIB_RELEASE" != "x13.10" ]]; then
     fi
 fi 
 
-# Create DAVIX User
-useradd -d /home/davix -m davix
-passwd davix
-davix
-davix
+# create davix group
+if ! getent group davix >/dev/null; then
+    groupadd -r davix
+fi
 
+# create davix user
+if ! getent passwd davix >/dev/null; then
+    useradd -M -r -g davix -d /home/davix \
+            -s /bin/bash -c "DAVIX User" davix
+fi
+
+# make davix a sudoer
+adduser davix sudo
+# set password for davix
+echo 'davix:davix' | chpasswd
 
 # Setup the directories
 mkdir -p /opt/davix
