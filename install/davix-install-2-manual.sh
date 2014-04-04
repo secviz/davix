@@ -60,7 +60,7 @@ cd bro-2.2
  make
  make install
  make clean
-
+$DH/broids/bin/broctl install
 
 ## Perl Chart Director
 echo "Installing ChartDirector"
