@@ -6,24 +6,21 @@
 ##                                                ##
 ## Raffael Marty, Amanda Gellhouse, Edward McCabe ##
 ##                                                ##
-## DEVELOPMENT v1.0 12 MAR 2014                   ##
+## DEVELOPMENT v1.1 17 APR 2014                   ##
 ####################################################
 
+apt-get update
+apt-get -y -u upgrade
+apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 16126D3A3E5C1192
 apt-get -y remove ubuntu-minimal
 apt-get -y install acidbase
-apt-get -y install apache2
 apt-get -y install apache2-mpm-prefork
-apt-get -y install apache2-utils
-apt-get -y install apache2.2-bin
-apt-get -y install apache2.2-common
-apt-get -y install argus-client
 apt-get -y install argus-server
 apt-get -y install autoconf
 apt-get -y install automake
 apt-get -y install autotools-dev
 apt-get -y install bison
 apt-get -y install build-essential
-apt-get -y install ca-certificates-java
 apt-get -y install cabextract
 apt-get -y install chaosreader
 apt-get -y install cmake
@@ -92,15 +89,9 @@ apt-get -y install libalgorithm-merge-perl
 apt-get -y install libamd2.2.0
 apt-get -y install libapache2-mod-geoip
 apt-get -y install libapache2-mod-php5
-apt-get -y install libapr1
-apt-get -y install libaprutil1
-apt-get -y install libaprutil1-dbd-sqlite3
-apt-get -y install libaprutil1-ldap
 apt-get -y install libarpack2
 apt-get -y install libasn1-8-heimdal
 apt-get -y install libasound2
-apt-get -y install libatk-wrapper-java
-apt-get -y install libatk-wrapper-java-jni
 apt-get -y install libatlas3gf-base
 apt-get -y install libavahi-client3
 apt-get -y install libavahi-common-data
@@ -109,7 +100,6 @@ apt-get -y install libblas-dev
 apt-get -y install libboost-python1.46.1
 apt-get -y install libbz2-dev
 apt-get -y install libc-ares2
-apt-get -y install libc6
 apt-get -y install libcapi20-3
 apt-get -y install libccolamd2.7.1
 apt-get -y install libcgraph5
@@ -154,7 +144,6 @@ apt-get -y install libgd2-xpm
 apt-get -y install libgeo-ip-perl
 apt-get -y install libgettextpo0
 apt-get -y install libgettextpo0
-apt-get -y install libgif4
 apt-get -y install libgl1-mesa-dri-lts-quantal
 apt-get -y install libgl1-mesa-glx-lts-quantal
 apt-get -y install libglademm-2.4-1c2a
@@ -198,7 +187,6 @@ apt-get -y install libhttp-message-perl
 apt-get -y install libhttp-negotiate-perl
 apt-get -y install libhx509-5-heimdal
 apt-get -y install libibverbs1
-apt-get -y install libice6
 apt-get -y install libieee1284-3
 apt-get -y install libio-compress-perl
 apt-get -y install libio-socket-inet6-perl
@@ -399,8 +387,6 @@ apt-get -y install octave3.2-doc
 apt-get -y install octave3.2-htmldoc
 apt-get -y install oinkmaster
 apt-get -y install openbsd-inetd
-apt-get -y install openjdk-6-jre
-apt-get -y install openjdk-6-jre-headless
 apt-get -y install openjdk-6-jre-lib
 apt-get -y install openjdk-6-jdk
 apt-get -y install openssh-server
@@ -502,7 +488,6 @@ apt-get -y install ttt
 apt-get -y install tttview
 apt-get -y install tulip
 apt-get -y install tulip-doc
-apt-get -y install tzdata-java
 apt-get -y install udns-utils
 apt-get -y install ufraw-batch
 apt-get -y install unrar
