@@ -390,5 +390,18 @@ wget -c http://www.cs.ru.ac.za/research/g02v2468/inetvis/0.9.3/inetvis-0.9.3.1.t
 tar -xvpf inetvis-0.9.3.1.tar.gz
 ln -s /usr/lib/x86_64-linux-gnu/libpcap.so.0.8
 
+# pause 'Press [Enter] key to continue...'
+
+## Shoki Packet Hustler
+## TODO Add this package
+## http://shoki.sourceforge.net/hustler/ 
+## http://raffy.ch/blog/2006/01/16/shoki-packet-hustler/
+
+# pause 'Press [Enter] key to continue...'
+
+## RT Graph 3D
+## TODO Add this package
+## http://www.secdev.org/projects/rtgraph3d/
+
 pause 'Press [Enter] key to continue...'
 
