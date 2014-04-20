@@ -6,7 +6,7 @@
 ##                                                ##
 ## Raffael Marty, Amanda Gellhouse, Edward McCabe ##
 ##                                                ##
-## DEVELOPMENT V1.4 12 MAR 2014                   ##
+## DEVELOPMENT V1.4.01 20 APR 2014                ##
 ####################################################
 
 # init
@@ -26,45 +26,12 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS NVisionIP InetVis processing PyInline Rumint gltail Rstudio RPackages FlowTag GoogleEarth tcpdump
+mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS NVisionIP InetVis processing PyInline Rumint gltail Rstudio RPackages FlowTag tcpdump INAV NetGrok SeedsOfContempt
 
 
 # pause 'Press [Enter] key to continue...'
 
 # Start downloading, unpacking and installing associated packages and their dependencies.
-
-# SANCP
-# libpcap issues
-#cd sancp
-# wget -c http://sourceforge.net/projects/sancp/files/sancp/sancp-1.6.1-stable/sancp-1.6.1-stable.tar.gz
-# tar -xvpf sancp-1.6.1-stable.tar.gz
-# cd sancp-1.6.1-stable/
-# make linux	
-# 
-# create user/group sancp/sancp
-# create /var/log/scancp/
-# create /etc/sancp/sancp.conf 
-# 
-#mkdir -p /opt/davix/sancp/bin
-#mkdir -p /opt/davix/sancp/etc
-#ln -s /usr/local/bin/sancp /opt/davix/sancp/bin/sancp
-#ln -s /etc/sancp/sancp.conf /opt/davix/sancp/etc/sancp.conf
-#ln -s /var/log/sancp/ /opt/davix/sancp/log/
-#
-## Requires mySQL interaction to setup and run
-
-# SGUIL
-# cd $DPMI/sguil
-# wget -c http://sourceforge.net/projects/sguil/files/sguil/sguil-0.8.0/sguil-server-0.8.0.tar.gz
-# wget -c http://sourceforge.net/projects/sguil/files/sguil/sguil-0.8.0/sguil-sensor-0.8.0.tar.gz
-# tar -xvpf sguil-server-0.8.0.tar.gz
-# tar -xvpf sguil-sensor-0.8.0.tar.gz
-# cd sguil-0.8.0/
-## create sguil database
-## install GUI Server
-## install GUI client
-## install the sensor
-# mysql -u root -p davix
 
 # LOGSTASH
 mkdir $DH/logstash
@@ -114,9 +81,9 @@ wget -c http://qosient.com/argus/src/argus-clients-3.0.6.2.tar.gz
 tar -xvpf argus-3.0.6.1.tar.gz 
 tar -xvpf argus-clients-3.0.6.2.tar.gz 
 cd argus-3.0.6.1/
- ./configure --prefix=$DH/argus-server
- make
- make install
+./configure --prefix=$DH/argus-server
+make
+make install
  
 # pause 'Press [Enter] key to continue...'
 
@@ -172,6 +139,12 @@ wget -c http://omnipotent.net/jquery.sparkline/2.1.2/jquery.sparkline.js
 
 # pause 'Press [Enter] key to continue...'
 
+# Seeds of Contempt
+# TODO: Fix this one
+# http://seedsofcontempt.googlecode.com/svn/trunk/seedsofcontempt-read-only
+
+# pause 'Press [Enter] key to continue...'
+
 # NSM-CONSOLE
 # Good Install
 cd $DPMI/nsm-console
@@ -193,7 +166,7 @@ cd eventlog-0.2.4
 
 # pause 'Press [Enter] key to continue...'
 
-# TreeMap
+## TreeMap
 cd $DPMI/TreeMap
 wget -c http://www.cs.umd.edu/hcil/treemap/demos/Treemap-4.1.2.zip
 unzip Treemap-4.1.2.zip
@@ -242,20 +215,16 @@ tar -xvpf ts1.3.7.tar.gz
 
 # pause 'Press [Enter] key to continue...'
 
-# cd $DPMI/LGL
-# wget -c http://sourceforge.net/projects/lgl/files/latest/download -O lgl-1.03.tar.gz
-# tar -xvpf lgl-1.03.tar.gz
-# cp lgl.1.D3/perls/ParseConfigFile.pm /usr/lib/perl5
-# cp lgl.1.D3/perls/LGLFormatHandler.pm /usr/lib/perl5
-# mkdir -p $DH/LGL
-# mv lgl.1.D3/* $DH/LGL/
+# INAV
+cd ../INAV
+wget -c http://inav.scaparra.com/files/server/INAV-Server\(current\).tar.gz
+tar -xvpf INAV-Server\(current\).tar.gz
+wget -c http://inav.scaparra.com/files/client/INAV-0.13.jar
+cd INAV-Server-0.3.7/server
+apt-get install libcap-ng-dev
+make
 
-# ParseConfigFile.pm & LGLFormatHandler.pm required to be moved to local perl library
-
-# native lesstif-bin
-#cd $DPMI/lesstif
-#wget -c http://sourceforge.net/projects/lesstif/files/latest/download -O lesstif-0.95.2.tar.bz2
-#tar -xvpf lesstif-0.95.2.tar.bz2
+# pause 'Press [Enter] key to continue...'
 
 cd $DPMI/Mondrian
 wget -c http://stats.math.uni-augsburg.de/mondrian/Mondrian.jar
@@ -350,13 +319,18 @@ ruby setup.rb
 
 # pause 'Press [Enter] key to continue...'
 
+## Processing
 cd $DPMI/processing
-# 64-bit version
-# wget -c http://download.processing.org/processing-2.1-linux64.tgz
-# tar -xvpf processing-2.1-linux64.tgz
 wget -c http://download.processing.org/processing-2.1-linux32.tgz
 tar -xvpf processing-2.1-linux32.tgz
 mv processing-2.1 $DH
+
+# pause 'Press [Enter] key to continue...'
+
+## NetGrok
+cd ../NetGrok
+wget -c http://netgrok.googlecode.com/files/netgrok20080928.zip
+unzip netgrok20080928.zip
 
 # pause 'Press [Enter] key to continue...'
 
@@ -371,10 +345,8 @@ chmod +x ./Cytoscape_3_0_2_unix.sh
 
 # pause 'Press [Enter] key to continue...'
 
+## R Studio
 cd $DPMI/Rstudio
-# 64-bit version
-# wget -c http://download1.rstudio.org/rstudio-0.97.551-amd64.deb
-# dpkg -i rstudio-0.97.551-amd64.deb
 wget -c http://download1.rstudio.org/rstudio-0.98.501-i386.deb
 dpkg -i rstudio-0.98.501-i386.deb
 
@@ -387,6 +359,36 @@ unzip rumint_v.214.zip
 cd rumint_2.14_distro
 su davix -c "wine ./setup.exe"
 
+# pause 'Press [Enter] key to continue...'
+
+## R Project
+## Installs FactoMineR, Leaps, HH and dependencies required (ellipse, plyr, RColorBrewer, reshape)
+cd ../RPackages
+wget -c http://cran.r-project.org/src/contrib/FactoMineR_1.25.tar.gz
+wget -c http://stat.ethz.ch/CRAN/src/contrib/leaps_2.9.tar.gz
+wget -c http://stat.ethz.ch/CRAN/src/contrib/HH_2.3-42.tar.gz
+wget -c http://stat.ethz.ch/CRAN/src/contrib/latticeExtra_0.6-26.tar.gz
+wget -c http://stat.ethz.ch/CRAN/src/contrib/reshape_0.8.4.tar.gz
+wget -c http://stat.ethz.ch/CRAN/src/contrib/RColorBrewer_1.0-5.tar.gz
+wget -c http://cran.r-project.org/src/contrib/plyr_1.8.tar.gz
+wget -c http://cran.r-project.org/src/contrib/ellipse_0.3-8.tar.gz
+R CMD INSTALL ellipse_0.3-8.tar.gz
+R CMD INSTALL FactoMineR_1.25.tar.gz
+R CMD INSTALL leaps_2.9.tar.gz
+R CMD INSTALL latticeExtra_0.6-26.tar.gz
+R CMD INSTALL plyr_1.8.tar.gz
+R CMD INSTALL reshape_0.8.4.tar.gz  
+R CMD INSTALL RColorBrewer_1.0-5.tar.gz
+R CMD INSTALL HH_2.3-42.tar.gz
+# requires latticeExtra reshape RColorBrewer
+
+# pause 'Press [Enter] key to continue...'
+
+## InetVis
+cd ../InetVis
+wget -c http://www.cs.ru.ac.za/research/g02v2468/inetvis/0.9.3/inetvis-0.9.3.1.tar.gz
+tar -xvpf inetvis-0.9.3.1.tar.gz
+ln -s /usr/lib/x86_64-linux-gnu/libpcap.so.0.8
 
 pause 'Press [Enter] key to continue...'
 
