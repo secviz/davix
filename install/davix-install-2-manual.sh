@@ -25,7 +25,7 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS NVisionIP InetVis processing PyInline Rumint gltail FlowTag tcpdump INAV Netgrok SeedsOfContempt Shoki RTGraph3D 
+mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS NVisionIP InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt Shoki RTGraph3D 
 
 # pause 'Press [Enter] key to continue...'
 
@@ -265,24 +265,6 @@ cd $DPMI/SeedsOfContempt
 svn checkout http://seedsofcontempt.googlecode.com/svn/trunk/ seedsofcontempt-read-only
 mv seedsofcontempt-read-only seedsofcontempt
 mv seedsofcontempt/ $DH
-
-# pause 'Press [Enter] key to continue...'
-
-
-## tcpdump and lipcap
-cd $DPMI/tcpdump 
-wget -c http://www.tcpdump.org/release/tcpdump-4.4.0.tar.gz
-wget -c http://www.tcpdump.org/release/libpcap-1.4.0.tar.gz
-tar -xvpf tcpdump-4.4.0.tar.gz
-tar -xvpf libpcap-1.4.0.tar.gz
-cd libpcap-1.4.0/
-./configure --prefix=$DH/tcpdump
-make
-make install
-cd $DPMI/tcpdump-4.4.0/
-./configure --prefix=$DH/tcpdump
-make
-make install
 
 # pause 'Press [Enter] key to continue...'
 
