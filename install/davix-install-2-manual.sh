@@ -267,6 +267,9 @@ pause 'Press [Enter] key to continue...'
 cd $DPMI/pulledpork/
 wget -c http://pulledpork.googlecode.com/files/pulledpork-0.7.0.tar.gz
 tar -xvpf pulledpork-0.7.0.tar.gz
+mv pulledpork-0.7.0 $DH
+cd $DH/pulledpork-0.7.0
+chmod +x pulledpork.pl
 
 pause 'Press [Enter] key to continue...'
 
