@@ -25,7 +25,7 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D 
+mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D RStudio
 
 pause 'Press [Enter] key to continue...'
 
@@ -59,8 +59,10 @@ cd $DPMI/argus-clients-3.0.6.2/
 pause 'Press [Enter] key to continue...'
 
 
-## BroIDS
+## BroIDS (requires CMake)
 cd $DPMI/BroIDS
+git clone https://github.com/Kitware/CMake $DH/cmake
+# TODO Make this work - $ ./bootstrap && make && make install
 wget -c http://www.bro.org/downloads/release/bro-2.2.tar.gz
 tar -xvpf bro-2.2.tar.gz
 cd bro-2.2
@@ -148,7 +150,7 @@ pause 'Press [Enter] key to continue...'
 cd $DPMI/InetVis
 wget -c http://www.cs.ru.ac.za/research/g02v2468/inetvis/0.9.3/inetvis-0.9.3.1.tar.gz
 tar -xvpf inetvis-0.9.3.1.tar.gz
-mv inetvis—0.9.3.1/ $DH
+mv inetvis-0.9.3.1 $DH
 
 pause 'Press [Enter] key to continue...'
 
@@ -190,7 +192,7 @@ pause 'Press [Enter] key to continue...'
 cd $DPMI/Netgrok
 wget -c http://netgrok.googlecode.com/files/netgrok20080928.zip
 unzip netgrok20080928.zip
-mv Netgrok/ $DH
+mv Netgrok $DH
 
 pause 'Press [Enter] key to continue...'
 
@@ -231,7 +233,7 @@ unzip parvis-0.3.1.zip
 cp parvis.bat parvish.sh
 chmod +x parvish.sh
 cd ..
-mv Parvis/ $DH
+mv Parvis $DH
 
 pause 'Press [Enter] key to continue...'
 
@@ -254,7 +256,7 @@ pause 'Press [Enter] key to continue...'
 cd $DPMI/processing
 wget -c http://download.processing.org/processing-2.1-linux32.tgz
 tar -xvpf processing-2.1-linux32.tgz
-mv processing-2.1/ $DH
+mv processing-2.1 $DH
 
 pause 'Press [Enter] key to continue...'
 
@@ -268,8 +270,9 @@ pause 'Press [Enter] key to continue...'
 
 
 ## R Studio
-cd $DPMI/Rstudio
+cd $DPMI/RStudio
 wget -c http://download1.rstudio.org/rstudio-0.98.501-i386.deb
+apt-get -y install libjpeg62
 dpkg -i rstudio-0.98.501-i386.deb
 
 pause 'Press [Enter] key to continue...'
@@ -279,7 +282,7 @@ pause 'Press [Enter] key to continue...'
 cd $DPMI/RTGraph3D
 wget -c http://www.secdev.org/projects/rtgraph3d/files/rtgraph3d-0.1.tgz
 tar -xvpf rtgraph3d-0.1.tgz
-mv rtgraph3d-0.1 $DH/rtgraph3d-0.1
+mv rtgraph3d-0.1 $DH
 
 pause 'Press [Enter] key to continue...'
 
@@ -297,19 +300,19 @@ pause 'Press [Enter] key to continue...'
 ## Seeds of Contempt
 cd $DPMI/SeedsOfContempt
 svn checkout http://seedsofcontempt.googlecode.com/svn/trunk/ seedsofcontempt-read-only
-mv seedsofcontempt-read-only seedsofcontempt
-mv seedsofcontempt/ $DH
+mv seedsofcontempt-read-only $DH/seedsofcontempt
 
 pause 'Press [Enter] key to continue...'
 
 
 ## Timesearcher 1
-## TODO Where do we want to move the demos?
 cd $DPMI/Timesearcher1
 wget -c http://www.cs.umd.edu/hcil/timesearcher/dist/ts1.3.7.tar.gz
-wget -c http://www.cs.umd.edu/hcil/timesearcher/dist2/demos_4Gf5x/ts-2.4.zip
 tar -xvpf ts1.3.7.tar.gz
-mv ts1.3.7/ $DH
+wget -c http://www.cs.umd.edu/hcil/timesearcher/dist2/demos_4Gf5x/ts-2.4.zip
+unzip ts-2.4.zip
+mv ts1.3.7 $DH
+mv ts-2.4 $DH/ts1.3.7/demos
 
 pause 'Press [Enter] key to continue...'
 
@@ -318,7 +321,7 @@ pause 'Press [Enter] key to continue...'
 cd $DPMI/TNV
 wget -c http://sourceforge.net/projects/tnv/files/tnv/0.3.9/tnv_java_0.3.9.zip
 unzip tnv_java_0.3.9.zip
-mv tnv-0.3.9/ $DH
+mv tnv-0.3.9 $DH
 
 pause 'Press [Enter] key to continue...'
 
@@ -327,7 +330,7 @@ pause 'Press [Enter] key to continue...'
 cd $DPMI/TreeMap
 wget -c http://www.cs.umd.edu/hcil/treemap/demos/Treemap-4.1.2.zip
 unzip Treemap-4.1.2.zip
-mv Treemap-4.1.2/ $DH
+mv Treemap-4.1.2 $DH
 
 pause 'Press [Enter] key to continue...'
 
