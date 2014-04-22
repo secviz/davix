@@ -25,7 +25,7 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS NVisionIP InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt Shoki RTGraph3D 
+mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D 
 
 pause 'Press [Enter] key to continue...'
 
@@ -139,9 +139,7 @@ wget -c https://github.com/secviz/davix/tree/master/tools/inav/INAV-Server.tar.g
 tar -xvpf INAV-Server.tar.gz
 wget -c https://github.com/secviz/davix/tree/master/tools/inav/INAV-0.13.jar
 cd INAV-Server-0.3.7/server
-apt-get install libcap-ng-dev
 make
-# TODO Move the client to the directory
 
 pause 'Press [Enter] key to continue...'
 
@@ -150,7 +148,7 @@ pause 'Press [Enter] key to continue...'
 cd $DPMI/InetVis
 wget -c http://www.cs.ru.ac.za/research/g02v2468/inetvis/0.9.3/inetvis-0.9.3.1.tar.gz
 tar -xvpf inetvis-0.9.3.1.tar.gz
-mv inetvis—.9.3.1 $DH/inetvis—.9.3.1
+mv inetvis—0.9.3.1/ $DH
 
 pause 'Press [Enter] key to continue...'
 
@@ -192,7 +190,7 @@ pause 'Press [Enter] key to continue...'
 cd $DPMI/Netgrok
 wget -c http://netgrok.googlecode.com/files/netgrok20080928.zip
 unzip netgrok20080928.zip
-mv Netgrok $DH/Netgrok
+mv Netgrok/ $DH
 
 pause 'Press [Enter] key to continue...'
 
