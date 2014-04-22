@@ -27,16 +27,13 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 cd $DPMI
 mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D RStudio
 
-pause 'Press [Enter] key to continue...'
-
 
 ## Afterglow
 git clone https://github.com/zrlram/afterglow $DH/afterglow
 
-pause 'Press [Enter] key to continue...'
-
 
 ## Argus Server
+echo “Installing Argus Server”
 cd $DPMI/argus
 wget -c http://qosient.com/argus/src/argus-3.0.6.1.tar.gz
 wget -c http://qosient.com/argus/src/argus-clients-3.0.6.2.tar.gz
@@ -49,23 +46,21 @@ cd argus-3.0.6.1/
  make
  make install
  
-pause 'Press [Enter] key to continue...'
-
 
 ## Argus Client
+echo “Installing Argus Client”
 cd $DPMI/argus-clients-3.0.6.2/
  ./configure --prefix=$DH/argus-client
  make
  make install
 
-pause 'Press [Enter] key to continue...'
-
 
 ## BroIDS (requires CMake)
+echo “Installing CMake”
 cd $DPMI/BroIDS
 git clone https://github.com/Kitware/CMake $DH/cmake
 # TODO Make this work - $ ./bootstrap && make && make install
-wget -c http://www.bro.org/downloads/release/bro-2.2.tar.gz
+echo “Installing BroIDS”wget -c http://www.bro.org/downloads/release/bro-2.2.tar.gz
 tar -xvpf bro-2.2.tar.gz
 cd bro-2.2
  ./configure --prefix=$DH/broids
@@ -73,20 +68,31 @@ cd bro-2.2
  make install
  make clean
 
-pause 'Press [Enter] key to continue...'
+
+## Perl Chart Director
+echo “Installing ChartDirector”
+cd $DPMI/PerlPackages
+wget -c http://download2.advsofteng.com/chartdir_perl_linux.tar.gz
+tar -xvpf chartdir_perl_linux.tar.gz
+# Add to perl @INC Path
+ mv ChartDirector /usr/lib/perl5/
+ cpan -i Crypt::SSLeay
+ cpan -i IP::Anonymous
+ cpan -i Crypt::Rijndael
+ cpan -i Test::Manifest
 
 
 ## Cytoscape
+echo “Installing Cytoscape”
 cd $DPMI/Cytoscape
 wget -c http://chianti.ucsd.edu/cytoscape-3.0.2/Cytoscape_3_0_2_unix.sh
 chmod +x ./Cytoscape_3_0_2_unix.sh
 mkdir -p $DH/Cytoscape
 mv Cytoscape_3_0_2_unix.sh $DH/Cytoscape/Cytoscape_3_0_2_unix.sh
 
-pause 'Press [Enter] key to continue...'
-
 
 # EVENTLOG
+echo “Installing Eventlog”
 cd $DPMI/eventlog
 wget -c https://www.balabit.com/downloads/files/eventlog/0.2/eventlog-0.2.4.tar.gz
 tar -xvpf eventlog-0.2.4.tar.gz
@@ -96,10 +102,9 @@ cd eventlog-0.2.4
  make
  make install
 
-pause 'Press [Enter] key to continue...'
-
 
 ## FlowTag
+echo “Installing FlowTag”
 cd $DPMI/FlowTag
 wget -c http://chrislee.dhs.org/projects/flowtag/flowtag-2.0.5.tgz
 tar -xvpf flowtag-2.0.5.tgz
@@ -107,16 +112,14 @@ cd flowtag-2.0.5
 apt-get -y install ruby
 ruby setup.rb
 
-pause 'Press [Enter] key to continue...'
-
 
 ## glTail
+echo “Installing glTail”
 git clone https://github.com/Fudge/gltail $DH/gltail
-
-pause 'Press [Enter] key to continue...'
 
 
 ## GUESS
+echo “Installing GUESS”
 cd $DPMI/GUESS
 wget -c http://sourceforge.net/projects/guess/files/guess/guess-1.0.3-beta/guess-20070813.zip
 unzip guess-20070813.zip
@@ -134,34 +137,31 @@ mkdir -p $DH/guess
  echo "java -DgHome=$GUESS_HOME -classpath $GCLASSPATH \"-Dpython.home=$GUESS_HOME/src\" com.hp.hpl.guess.Guess $@ " >> $DH/guess/guess.sh
  echo "echo $?">> $DH/guess/guess.sh
 
-pause 'Press [Enter] key to continue...'
-
 
 ## INAV
+echo “Installing INAV”
 cd $DPMI/INAV
-wget -c https://github.com/secviz/davix/tree/master/tools/inav/INAV-Server.tar.gz
-tar -xvpf INAV-Server.tar.gz
-wget -c https://github.com/secviz/davix/tree/master/tools/inav/INAV-0.13.jar
+wget -c “http://inav.scaparra.com/files/server/INAV-Server(current).tar.gz”
+tar -xvpf “INAV-Server(current).tar.gz”
+apt-get -y install build-essential
+mkdir $DH/INAV
+wget -c https://github.com/secviz/davix/tree/master/tools/inav/INAV-0.13.jar -o $DH/INAV/INAV-0.13.jar
 cd INAV-Server-0.3.7/server
-make
-
-pause 'Press [Enter] key to continue...'
+ make -f makefile
 
 
 ## InetVis
+echo “Installing InetVis”
 cd $DPMI/InetVis
 wget -c http://www.cs.ru.ac.za/research/g02v2468/inetvis/0.9.3/inetvis-0.9.3.1.tar.gz
 tar -xvpf inetvis-0.9.3.1.tar.gz
 mv inetvis-0.9.3.1 $DH
 
-pause 'Press [Enter] key to continue...'
-
 
 # Logstash
+echo “Installing Logstash”
 mkdir $DH/logstash
 wget -c https://download.elasticsearch.org/logstash/logstash/logstash-1.2.2-flatjar.jar -o $DH/logstash/logstash-1.2.2-flatjar.jar
-
-pause 'Press [Enter] key to continue...'
 
 
 # Build the base configuration file
@@ -178,37 +178,33 @@ pause 'Press [Enter] key to continue...'
  echo "  elasticsearch { embedded => true }" >> $DH/logstash/logstash.conf
  echo "}" >> $DH/logstash/logstash.conf
 
-pause 'Press [Enter] key to continue...'
-
 
 ## Mondrian
+echo “Installing Mondrian”
 cd $DPMI/Mondrian
 wget -c http://stats.math.uni-augsburg.de/mondrian/Mondrian.jar
 mkdir -p $DH/Mondrian
 mv Mondrian.jar $DH/Mondrian/Mondrian.jar
 
-pause 'Press [Enter] key to continue...'
 
-
-## NetGrok
+## Netgrok
+echo “Installing Netgrok”
 cd $DPMI/Netgrok
 wget -c http://netgrok.googlecode.com/files/netgrok20080928.zip
 unzip netgrok20080928.zip
 mv Netgrok $DH
 
-pause 'Press [Enter] key to continue...'
-
 
 # nsm-console
+echo “Installing nsm-console”
 cd $DPMI/nsm-console
 wget -c http://writequit.org/projects/nsm-console/files/nsm-console-0.7.tar.gz
 tar -xvpf nsm-console-0.7.tar.gz
-mv nsm-console/ $DH
-
-pause 'Press [Enter] key to continue...'
+mv nsm-console $DH
 
 
 ## p0f
+echo “Installing p0f”
 cd $DPMI/p0f/
 wget -c http://lcamtuf.coredump.cx/p0f3/releases/p0f-3.06b.tgz
 tar -xvpf p0f-3.06b.tgz
@@ -225,10 +221,9 @@ mv p0f-sendsyn $DH/p0f/bin
 mv p0f-sendsyn6 $DH/p0f/bin
 mv p0f-client $DH/p0f/bin
 
-pause 'Press [Enter] key to continue...'
-
 
 ## Parvis
+echo “Installing Parvis”
 cd $DPMI/Parvis
 wget -c http://www.mediavirus.org/parvis/parvis-0.3.1.zip
 unzip parvis-0.3.1.zip
@@ -237,33 +232,17 @@ chmod +x parvish.sh
 cd ..
 mv Parvis $DH
 
-pause 'Press [Enter] key to continue...'
-
-
-## Perl Chart Director
-cd $DPMI/PerlPackages
-wget -c http://download2.advsofteng.com/chartdir_perl_linux.tar.gz
-tar -xvpf chartdir_perl_linux.tar.gz
-# Add to perl @INC Path
- mv ChartDirector /usr/lib/perl5/
- cpan -i Crypt::SSLeay
- cpan -i IP::Anonymous
- cpan -i Crypt::Rijndael
- cpan -i Test::Manifest
-
-pause 'Press [Enter] key to continue...'
-
 
 ## Processing
+echo “Installing Processing”
 cd $DPMI/processing
 wget -c http://download.processing.org/processing-2.1-linux32.tgz
 tar -xvpf processing-2.1-linux32.tgz
 mv processing-2.1 $DH
 
-pause 'Press [Enter] key to continue...'
-
 
 ## pulledpork: snort rules updater
+echo “Installing PulledPork”
 cd $DPMI/pulledpork/
 wget -c http://pulledpork.googlecode.com/files/pulledpork-0.7.0.tar.gz
 tar -xvpf pulledpork-0.7.0.tar.gz
@@ -271,46 +250,41 @@ mv pulledpork-0.7.0 $DH
 cd $DH/pulledpork-0.7.0
 chmod +x pulledpork.pl
 
-pause 'Press [Enter] key to continue...'
-
 
 ## R Studio
+echo “Installing R Studio”
 cd $DPMI/RStudio
 wget -c http://download1.rstudio.org/rstudio-0.98.501-i386.deb
 apt-get -y install libjpeg62
 dpkg -i rstudio-0.98.501-i386.deb
 
-pause 'Press [Enter] key to continue...'
-
 
 ## RT Graph 3D
+echo “Installing RT Graph 3D”
 cd $DPMI/RTGraph3D
 wget -c http://www.secdev.org/projects/rtgraph3d/files/rtgraph3d-0.1.tgz
 tar -xvpf rtgraph3d-0.1.tgz
 mv rtgraph3d-0.1 $DH
 
-pause 'Press [Enter] key to continue...'
-
 
 ## rumint
+echo “Installing rumint”
 cd $DPMI/Rumint
 wget -c http://www.rumint.org/software/rumint/rumint_v.214.zip
 unzip rumint_v.214.zip
 cd rumint_2.14_distro
 su davix -c "wine ./setup.exe"
 
-pause 'Press [Enter] key to continue...'
-
 
 ## Seeds of Contempt
+echo “Installing Seeds of Contempt”
 cd $DPMI/SeedsOfContempt
 svn checkout http://seedsofcontempt.googlecode.com/svn/trunk/ seedsofcontempt-read-only
 mv seedsofcontempt-read-only $DH/seedsofcontempt
 
-pause 'Press [Enter] key to continue...'
-
 
 ## Timesearcher 1
+echo “Installing Timesearcher 1”
 cd $DPMI/Timesearcher1
 wget -c http://www.cs.umd.edu/hcil/timesearcher/dist/ts1.3.7.tar.gz
 tar -xvpf ts1.3.7.tar.gz
@@ -319,28 +293,25 @@ unzip ts-2.4.zip
 mv ts1.3.7 $DH
 mv ts-2.4 $DH/ts1.3.7/demos
 
-pause 'Press [Enter] key to continue...'
-
 
 ## TNV
+echo “Installing TNV”
 cd $DPMI/TNV
 wget -c http://sourceforge.net/projects/tnv/files/tnv/0.3.9/tnv_java_0.3.9.zip
 unzip tnv_java_0.3.9.zip
 mv tnv-0.3.9 $DH
 
-pause 'Press [Enter] key to continue...'
-
 
 ## TreeMap
+echo “Installing TreeMap”
 cd $DPMI/TreeMap
 wget -c http://www.cs.umd.edu/hcil/treemap/demos/Treemap-4.1.2.zip
 unzip Treemap-4.1.2.zip
 mv Treemap-4.1.2 $DH
 
-pause 'Press [Enter] key to continue...'
-
 
 ## Walrus
+echo “Installing Walrus”
 ## build java3d environment
 echo "You must accept the Oracle Binary Code License Agreement for Java SE to download this software."
 echo "Open the following link in your browser and save to $DPMI/walrus"
@@ -349,15 +320,10 @@ echo "http://download.oracle.com/otn-pub/java/java3d/1.5.1/java3d-1_5_1-linux-i5
 echo " "
 echo "DAVIX 2014 will wait until you've downloaded the required file."
 echo " "
-
-pause 'Press [Enter] key to continue installation...'
-
 cd $DPMI/walrus
 sh java3d-1_5_1-linux-i586.bin
 mv lib/ext/* /usr/lib/jvm/java-1.6.0-openjdk-i386/jre/lib/ext/
 mv lib/i386/* /usr/lib/jvm/java-1.6.0-openjdk-i386/jre/lib/i386/
-
-pause 'Press [Enter] key to continue...'
 
 # Get Walrus Test Data
 cd $DPMI/walrus
@@ -377,19 +343,15 @@ mv walrus-0.6.3 $DH/walrus-0.6.3
 mv tmp/walruscsv $DH/walrus-0.6.3
 rm -r tmp
 
-pause 'Press [Enter] key to continue...'
-
-
 
 
 ## Unknown Packages ##
 
 ## PyInline
+echo “Installing PyInLine”
 cd $DPMI/PyInline
 wget -c http://sourceforge.net/projects/pyinline/files/pyinline/0.03/PyInline-0.03.tar.gz
 tar -xvpf PyInline-0.03.tar.gz
 cd PyInline-0.03
  python setup.py build
  python setup.py install
-
-pause 'Press [Enter] key to continue...'
