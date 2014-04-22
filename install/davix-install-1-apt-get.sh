@@ -29,7 +29,7 @@ apt-get -y install apache2-mpm-prefork mysql-client mysql-server ntp openssh-ser
 
 ## DAVIX Packages
 apt-get -y install chaosreader dnstop etherape geoip-database geoip-bin ggobi gnuplot googleearth-package
-apt-get -y install graphviz gwhois mrtg netcat netexpect netrw netsed nfdump ngrep nmap octave octave-image
+apt-get -y install graphviz gwhois mrtg libpcap-dev netcat netexpect netrw netsed nfdump ngrep nmap octave octave-image
 apt-get -y install octave-linear-algebra octave-mapping octave-nan octave-plplot octave-splines octave-tsa qtoctave
 apt-get -y install pads picviz ploticus prads prelude-manager python-scapy rrdtool sagan snort socat syslog-ng
 apt-get -y install tcpdump tcpflow tcpreplay tcpslice tcpstat tcpxtract tshark ttt tulip tulip-doc wireshark zenmap
