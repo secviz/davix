@@ -42,22 +42,19 @@ wget -c http://qosient.com/argus/src/argus-3.0.6.1.tar.gz
 wget -c http://qosient.com/argus/src/argus-clients-3.0.6.2.tar.gz
 tar -xvpf argus-3.0.6.1.tar.gz 
 tar -xvpf argus-clients-3.0.6.2.tar.gz 
-apt-get -y install libjpeg62
-apt-get -y install flex
 cd argus-3.0.6.1/
-./configure --prefix=$DH/argus-server
-make
-make install
-
+ ./configure --prefix=$DH/argus-server
+ make
+ make install
  
 pause 'Press [Enter] key to continue...'
 
 
 ## Argus Client
 cd $DPMI/argus-clients-3.0.6.2/
-./configure --prefix=$DH/argus-client
-make
-make install
+ ./configure --prefix=$DH/argus-client
+ make
+ make install
 
 pause 'Press [Enter] key to continue...'
 
@@ -67,10 +64,10 @@ cd $DPMI/BroIDS
 wget -c http://www.bro.org/downloads/release/bro-2.2.tar.gz
 tar -xvpf bro-2.2.tar.gz
 cd bro-2.2
-./configure --prefix=$DH/broids
-make
-make install
-make clean
+ ./configure --prefix=$DH/broids
+ make
+ make install
+ make clean
 
 pause 'Press [Enter] key to continue...'
 
@@ -137,14 +134,14 @@ pause 'Press [Enter] key to continue...'
 
 
 ## INAV
-## TODO make returns a compilation error
 cd $DPMI/INAV
-wget -c “https://github.com/secviz/davix/tree/master/tools/inav/INAV-Server(current).tar.gz”
-tar -xvpf INAV-Server\(current\).tar.gz
+wget -c https://github.com/secviz/davix/tree/master/tools/inav/INAV-Server.tar.gz
+tar -xvpf INAV-Server.tar.gz
 wget -c https://github.com/secviz/davix/tree/master/tools/inav/INAV-0.13.jar
 cd INAV-Server-0.3.7/server
 apt-get install libcap-ng-dev
 make
+# TODO Move the client to the directory
 
 pause 'Press [Enter] key to continue...'
 
