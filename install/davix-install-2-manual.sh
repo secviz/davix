@@ -27,13 +27,13 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 cd $DPMI
 mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS NVisionIP InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt Shoki RTGraph3D 
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## Afterglow
 git clone https://github.com/zrlram/afterglow $DH/afterglow
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## Argus Server
@@ -50,7 +50,7 @@ make
 make install
 
  
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## Argus Client
@@ -59,7 +59,7 @@ cd $DPMI/argus-clients-3.0.6.2/
 make
 make install
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## BroIDS
@@ -72,7 +72,7 @@ make
 make install
 make clean
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## Cytoscape
@@ -82,7 +82,7 @@ chmod +x ./Cytoscape_3_0_2_unix.sh
 mkdir -p $DH/Cytoscape
 mv Cytoscape_3_0_2_unix.sh $DH/Cytoscape/Cytoscape_3_0_2_unix.sh
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 # EVENTLOG
@@ -95,7 +95,7 @@ cd eventlog-0.2.4
  make
  make install
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## FlowTag
@@ -106,13 +106,13 @@ cd flowtag-2.0.5
 apt-get -y install ruby
 ruby setup.rb
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## glTail
 git clone https://github.com/Fudge/gltail $DH/gltail
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## GUESS
@@ -133,7 +133,7 @@ mkdir -p $DH/guess
  echo "java -DgHome=$GUESS_HOME -classpath $GCLASSPATH \"-Dpython.home=$GUESS_HOME/src\" com.hp.hpl.guess.Guess $@ " >> $DH/guess/guess.sh
  echo "echo $?">> $DH/guess/guess.sh
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## INAV
@@ -146,7 +146,7 @@ cd INAV-Server-0.3.7/server
 apt-get install libcap-ng-dev
 make
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## InetVis
@@ -155,14 +155,14 @@ wget -c http://www.cs.ru.ac.za/research/g02v2468/inetvis/0.9.3/inetvis-0.9.3.1.t
 tar -xvpf inetvis-0.9.3.1.tar.gz
 mv inetvis—.9.3.1 $DH/inetvis—.9.3.1
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 # Logstash
 mkdir $DH/logstash
 wget -c https://download.elasticsearch.org/logstash/logstash/logstash-1.2.2-flatjar.jar -o $DH/logstash/logstash-1.2.2-flatjar.jar
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 # Build the base configuration file
@@ -179,7 +179,7 @@ wget -c https://download.elasticsearch.org/logstash/logstash/logstash-1.2.2-flat
  echo "  elasticsearch { embedded => true }" >> $DH/logstash/logstash.conf
  echo "}" >> $DH/logstash/logstash.conf
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## Mondrian
@@ -188,7 +188,7 @@ wget -c http://stats.math.uni-augsburg.de/mondrian/Mondrian.jar
 mkdir -p $DH/Mondrian
 mv Mondrian.jar $DH/Mondrian/Mondrian.jar
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## NetGrok
@@ -197,7 +197,7 @@ wget -c http://netgrok.googlecode.com/files/netgrok20080928.zip
 unzip netgrok20080928.zip
 mv Netgrok $DH/Netgrok
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 # nsm-console
@@ -206,7 +206,7 @@ wget -c http://writequit.org/projects/nsm-console/files/nsm-console-0.7.tar.gz
 tar -xvpf nsm-console-0.7.tar.gz
 mv nsm-console/ $DH
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## p0f
@@ -226,7 +226,7 @@ mv p0f-sendsyn $DH/p0f/bin
 mv p0f-sendsyn6 $DH/p0f/bin
 mv p0f-client $DH/p0f/bin
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## Parvis
@@ -238,7 +238,7 @@ chmod +x parvish.sh
 cd ..
 mv Parvis/ $DH
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## Perl Chart Director
@@ -252,7 +252,7 @@ tar -xvpf chartdir_perl_linux.tar.gz
  cpan -i Crypt::Rijndael
  cpan -i Test::Manifest
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## Processing
@@ -261,7 +261,7 @@ wget -c http://download.processing.org/processing-2.1-linux32.tgz
 tar -xvpf processing-2.1-linux32.tgz
 mv processing-2.1/ $DH
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## pulledpork: snort rules updater
@@ -269,7 +269,7 @@ cd $DPMI/pulledpork/
 wget -c http://pulledpork.googlecode.com/files/pulledpork-0.7.0.tar.gz
 tar -xvpf pulledpork-0.7.0.tar.gz
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## R Studio
@@ -277,7 +277,7 @@ cd $DPMI/Rstudio
 wget -c http://download1.rstudio.org/rstudio-0.98.501-i386.deb
 dpkg -i rstudio-0.98.501-i386.deb
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## RT Graph 3D
@@ -286,7 +286,7 @@ wget -c http://www.secdev.org/projects/rtgraph3d/files/rtgraph3d-0.1.tgz
 tar -xvpf rtgraph3d-0.1.tgz
 mv rtgraph3d-0.1 $DH/rtgraph3d-0.1
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## rumint
@@ -296,7 +296,7 @@ unzip rumint_v.214.zip
 cd rumint_2.14_distro
 su davix -c "wine ./setup.exe"
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## Seeds of Contempt
@@ -305,7 +305,7 @@ svn checkout http://seedsofcontempt.googlecode.com/svn/trunk/ seedsofcontempt-re
 mv seedsofcontempt-read-only seedsofcontempt
 mv seedsofcontempt/ $DH
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## Timesearcher 1
@@ -316,7 +316,7 @@ wget -c http://www.cs.umd.edu/hcil/timesearcher/dist2/demos_4Gf5x/ts-2.4.zip
 tar -xvpf ts1.3.7.tar.gz
 mv ts1.3.7/ $DH
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## TNV
@@ -325,7 +325,7 @@ wget -c http://sourceforge.net/projects/tnv/files/tnv/0.3.9/tnv_java_0.3.9.zip
 unzip tnv_java_0.3.9.zip
 mv tnv-0.3.9/ $DH
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## TreeMap
@@ -334,7 +334,7 @@ wget -c http://www.cs.umd.edu/hcil/treemap/demos/Treemap-4.1.2.zip
 unzip Treemap-4.1.2.zip
 mv Treemap-4.1.2/ $DH
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 ## Walrus
@@ -374,7 +374,7 @@ mv walrus-0.6.3 $DH/walrus-0.6.3
 mv tmp/walruscsv $DH/walrus-0.6.3
 rm -r tmp
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
 
 
 
@@ -389,4 +389,4 @@ cd PyInline-0.03
  python setup.py build
  python setup.py install
 
-# pause 'Press [Enter] key to continue...'
+pause 'Press [Enter] key to continue...'
