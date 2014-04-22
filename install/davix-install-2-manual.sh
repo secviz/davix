@@ -1,4 +1,4 @@
-#!/bin/bash
+﻿#!/bin/bash
 
 ####################################################
 ## DAVIX 2014 Application Installation Script     ##
@@ -78,6 +78,19 @@ wget -c http://chianti.ucsd.edu/cytoscape-3.0.2/Cytoscape_3_0_2_unix.sh
 chmod +x ./Cytoscape_3_0_2_unix.sh
 mkdir -p $DH/Cytoscape
 mv Cytoscape_3_0_2_unix.sh $DH/Cytoscape/Cytoscape_3_0_2_unix.sh
+
+# pause 'Press [Enter] key to continue...'
+
+
+# EVENTLOG
+cd $DPMI/eventlog
+wget -c https://www.balabit.com/downloads/files/eventlog/0.2/eventlog-0.2.4.tar.gz
+tar -xvpf eventlog-0.2.4.tar.gz
+mkdir -p $DH/eventlog
+cd eventlog-0.2.4
+ ./configure --prefix=$DH/eventlog
+ make
+ make install
 
 # pause 'Press [Enter] key to continue...'
 
@@ -225,6 +238,20 @@ mv Parvis/ $DH
 # pause 'Press [Enter] key to continue...'
 
 
+## Perl Chart Director
+cd $DPMI/PerlPackages
+wget -c http://download2.advsofteng.com/chartdir_perl_linux.tar.gz
+tar -xvpf chartdir_perl_linux.tar.gz
+# Add to perl @INC Path
+ mv ChartDirector /usr/lib/perl5/
+ cpan -i Crypt::SSLeay
+ cpan -i IP::Anonymous
+ cpan -i Crypt::Rijndael
+ cpan -i Test::Manifest
+
+# pause 'Press [Enter] key to continue...'
+
+
 ## Processing
 cd $DPMI/processing
 wget -c http://download.processing.org/processing-2.1-linux32.tgz
@@ -232,6 +259,15 @@ tar -xvpf processing-2.1-linux32.tgz
 mv processing-2.1/ $DH
 
 # pause 'Press [Enter] key to continue...'
+
+
+## pulledpork: snort rules updater
+cd $DPMI/pulledpork/
+wget -c http://pulledpork.googlecode.com/files/pulledpork-0.7.0.tar.gz
+tar -xvpf pulledpork-0.7.0.tar.gz
+
+# pause 'Press [Enter] key to continue...'
+
 
 ## R Studio
 cd $DPMI/Rstudio
@@ -338,34 +374,9 @@ rm -r tmp
 # pause 'Press [Enter] key to continue...'
 
 
+
+
 ## Unknown Packages ##
-
-# EVENTLOG
-cd $DPMI/eventlog
-wget -c https://www.balabit.com/downloads/files/eventlog/0.2/eventlog-0.2.4.tar.gz
-tar -xvpf eventlog-0.2.4.tar.gz
-mkdir -p $DH/eventlog
-cd eventlog-0.2.4
- ./configure --prefix=$DH/eventlog
- make
- make install
-
-# pause 'Press [Enter] key to continue...'
-
-
-## Perl Chart Director
-cd $DPMI/PerlPackages
-wget -c http://download2.advsofteng.com/chartdir_perl_linux.tar.gz
-tar -xvpf chartdir_perl_linux.tar.gz
-# Add to perl @INC Path
- mv ChartDirector /usr/lib/perl5/
- cpan -i Crypt::SSLeay
- cpan -i IP::Anonymous
- cpan -i Crypt::Rijndael
- cpan -i Test::Manifest
-
-# pause 'Press [Enter] key to continue...'
-
 
 ## PyInline
 cd $DPMI/PyInline
@@ -376,13 +387,3 @@ cd PyInline-0.03
  python setup.py install
 
 # pause 'Press [Enter] key to continue...'
-
-
-## pulledpork: snort rules updater
-cd $DPMI/pulledpork/
-wget -c http://pulledpork.googlecode.com/files/pulledpork-0.7.0.tar.gz
-tar -xvpf pulledpork-0.7.0.tar.gz
-
-# pause 'Press [Enter] key to continue...'
-
-
