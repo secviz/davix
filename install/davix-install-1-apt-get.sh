@@ -19,10 +19,10 @@ apt-get -y install geeqie gnome-desktop-environment openjdk-6-jre-lib openjdk-6-
            terminator udns-utils default-jre unrar
 apt-get -y install cvs subversion git
 apt-get -y install dns-browse exuberant-ctags java3ds-fileloader
-apt-get -y install joe vim
+apt-get -y install joe vim git
 apt-get -y install ftpd lftp lynx ncftp curl
 apt-get -y install python python-geoip python-gnuplot
-apt-get -y install tor winbind wine
+apt-get -y install subversion tor winbind wine
 
 ## Services
 apt-get -y install apache2-mpm-prefork mysql-client mysql-server ntp openssh-server
