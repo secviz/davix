@@ -42,10 +42,13 @@ wget -c http://qosient.com/argus/src/argus-3.0.6.1.tar.gz
 wget -c http://qosient.com/argus/src/argus-clients-3.0.6.2.tar.gz
 tar -xvpf argus-3.0.6.1.tar.gz 
 tar -xvpf argus-clients-3.0.6.2.tar.gz 
+apt-get -y install libjpeg62
+apt-get -y install flex
 cd argus-3.0.6.1/
 ./configure --prefix=$DH/argus-server
 make
 make install
+
  
 # pause 'Press [Enter] key to continue...'
 
