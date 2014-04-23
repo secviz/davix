@@ -6,7 +6,7 @@
 ##                                                ##
 ## Raffael Marty, Amanda Gellhouse, Edward McCabe ##
 ##                                                ##
-## DEVELOPMENT v0.1 12 MAR 2014                   ##
+## DEVELOPMENT v0.1.01 22 APR 2014                ##
 ####################################################
 
 wget -c http://cran.us.r-project.org/bin/linux/ubuntu/saucy/r-base-core_3.0.3-1saucy0_i386.deb
