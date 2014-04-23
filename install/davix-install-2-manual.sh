@@ -39,8 +39,6 @@ wget -c http://qosient.com/argus/src/argus-3.0.6.1.tar.gz
 wget -c http://qosient.com/argus/src/argus-clients-3.0.6.2.tar.gz
 tar -xvpf argus-3.0.6.1.tar.gz 
 tar -xvpf argus-clients-3.0.6.2.tar.gz 
-apt-get -y install flex
-apt-get -y install bison
 cd argus-3.0.6.1/
  ./configure --prefix=$DH/argus-server
  make
@@ -57,7 +55,6 @@ cd $DPMI/argus-clients-3.0.6.2/
 
 ## BroIDS (requires CMake)
 echo “Installing BroIDS”
-apt-get install cmake
 cd $DPMI/BroIDS
 wget -c http://www.bro.org/downloads/release/bro-2.2.tar.gz
 tar -xvpf bro-2.2.tar.gz
@@ -108,7 +105,6 @@ cd $DPMI/FlowTag
 wget -c http://chrislee.dhs.org/projects/flowtag/flowtag-2.0.5.tgz
 tar -xvpf flowtag-2.0.5.tgz
 cd flowtag-2.0.5
-apt-get -y install ruby
 ruby setup.rb
 
 
@@ -142,7 +138,6 @@ echo “Installing INAV”
 cd $DPMI/INAV
 wget -c “http://inav.scaparra.com/files/server/INAV-Server(current).tar.gz”
 tar -xvpf “INAV-Server(current).tar.gz”
-apt-get -y install build-essential
 mkdir $DH/INAV
 wget -c https://github.com/secviz/davix/tree/master/tools/inav/INAV-0.13.jar -o $DH/INAV/INAV-0.13.jar
 cd INAV-Server-0.3.7/server
@@ -255,7 +250,6 @@ chmod +x pulledpork.pl
 echo “Installing R Studio”
 cd $DPMI/RStudio
 wget -c http://download1.rstudio.org/rstudio-0.98.501-i386.deb
-apt-get -y install libjpeg62
 dpkg -i rstudio-0.98.501-i386.deb
 
 

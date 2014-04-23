@@ -24,6 +24,9 @@ apt-get -y install ftpd lftp lynx ncftp curl
 apt-get -y install python python-geoip python-gnuplot
 apt-get -y install subversion tor winbind wine
 
+## Required for Manual Installs
+apt-get -y install flex bison cmake ruby build-essential libjpeg62
+
 ## Services
 apt-get -y install apache2-mpm-prefork mysql-client mysql-server ntp openssh-server
 
