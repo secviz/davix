@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=gnome-panel-launcher
+Name[en_US]=Stop snort
+Exec=pkexec /etc/init.d/snort stop
+Name=Stop snort
+Icon=gnome-panel-launcher

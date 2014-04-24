@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=Google Earth
+GenericName=3D planet viewer
+Comment=Explore, search and discover the planet
+Exec=/opt/google/earth/free/google-earth %f
+Terminal=false
+MultipleArgs=false
+Icon=google-earth
+Type=Application
+Categories=Application;Network
+MimeType=application/vnd.google-earth.kml+xml;application/vnd.google-earth.kmz;application/earthviewer;application/keyhole

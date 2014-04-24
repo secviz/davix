@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[en_US]=gnome-panel-launcher
+Name[en_US]=Start p0f
+Exec=pkexec /etc/init.d/p0f start
+Name=start p0f
+Icon=gnome-panel-launcher

@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=true
+Icon[en_US]=/
+Name[en_US]=Start Argus Server
+Exec=pkexec /etc/init.d/argus-server start
+Name=Start Argus server
+Icon=/
