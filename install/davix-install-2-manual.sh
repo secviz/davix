@@ -136,10 +136,10 @@ mkdir -p $DH/guess
 ## INAV
 echo "Installing INAV"
 cd $DPMI/INAV
-wget -c "http://inav.scaparra.com/files/server/INAV-Server(current).tar.gz"
-tar -xvpf "INAV-Server(current).tar.gz"
+wget -c https://github.com/secviz/davix/raw/master/tools/inav/INAV-Server.tar.gz
+tar -xvpf INAV-Server.tar.gz
 mkdir $DH/INAV
-wget -c https://github.com/secviz/davix/tree/master/tools/inav/INAV-0.13.jar -o $DH/INAV/INAV-0.13.jar
+wget -c https://github.com/secviz/davix/raw/master/tools/inav/INAV-0.13.jar -o $DH/INAV/INAV-0.13.jar
 cd INAV-Server-0.3.7/server
 cp $XXX/makefile .
 make 
