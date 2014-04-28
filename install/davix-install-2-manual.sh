@@ -6,7 +6,7 @@
 ##                                                ##
 ## Raffael Marty, Amanda Gellhouse, Edward McCabe ##
 ##                                                ##
-## DEVELOPMENT V1.4.02 22 APR 2014                ##
+## DEVELOPMENT V1.4.03 27 APR 2014                ##
 ####################################################
 
 # init
@@ -15,9 +15,6 @@ function pause(){
 }
 
 # Setup
-mkdir -p /opt/davix
-mkdir -p /home/davix/davix-packages-manual-install
-
 export DH="/opt/davix"
 export DPMI="/home/davix/davix-packages-manual-install"
 export LibMagic_LIBRARY="/usr/lib/i386-linux-gnu/"
@@ -26,7 +23,6 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 # Build the directory structure
 cd $DPMI
 mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D RStudio
-
 
 ## Afterglow
 git clone https://github.com/zrlram/afterglow $DH/afterglow
@@ -135,12 +131,12 @@ mkdir -p $DH/guess
 
 ## INAV
 echo "Installing INAV"
-cd $DPMI/INAV
-wget -c https://github.com/secviz/davix/raw/master/tools/inav/INAV-Server.tar.gz
+cd $DPMI/davix/tools/inav
 tar -xvpf INAV-Server.tar.gz
 mkdir $DH/INAV
-wget -c https://github.com/secviz/davix/raw/master/tools/inav/INAV-0.13.jar -o $DH/INAV/INAV-0.13.jar
-cd INAV-Server-0.3.7/server
+mv $DPMI/davix/tools/inav/INAV-0.13.jar $DH/INAV
+cd $DPMI/davix/tools/inav/INAV-Server-0.3.7/server
+# TODO Location of makefile?
 cp $XXX/makefile .
 make 
 
