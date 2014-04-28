@@ -13,9 +13,6 @@ function pause(){
     read -p "$*"
 }
 
-# Install Gnome Classic
-apt-get -y install gnome-session-fallback
-
 # TODO: Default to Gnome Classic
 
 # Setup
