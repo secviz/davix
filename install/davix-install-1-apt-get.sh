@@ -6,7 +6,7 @@
 ##                                                ##
 ## Raffael Marty, Amanda Gellhouse, Edward McCabe ##
 ##                                                ##
-## DEVELOPMENT v1.1.03 22 APR 2014                ##
+## DEVELOPMENT v1.1.04 28 APR 2014                ##
 ####################################################
 
 apt-get update
@@ -19,7 +19,7 @@ apt-get -y install geeqie gnome-desktop-environment openjdk-6-jre-lib openjdk-6-
            terminator udns-utils default-jre unrar
 apt-get -y install cvs subversion git
 apt-get -y install dns-browse exuberant-ctags java3ds-fileloader
-apt-get -y install joe vim git
+apt-get -y install joe vim
 apt-get -y install ftpd lftp lynx ncftp curl
 apt-get -y install python python-geoip python-gnuplot
 apt-get -y install subversion tor winbind wine

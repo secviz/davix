@@ -24,6 +24,7 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 cd $DPMI
 mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D RStudio
 
+
 ## Afterglow
 git clone https://github.com/zrlram/afterglow $DH/afterglow
 

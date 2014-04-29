@@ -5,7 +5,7 @@
 ##                                                ##
 ## Raffael Marty, Amanda Gellhouse                ##
 ##                                                ##
-## DEVELOPMENT v1.0 27 APR 2014                   ##
+## DEVELOPMENT v1.0.1 28 APR 2014                 ##
 ####################################################
 
 if [[ "$USER" != "root" ]]; then
@@ -15,7 +15,7 @@ fi
 
 # Checking for correct base version of Base OS
 . /etc/lsb-release
-if [[ "$DISTRIB_ID" -ne "Ubuntu" || "x$DISTRIB_RELEASE" != "x13.20" ]]; then
+if [[ "$DISTRIB_ID" -ne "Ubuntu" || "x$DISTRIB_RELEASE" != "x13.10" ]]; then
     if [ -z "$OVERWRITE_VERSION" ]; then
         echo "Please use Ubuntu 13.10 as a base release."
         echo "You can overwrite this requirement by setting OVERWRITE_VERSION to 1"
@@ -28,8 +28,12 @@ mkdir -p /opt/davix
 mkdir -p /home/davix/davix-packages-manual-install
 
 
+# Install git
+apt-get -y install git
+
+
 # Clone the DAVIX repository
-cd /home/davix/davix-packages-manual-install
+cd $DPMI
 git clone https://github.com/secviz/davix/
 cd davix/install
 
