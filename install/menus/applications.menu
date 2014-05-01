@@ -3,7 +3,7 @@
   'http://standards.freedesktop.org/menu-spec/menu-1.0.dtd'>
 <Menu>
 	<Name>Applications</Name>
-	<MergeFile type="parent">/etc/xdg/menus/applications.menu</MergeFile>
+	<MergeFile type="parent">/usr/share/app-install/desktop/applications.menu</MergeFile>
 	<Menu>
 		<Name>DAVIX</Name>
 		<Directory>davix2014-davix.directory</Directory>

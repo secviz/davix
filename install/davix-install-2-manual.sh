@@ -265,7 +265,7 @@ cd $DPMI/Rumint
 wget -c http://www.rumint.org/software/rumint/rumint_v.214.zip
 unzip rumint_v.214.zip
 cd rumint_2.14_distro
-su davix -c "wine ./setup.exe"
+wine ./setup.exe
 
 
 ## Seeds of Contempt

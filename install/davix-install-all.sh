@@ -23,6 +23,13 @@ if [[ "$DISTRIB_ID" -ne "Ubuntu" || "x$DISTRIB_RELEASE" != "x13.10" ]]; then
     fi
 fi 
 
+# Create DAVIX User
+useradd -d /home/davix -m davix
+passwd davix
+davix
+davix
+
+
 # Setup the directories
 mkdir -p /opt/davix
 mkdir -p /home/davix/davix-packages-manual-install
@@ -42,6 +49,7 @@ cd davix/install
 sh ./davix-install-1-apt-get.sh
 sh ./davix-install-2-manual.sh
 sh ./davix-install-3-R.sh
+sh ./davix-install-4-menus.sh
 sh ./davix-config.sh
 
 
