@@ -59,7 +59,6 @@ cd bro-2.2
  ./configure --prefix=$DH/broids
  make
  make install
- make clean
 $DH/broids/bin/broctl install
 
 ## Perl Chart Director
