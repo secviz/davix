@@ -31,6 +31,7 @@ apt-get -y install classicmenu-indicator
 
 ## Required for Manual Installs
 apt-get -y install flex bison cmake ruby build-essential libjpeg62
+apt-get -y install libmagic-dev libgeoip-dev libssl-dev swig2.0 libssl0.9.8
 
 ## Services
 apt-get -y install apache2-mpm-prefork mysql-client mysql-server ntp openssh-server
