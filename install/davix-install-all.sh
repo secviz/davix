@@ -5,7 +5,7 @@
 ##                                                ##
 ## Raffael Marty, Amanda Gellhouse                ##
 ##                                                ##
-## DEVELOPMENT v1.0.1 28 APR 2014                 ##
+## DEVELOPMENT v1.0.2 3 MAY 2014                  ##
 ####################################################
 
 if [[ "$USER" != "root" ]]; then
@@ -22,6 +22,7 @@ if [[ "$DISTRIB_ID" -ne "Ubuntu" || "x$DISTRIB_RELEASE" != "x13.10" ]]; then
         exit 1
     fi
 fi 
+
 
 # create davix group
 if ! getent group davix >/dev/null; then
@@ -42,6 +43,7 @@ echo 'davix:davix' | chpasswd
 # Setup the directories
 mkdir -p /opt/davix
 mkdir -p /home/davix/davix-packages-manual-install
+export DPMI="/home/davix/davix-packages-manual-install"
 
 
 # Install git
@@ -62,7 +64,7 @@ git clone https://github.com/secviz/davix/
 
 
 # Cleanup Manual Directories
-rm -rf /home/davix/davix-packages-manual-install
+rm -rf $DPMI
 
 
 # Cleanup apt-get

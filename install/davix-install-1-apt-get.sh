@@ -6,7 +6,7 @@
 ##                                                ##
 ## Raffael Marty, Amanda Gellhouse, Edward McCabe ##
 ##                                                ##
-## DEVELOPMENT v1.1.04 28 APR 2014                ##
+## DEVELOPMENT v1.1.05 3 MAY 2014                 ##
 ####################################################
 
 apt-get update
@@ -34,7 +34,9 @@ apt-get -y install flex bison cmake ruby build-essential libjpeg62
 apt-get -y install libmagic-dev libgeoip-dev libssl-dev swig2.0 libssl0.9.8
 
 ## Services
-apt-get -y install apache2-mpm-prefork mysql-client mysql-server ntp openssh-server
+apt-get -y install apache2-mpm-prefork mysql-client ntp openssh-server
+DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server
+
 
 ## DAVIX Packages
 apt-get -y install chaosreader dnstop etherape geoip-database geoip-bin ggobi gnuplot googleearth-package
