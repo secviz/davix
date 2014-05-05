@@ -40,5 +40,5 @@ cp $DPMI/davix/install/menus/applications.menu $DAVEHM/.config/menus
 cd $DPMI/davix/logos
 cp davix-2014_white.png $DH
 gsettings set org.gnome.desktop.background primary-color '#ffffff'
-gsettings set org.gnome.desktop.background picture-uri 'file:///opt/davix/davix-2014_white.png'
+gsettings set org.gnome.desktop.background picture-uri 'file:///home/davix/davix-2014_white.png'
 gsettings set org.gnome.desktop.background picture-options 'scaled'
