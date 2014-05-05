@@ -42,8 +42,8 @@ echo 'davix:davix' | chpasswd
 
 # Setup the directories
 mkdir -p /opt/davix
-mkdir -p /home/davix/davix-packages-manual-install
 export DPMI="/home/davix/davix-packages-manual-install"
+mkdir -p $DPMI
 
 
 # Install git
