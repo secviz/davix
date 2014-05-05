@@ -31,7 +31,7 @@ fi
 
 # create davix user
 if ! getent passwd davix >/dev/null; then
-    useradd -M -r -g davix -d /home/davix \
+    useradd -m -r -g davix -d /home/davix \
             -s /bin/bash -c "DAVIX User" davix
 fi
 
