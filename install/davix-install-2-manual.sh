@@ -304,20 +304,12 @@ mv Treemap-4.1.2 $DH
 ## Walrus
 echo "Installing Walrus"
 ## build java3d environment
-echo "You must accept the Oracle Binary Code License Agreement for Java SE to download this software."
-echo "Open the following link in your browser and save to $DPMI/walrus"
-echo " " 
-echo "http://download.oracle.com/otn-pub/java/java3d/1.5.1/java3d-1_5_1-linux-i586.bin"
-echo " "
-echo "DAVIX 2014 will wait until you've downloaded the required file."
-echo " "
 cd $DPMI/walrus
+wget ftp://www.daba.lv/pub/Programmeeshana/java/3D_java/java3d-1_5_1-linux-i586.bin
 sh java3d-1_5_1-linux-i586.bin
 mv lib/ext/* /usr/lib/jvm/java-1.6.0-openjdk-i386/jre/lib/ext/
 mv lib/i386/* /usr/lib/jvm/java-1.6.0-openjdk-i386/jre/lib/i386/
-
 # Get Walrus Test Data
-cd $DPMI/walrus
 mkdir tmp
 cd tmp
 wget -c http://www.soa-world.de/dev/walruscsv/walruscsv.zip
@@ -325,9 +317,7 @@ unzip walruscsv.zip
 g++ wlink.cpp main.cpp wtree.cpp -o walruscsv
 wget -c http://www.soa-world.de/dev/walruscsv/testdata.zip
 unzip testdata.zip
-
 # Get Walrus
-cd $DPMI/walrus
 wget -c http://www.caida.org/tools/visualization/walrus/download/walrus-0.6.3.tar.gz
 tar -xvpf walrus-0.6.3.tar.gz
 mv walrus-0.6.3 $DH/walrus-0.6.3
@@ -335,14 +325,13 @@ mv tmp/walruscsv $DH/walrus-0.6.3
 rm -r tmp
 
 
-
 ## Unknown Packages ##
 
 ## PyInline
-echo "Installing PyInLine"
-cd $DPMI/PyInline
-wget -c http://sourceforge.net/projects/pyinline/files/pyinline/0.03/PyInline-0.03.tar.gz
-tar -xvpf PyInline-0.03.tar.gz
-cd PyInline-0.03
- python setup.py build
- python setup.py install
+#echo "Installing PyInLine"
+#cd $DPMI/PyInline
+#wget -c http://sourceforge.net/projects/pyinline/files/pyinline/0.03/PyInline-0.03.tar.gz
+#tar -xvpf PyInline-0.03.tar.gz
+#cd PyInline-0.03
+# python setup.py build
+# python setup.py install
