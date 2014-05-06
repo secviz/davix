@@ -33,9 +33,12 @@ cd /etc/xdg/menus
 cp gnome-applications.menu gnome-applications.menu.old
 cp $DPMI/davix/install/menus/applications.menu gnome-applications.menu
 
+# Set gnome classic as the default interface
+/usr/lib/lightdm/lightdm-set-defaults -s gnome-classic
+
 # Fetch the logo and set the desktop 
 cd $DPMI/davix/logos
-cp davix-2014_white.png $DAVEHM
-gsettings set org.gnome.desktop.background primary-color '#ffffff'
-gsettings set org.gnome.desktop.background picture-uri 'file:///home/davix/davix-2014_white.png'
+cp davix-2014_black.png $DAVEHM
+gsettings set org.gnome.desktop.background primary-color '#000000'
+gsettings set org.gnome.desktop.background picture-uri 'file:///home/davix/davix-2014_black.png'
 gsettings set org.gnome.desktop.background picture-options 'scaled'
