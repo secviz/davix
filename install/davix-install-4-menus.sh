@@ -8,11 +8,6 @@
 ## DEVELOPMENT V1.0 27 APR 2014                   ##
 ####################################################
 
-# init
-function pause(){
-    read -p "$*"
-}
-
 # TODO: Default to Gnome Classic
 
 # Setup
