@@ -324,6 +324,12 @@ mv walrus-0.6.3 $DH/walrus-0.6.3
 mv tmp/walruscsv $DH/walrus-0.6.3
 rm -r tmp
 
+## Gephi
+mkdir $DPMI/gephi
+cd $DPMI/gephi
+wget -c https://launchpad.net/gephi/0.8/0.8.2beta/+download/gephi-0.8.2-beta.tar.gz
+tar -xzf gephi-0.8.2-beta.tar.gz
+mv gephi $DH
 
 ## Unknown Packages ##
 
