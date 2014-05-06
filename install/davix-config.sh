@@ -24,4 +24,4 @@ update-rc.d prads disable
 echo manual >> /etc/init/logstash.override
 echo manual >> /etc/init/logstash-web.override
 # turn off mrtg
-sed -i -e 's/^/#/' /etc/cron/mrtg/ 
+sed -i -e 's/^/#/' /etc/cron.d/mrtg
