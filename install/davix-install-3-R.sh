@@ -18,9 +18,10 @@ apt-get -y install r-cran-rcmdr r-cran-reshape2 r-cran-rggobi r-cran-rmysql r-cr
 apt-get -y install r-cran-rserve r-cran-sandwich r-cran-scatterplot3d r-cran-teachingdemos r-cran-timeseries r-cran-tseries
 apt-get -y install r-cran-vcd r-cran-xml r-doc-html r-doc-pdf r-mathlib r-recommended
 
+mkdir $DPMI/RPackages
 cd $DPMI/RPackages
 wget -c http://cran.r-project.org/src/contrib/FactoMineR_1.26.tar.gz
-wget -c http://stat.ethz.ch/CRAN/src/contrib/leaps_2.9.tar.gz
+wget -c http://cran.r-project.org/src/contrib/leaps_2.9.tar.gz
 wget -c http://cran.r-project.org/src/contrib/HH_3.0-4.tar.gz
 wget -c http://cran.r-project.org/src/contrib/ellipse_0.3-8.tar.gz
   R CMD INSTALL leaps_2.9.tar.gz
