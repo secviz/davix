@@ -28,6 +28,9 @@ echo manual >> /etc/init/logstash-web.override
 # turn off mrtg
 sed -i -e 's/^/#/' /etc/cron.d/mrtg
 
+# some other cleanup
+apt-get -y remove openoffice.org*
+apt-get -y autoremove
 
 # just to be sure!
 chown -R davix:davix /home/davix
