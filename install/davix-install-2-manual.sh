@@ -344,5 +344,5 @@ mv gephi $DH
 ## Copy over Run Scripts
 mkdir $DH/scripts
 cp $DPMI/davix/install/scripts/* $DH/scripts
-
+ln -s /opt/davix/gephi/bin/gephi $DH/scripts/gephi
 
