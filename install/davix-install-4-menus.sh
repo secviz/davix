@@ -34,7 +34,7 @@ cp gnome-applications.menu gnome-applications.menu.old
 cp $DPMI/davix/install/menus/applications.menu gnome-applications.menu
 
 # Set gnome classic as the default interface
-/usr/lib/ligthdm/lightdm-set-defaults -s gnome-classic -m true -R false -l false
+/usr/lib/lightdm/lightdm-set-defaults -s gnome-classic -m true -R false -l false
 
 # Fetch the logo and set the desktop 
 cd $DPMI/davix/logos
