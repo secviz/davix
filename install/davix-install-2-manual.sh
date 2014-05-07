@@ -22,12 +22,12 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D RStudio
+mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D RStudio parsers
 
 
 ## Afterglow
 git clone https://github.com/zrlram/afterglow $DH/afterglow
-
+git clone https://github.com/zrlram/parsers $DH/parsers
 
 ## Argus Server
 echo "Installing Argus Server"
@@ -345,4 +345,5 @@ mv gephi $DH
 mkdir $DH/scripts
 cp $DPMI/davix/install/scripts/* $DH/scripts
 ln -s /opt/davix/gephi/bin/gephi $DH/scripts/gephi
+ln -s /opt/davix/afterglow/afterglow.pl $DH/scripts/afterglow
 

@@ -41,7 +41,7 @@ adduser davix sudo
 echo 'davix:davix' | chpasswd
 
 # Add path to scripts
-echo "export PATH=$PATH:/opt/davix/scripts" >> ~/.profile
+echo "export PATH=$PATH:/opt/davix/scripts/:/opt/davix/parsers" >> ~/.profile
 
 # Setup the directories
 mkdir -p /opt/davix
