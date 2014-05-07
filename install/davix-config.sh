@@ -20,8 +20,14 @@ update-rc.d snort disable
 update-rc.d pads disable
 # turn off prads
 update-rc.d prads disable
+# turn off avahi-daemon discovery 
+update-rc.d avahi-daemon disable
 # turn off logstash
 echo manual >> /etc/init/logstash.override
 echo manual >> /etc/init/logstash-web.override
 # turn off mrtg
 sed -i -e 's/^/#/' /etc/cron.d/mrtg
+
+
+# just to be sure!
+chown -R davix:davix /home/davix
