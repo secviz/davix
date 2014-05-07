@@ -1,11 +1,9 @@
 [Desktop Entry]
 Categories=;
 Comment=Graphical Network Monitor
-Comment[es]=Monitor Gráfico de Red
-Exec=su-to-root -X -c /usr/bin/etherape
+Exec=etherape
 Hidden=false
 Icon=etherape.png
-Name=EtherApe (as root)
+Name=EtherApe
 Terminal=0
-TryExec=su-to-root
 Type=Application

@@ -6,6 +6,6 @@ Type=Application
 Terminal=true
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=Parvis
-Exec=/opt/davix/Parvis/parvis.sh
+Exec=bash /opt/davix/scripts/parvis
 Name=Parvis
 Icon=gnome-panel-launcher

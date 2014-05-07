@@ -1,12 +1,11 @@
 [Desktop Entry]
 Categories=;
 Comment=Scientific Computing using GNU Octave
-Exec=/usr/bin/octave-3.2.4
+Exec=octave
 Hidden=false
-Icon=/usr/share/octave/3.2.4/imagelib/octave-sombrero.png
+Icon=/usr/share/octave/3.6.4/imagelib/octave-sombrero.png
 Name=GNU Octave
 StartupNotify=false
 Terminal=true
-TryExec=/usr/bin/octave-3.2.4
 Type=Application
 X-Desktop-File-Install-Version=0.18

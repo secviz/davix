@@ -184,6 +184,13 @@ echo "Installing Netgrok"
 cd $DPMI/Netgrok
 wget -c http://netgrok.googlecode.com/files/netgrok20080928.zip
 unzip netgrok20080928.zip
+# TODO Resolve Netgrok issues
+# Fix ini file
+#mv -f $DPMI/davix/install/fixes/netgrok/groups.ini Netgrok/ 
+# Get jpcap
+#wget -c http://sourceforge.net/projects/jpcap/files/jpcap/v0.01.16/jpcap-0.01.16.tar.gz
+#tar -xvpf jpcap-0.01.16.tar.gz
+#cp Netgrok/lib/linux/jpcap.jar /usr/lib/jvm/default-java/jre/lib/ext
 mv Netgrok $DH
 
 
@@ -255,6 +262,15 @@ echo "Installing RT Graph 3D"
 cd $DPMI/RTGraph3D
 wget -c http://www.secdev.org/projects/rtgraph3d/files/rtgraph3d-0.1.tgz
 tar -xvpf rtgraph3d-0.1.tgz
+# Dependencies - povexport
+wget -c http://www.vpython.org/contents/contributed/povexport-2012-07-10.zip
+unzip povexport-2012-07-10.zip
+mv povexport-2012-07-10/* rtgraph3d-0.1/
+# Dependencies - PyInline
+wget -c http://sourceforge.net/projects/pyinline/files/pyinline/0.03/PyInline-0.03.tar.gz
+tar -xvpf PyInline-0.03.tar.gz
+chmod -R 755 PyInline-0.03
+mv PyInline-0.03/PyInline/*.py rtgraph3d-0.1/
 mv rtgraph3d-0.1 $DH
 
 
@@ -265,6 +281,10 @@ wget -c http://www.rumint.org/software/rumint/rumint_v.214.zip
 unzip rumint_v.214.zip
 cd rumint_2.14_distro
 wine ./setup.exe
+
+
+## Sagan Fix - configuration file error so copy correct one
+cp -f $DPMI/davix/install/fixes/sagan/sagan.conf /etc
 
 
 ## Seeds of Contempt

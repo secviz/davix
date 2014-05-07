@@ -5,6 +5,6 @@ Exec=env WINEPREFIX="/home/davix/.wine" wine C:\\\\windows\\\\command\\\\start.e
 Hidden=false
 Icon=14E5_rumint_214.0
 Name=rumint 2.14
-Path=/home/davix/.wine/dosdevices/c:/Program Files (x86)/rumint
+Path=/home/davix/.wine/dosdevices/c:/Program Files/rumint
 StartupNotify=true
 Type=Application

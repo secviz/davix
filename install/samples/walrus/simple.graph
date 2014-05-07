@@ -1,0 +1,92 @@
+Graph
+{
+   ### metadata ###
+   @name="Binary Tree";
+   @description="A complete binary tree of height 3 with some cross links.";
+   @numNodes=15;
+   @numLinks=17;
+   @numPaths=0;
+   @numPathLinks=0;
+
+   ### structural data ###
+   @links=[
+      { @source=0; @destination=1; },
+      { @source=0; @destination=2; },
+      { @source=1; @destination=3; },
+      { @source=1; @destination=4; },
+      { @source=2; @destination=5; },
+      { @source=2; @destination=6; },
+      { @source=3; @destination=7; },
+      { @source=3; @destination=8; },
+      { @source=4; @destination=9; },
+      { @source=4; @destination=10; },
+      { @source=5; @destination=11; },
+      { @source=5; @destination=12; },
+      { @source=6; @destination=13; },
+      { @source=6; @destination=14; },
+      { @source=7; @destination=0; },
+      { @source=14; @destination=0; },
+      { @source=1; @destination=2; }
+   ];
+   @paths=;
+
+   ### attribute data ###
+   @enumerations=;
+   @attributeDefinitions=[
+      {
+         @name=$root;
+         @type=bool;
+         @default=|| false ||;
+         @nodeValues=[ { @id=0; @value=T; } ];
+         @linkValues=;
+         @pathValues=;
+      },
+      {
+         @name=$tree_link;
+         @type=bool;
+         @default=|| false ||;
+         @nodeValues=;
+         @linkValues=[
+            { @id=0; @value=T; },
+            { @id=1; @value=T; },
+            { @id=2; @value=T; },
+            { @id=3; @value=T; },
+            { @id=4; @value=T; },
+            { @id=5; @value=T; },
+            { @id=6; @value=T; },
+            { @id=7; @value=T; },
+            { @id=8; @value=T; },
+            { @id=9; @value=T; },
+            { @id=10; @value=T; },
+            { @id=11; @value=T; },
+            { @id=12; @value=T; },
+            { @id=13; @value=T; }
+         ];
+         @pathValues=;
+      }
+   ];
+   @qualifiers=[
+      {
+         @type=$spanning_tree;
+         @name=$sample_spanning_tree;
+         @description=;
+         @attributes=[
+            { @attribute=0; @alias=$root; },
+            { @attribute=1; @alias=$tree_link; }
+         ];
+      }
+   ];
+
+   ### visualization hints ###
+   @filters=;
+   @selectors=;
+   @displays=;
+   @presentations=;
+
+   ### interface hints ###
+   @presentationMenus=;
+   @displayMenus=;
+   @selectorMenus=;
+   @filterMenus=;
+   @attributeMenus=;
+}

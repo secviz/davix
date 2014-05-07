@@ -5,6 +5,6 @@ Type=Application
 Terminal=true
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=Ploticus
-Exec=ploticus
+Exec=gnome-terminal
 Name=Ploticus
 Icon=gnome-panel-launcher

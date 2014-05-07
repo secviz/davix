@@ -32,6 +32,9 @@ apt-get -y install classicmenu-indicator
 ## Required for Manual Installs
 apt-get -y install flex bison cmake ruby build-essential libjpeg62
 apt-get -y install libmagic-dev libgeoip-dev libssl-dev swig2.0 libssl0.9.8
+apt-get -y install libjava3d-java libjava3d-java-doc libjava3d-jni # Walrus
+apt-get -y install python-visual # RT Graph 3D
+apt-get -y install libpcap # Netgrok
 
 ## Services
 apt-get -y install apache2-mpm-prefork mysql-client ntp openssh-server
@@ -39,17 +42,17 @@ apt-get -y install apache2-mpm-prefork mysql-client ntp openssh-server
 DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server
 mysql_install_db 
 sleep 7 
-/usr/bin/mysqld_safe & 
+/usr/bin/mysqld_safe &
 sleep 2 
-/usr/bin/mysqladmin -u root password ‘davix’
+/usr/bin/mysqladmin -u root password 'davix'
 # needs mysql running!
 apt-get -y install prelude-manager
-/usr/bin/mysqladmin -uroot —pdavix shutdown
+/usr/bin/mysqladmin -uroot -pdavix shutdown
 
 ## DAVIX Packages
 apt-get -y install chaosreader dnstop etherape geoip-database geoip-bin ggobi gnuplot googleearth-package
 apt-get -y install graphviz gwhois mrtg libpcap-dev netcat netexpect netrw netsed nfdump ngrep nmap octave octave-image
 apt-get -y install octave-linear-algebra octave-mapping octave-nan octave-plplot octave-splines octave-tsa qtoctave
-apt-get -y install pads picviz ploticus prads python-scapy rrdtool sagan snort socat syslog-ng
+apt-get -y install pads picviz ploticus prads python-scapy rrdtool rsyslog sagan snort socat syslog-ng
 apt-get -y install tcpdump tcpflow tcpreplay tcpslice tcpstat tcpxtract tshark ttt tulip tulip-doc wireshark zenmap
-apt-get -y install libtext-csv-perl
+apt-get -y install libtext-csv-perl 

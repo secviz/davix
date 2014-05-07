@@ -19,8 +19,38 @@
     <Name>Capture</Name>
     <Directory>davix2014-davix-capture.directory</Directory>
     <Include>
+      <Filename>davix2014-documentation-wiki.desktop</Filename> 
+      <Filename>davix2014-capture-broidsstart.desktop</Filename> 
+      <Filename>davix2014-capture-broidsstop.desktop</Filename> 
+      <Filename>davix2014-capture-broids.desktop</Filename>
+      <Filename>davix2014-capture-chaosreader.desktop</Filename>  
+      <Filename>davix2014-capture-dnsbrowse.desktop</Filename>  
+      <Filename>davix2014-capture-dnstop.desktop</Filename>  
+      <Filename>davix2014-capture-etherape.desktop</Filename> 
       <Filename>davix2014-capture-logstashstart.desktop</Filename>
-      <Filename>davix2014-capture-logstashstop.desktop</Filename>
+      <Filename>davix2014-capture-logstashstop.desktop</Filename>      
+      <Filename>davix2014-capture-nfdump.desktop</Filename>            
+      <Filename>davix2014-capture-ngrep.desktop</Filename>      
+      <Filename>davix2014-capture-nmap.desktop</Filename>      
+      <Filename>davix2014-capture-padsstart.desktop</Filename>
+      <Filename>davix2014-capture-padsstop.desktop</Filename>
+      <Filename>davix2014-capture-padsrestart.desktop</Filename>
+      <Filename>davix2014-capture-padseditconfig.desktop</Filename>
+      <Filename>davix2014-capture-prads.desktop</Filename>
+      <Filename>davix2014-capture-pradsassetreport.desktop</Filename>
+      <Filename>davix2014-capture-sagan.desktop</Filename>
+      <Filename>davix2014-capture-scapy.desktop</Filename>
+      <Filename>davix2014-capture-snort.desktop</Filename>
+      <Filename>davix2014-capture-snortstart.desktop</Filename>
+      <Filename>davix2014-capture-snortstop.desktop</Filename>
+      <Filename>davix2014-capture-syslogng.desktop</Filename>
+      <Filename>davix2014-capture-tcpdump.desktop</Filename>
+      <Filename>davix2014-capture-tcpflow.desktop</Filename>
+      <Filename>davix2014-capture-tcpstat.desktop</Filename>
+      <Filename>davix2014-capture-tcpprof.desktop</Filename>
+      <Filename>davix2014-capture-ttt.desktop</Filename>
+      <Filename>davix2014-capture-wireshark.desktop</Filename>
+      <Filename>davix2014-capture-tshark.desktop</Filename>
     </Include>
   </Menu>
   
@@ -29,7 +59,17 @@
     <Name>Process</Name>
     <Directory>davix2014-davix-process.directory</Directory>
     <Include>
-      <Filename>davix2014-process-afterglow.desktop</Filename>
+      <Filename>davix2014-documentation-wiki.desktop</Filename> 
+      <Filename>davix2014-process-afterglow.desktop</Filename> 
+      <Filename>davix2014-process-argus.desktop</Filename> 
+      <Filename>davix2014-process-chaosreader.desktop</Filename> 
+      <Filename>davix2014-process-logstash.desktop</Filename>  
+      <Filename>davix2014-process-padsreport.desktop</Filename>  
+      <Filename>davix2014-process-sagan.desktop</Filename>  
+      <Filename>davix2014-process-scapy.desktop</Filename>  
+      <Filename>davix2014-process-tcpreplay.desktop</Filename>  
+      <Filename>davix2014-process-tcpslice.desktop</Filename>   
+      <Filename>davix2014-process-tcpxtract.desktop</Filename> 
     </Include>
   </Menu>
   
@@ -38,11 +78,38 @@
     <Name>Visualize</Name>
     <Directory>davix2014-davix-visualize.directory</Directory>
     <Include>
+      <Filename>davix2014-documentation-wiki.desktop</Filename>
+      <Filename>davix2014-visualize-chartdirector.desktop</Filename>
+      <Filename>davix2014-visualize-etherape.desktop</Filename>
+      <Filename>davix2014-visualize-flowtag.desktop</Filename>
       <Filename>davix2014-visualize-gephi.desktop</Filename>
+      <Filename>davix2014-visualize-ggobi.desktop</Filename>
+      <Filename>davix2014-visualize-gltail.desktop</Filename>
+      <Filename>davix2014-visualize-gnuplot.desktop</Filename>
+      <Filename>davix2014-visualize-dot.desktop</Filename>
+      <Filename>davix2014-visualize-dotty.desktop</Filename>
+      <Filename>davix2014-visualize-lneato.desktop</Filename>
+      <Filename>davix2014-visualize-neato.desktop</Filename>
+      <Filename>davix2014-visualize-logstash.desktop</Filename>
+      <Filename>davix2014-visualize-mondrian.desktop</Filename>
+      <Filename>davix2014-visualize-mrtg.desktop</Filename>
+      <Filename>davix2014-visualize-octave.desktop</Filename>
+      <Filename>davix2014-visualize-parvis.desktop</Filename>
+      <Filename>davix2014-visualize-ploticus.desktop</Filename>
+      <Filename>davix2014-visualize-processing.desktop</Filename>
+      <Filename>davix2014-visualize-r.desktop</Filename>
+      <Filename>davix2014-visualize-rstudio.desktop</Filename>
+      <Filename>davix2014-visualize-rrdtool.desktop</Filename>
+      <Filename>davix2014-visualize-rtgraph3dserver.desktop</Filename>
+      <Filename>davix2014-visualize-rtgraph3dclient.desktop</Filename>
+      <Filename>davix2014-visualize-timesearcher1.desktop</Filename>
+      <Filename>davix2014-visualize-tnv.desktop</Filename>
       <Filename>davix2014-visualize-treemap.desktop</Filename>
+      <Filename>davix2014-visualize-zenmap.desktop</Filename>
     </Include>
   </Menu>
 
+  
   <!-- Accessories submenu -->
   <Menu>
     <Name>Accessories</Name>
@@ -366,10 +433,6 @@
 
 <!-- Separator between menus and gnome-app-install -->
 <Layout>
-  <Menuname>davix2014-davix-capture.directory</Menuname>
-  <Menuname>davix2014-davix-process.directory</Menuname>
-  <Menuname>davix2014-davix-visualize.directory</Menuname>
-  <Seperator/>
   <Merge type="menus"/>
   <Merge type="files"/>
   <Separator/>

@@ -6,6 +6,6 @@ Type=Application
 Terminal=true
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=glTail
-Exec=/opt/davix/gltail/bin/gl_tail /opt/davix/gltail/bin/gl_tail.yaml
+Exec=gnome-terminal
 Name=glTail
 Icon=gnome-panel-launcher

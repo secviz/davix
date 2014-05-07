@@ -8,4 +8,4 @@ Icon[en_US]=gnome-panel-launcher
 Name[en_US]=Walrus
 Name=Walrus
 Icon=gnome-panel-launcher
-Exec=/opt/davix/walrus-0.6.3/walrus
+Exec=/opt/davix/script/walrus

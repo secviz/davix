@@ -6,6 +6,6 @@ Type=Application
 Terminal=true
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=Afterglow
-Exec=/opt/davix/afterglow/afterglow.pl
+Exec=gnome-terminal --working-directory=/opt/davix/afterglow
 Name=Afterglow
 Icon=gnome-panel-launcher

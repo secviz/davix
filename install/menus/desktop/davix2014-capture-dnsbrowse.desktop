@@ -5,6 +5,6 @@ Type=Application
 Terminal=true
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=dns browse
-Exec=dns_browse
+Exec=gnome-terminal
 Name=dns browse
 Icon=gnome-panel-launcher

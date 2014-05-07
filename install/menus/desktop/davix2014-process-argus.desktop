@@ -1,0 +1,8 @@
+[Desktop Entry]
+Categories=;
+Encoding=UTF-8
+Exec=gnome-terminal --working-directory=/opt/davix/argus-client/bin
+Hidden=false
+Name=Argus Client
+Terminal=false
+Type=Application

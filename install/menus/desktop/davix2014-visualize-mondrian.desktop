@@ -6,6 +6,6 @@ Type=Application
 Terminal=false
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=Mondrian
-Exec=java -jar /opt/davix/Mondrian/Mondrian.jar
+Exec=bash /opt/davix/scripts/mondrian
 Name=Mondrian
 Icon=gnome-panel-launcher

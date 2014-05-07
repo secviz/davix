@@ -6,6 +6,6 @@ Type=Application
 Terminal=true
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=snort
-Exec=/usr/sbin/snort
+Exec=snort
 Name=snort
 Icon=gnome-panel-launcher

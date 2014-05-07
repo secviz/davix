@@ -5,6 +5,6 @@ Type=Application
 Terminal=true
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=Chaosreader
-Exec=chaosreader
+Exec=gnome-terminal
 Name=Chaosreader
 Icon=gnome-panel-launcher
