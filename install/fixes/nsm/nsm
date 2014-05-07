@@ -1,0 +1,134 @@
+#!/usr/bin/env ruby
+## NSM-Console - A framework for performing network security monitoring
+## Copyright (C) 2007 Matthew Lee Hinman
+## 
+## This library is free software; you can redistribute it and/or
+## modify it under the terms of the GNU Lesser General Public
+## License as published by the Free Software Foundation; either
+## version 2.1 of the License, or (at your option) any later version.
+## 
+## This library is distributed in the hope that it will be useful,
+## but WITHOUT ANY WARRANTY; without even the implied warranty of
+## MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+## Lesser General Public License for more details.
+
+## The following variables will ALWAYS be replaced:
+## ${PCAP_FILE} - The pcap datafile
+## ${PCAP_BASE} - The basename of the pcap datafile
+## ${MODULE_DIR} - The base module directory (modules)
+## ${MODULE_NAME} - The base name (without the .module) of the module
+## ${OUTPUT_DIR} - The base output directory
+
+## Require ruby files
+require 'readline'
+include Readline
+
+## Require commands
+require './lib/command_manager.rb'
+require './lib/commands.rb'
+
+## Required for tab completion
+$tabstrings = CommandManager.get_commands_as_array()
+$tabstrings.push("PCAP_FILE")
+$tabstrings.push("PCAP_BASE")
+$tabstrings.push("OUTPUT_DIR")
+
+## NOTE: THIS DOESN'T WORK YET :X
+# ## We're taking out space so it treats the whole line as 1 string
+#Readline.basic_word_break_characters = Readline.basic_word_break_characters.gsub(/ /,"")
+Readline.completion_proc = lambda{ |s|
+#  result = []
+  #puts "\ns: #{s}\n\n"
+  ## If we have 'toggle', only return module names
+#  if s =~ /^toggle/i and not $modules.empty?
+#    $modules.each { |m|
+#      result.push("toggle " + m.get_name)
+#    }
+#    return result
+#  ## If we have < 1 command, only return commands
+#  elsif (s.split(/ /).length < 2) and s !~ / $/
+#    return CommandManager.get_commands_as_array().find_all{|elm| elm =~ /^#{s}/}
+#  ## If we have 'set', return module names
+#  elsif (s.split(/ /).length < 3) and s =~ /^set /i
+#    if s =~ /[\s\S]+ ([\S]+)/
+#      match = $1
+#    else
+#      match = ""
+#    end
+#    $modules.each { |m|
+#      result.push(s + m.get_name) if m.get_name =~ /#{match}/i
+#    }
+#    puts "res: #{result}"
+#    return result
+#  else
+#    $tabstrings.find_all{|elm| elm =~ /^#{s}/}
+#  end
+#$tabstrings.find_all{|elm| elm =~ /^#{s}/}
+comp_array = Array.new($tabstrings + NSM_Alias.get_alias_names)
+comp_array.find_all{|elm| elm =~ /^#{s}/}
+}
+
+## Require nsm console specific files
+# Logging
+require './lib/logging.rb'
+# The history module
+require './lib/history.rb'
+# Module loading, options and running
+require './lib/nsm_module.rb'
+# Module category function
+require './lib/nsm_category.rb'
+# Helper methods (mostly for commands)
+require './lib/nsm_helper.rb'
+# Alias functions
+require './lib/nsm_alias.rb'
+# Main shell functions
+require './lib/nsm_console.rb'
+# Library for encoding and decoding
+require './lib/encodelib.rb'
+# Library for print and dump
+require './lib/pcaplib.rb'
+# Scholar's pcap library so libpcap isn't supported
+require './lib/pcapparser.rb'
+# Terminal color definitions
+require './lib/colors.rb'
+
+
+## Defaults for variables
+## Default module directory
+$moduledir = "modules"
+## Default output directory
+$outputdir = "${PCAP_BASE}-output"
+
+## List of modules
+$modules = []
+## List of categories
+$categories = []
+## The datafile being worked on
+$datafile = ""
+## The basename of the datafile
+$basefile = ""
+## Color setting (default true)
+$color = true
+
+## Catch our sigterms from being killed
+trap "SIGTERM", proc {
+  puts "SIGTERM Caught, exiting..."
+  exit(0)
+}
+
+#########################
+## Library overloading ##
+#########################
+class String
+  # This is used for rot13 encoding and decoding
+  def rot13
+    tr "a-z", "n-za-m"
+  end
+end
+
+###################
+## Begin program ##
+###################
+
+nsmc = NSM_Console.new(ARGV)
+nsmc.run()
