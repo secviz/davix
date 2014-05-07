@@ -114,7 +114,7 @@ echo "Installing GUESS"
 cd $DPMI/GUESS
 wget -c http://sourceforge.net/projects/guess/files/guess/guess-1.0.3-beta/guess-20070813.zip
 unzip guess-20070813.zip
-mkdir -p $DH/guess
+mv GUESS/guess $DH/guess
 
  echo "#!/bin/sh" >> $DH/guess/guess.sh
  echo "" >> $DH/guess/guess.sh
@@ -127,7 +127,7 @@ mkdir -p $DH/guess
  echo "" >> $DH/guess/guess.sh
  echo "java -DgHome=$GUESS_HOME -classpath $GCLASSPATH \"-Dpython.home=$GUESS_HOME/src\" com.hp.hpl.guess.Guess $@ " >> $DH/guess/guess.sh
  echo "echo $?">> $DH/guess/guess.sh
-
+chmod +x $DH/guess/guess.sh
 
 ## INAV
 echo "Installing INAV"
