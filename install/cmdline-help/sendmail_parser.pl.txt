@@ -1,0 +1,5 @@
+﻿DAVIX Quick Start Help
+----------------------
+
+
+Manual:                sendmail_parser.pl

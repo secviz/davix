@@ -1,8 +1,8 @@
 [Desktop Entry]
 Categories=;
 Encoding=UTF-8
-Exec=firefox -new-window http://localhost:9292/
+Exec=ipython
 Hidden=false
-Name=Logstash
+Name=iPython
 Terminal=false
 Type=Application

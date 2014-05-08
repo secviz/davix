@@ -1,0 +1,10 @@
+﻿DAVIX Quick Start Help
+----------------------
+
+
+Example:        gl_tail --new test.yaml
+                Modify test.yaml to your needs
+                gl_tail test.yaml
+
+
+Manual:                gl_tail --help

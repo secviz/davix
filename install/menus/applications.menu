@@ -53,6 +53,7 @@
       <Filename>davix2014-capture-nfdump.desktop</Filename>            
       <Filename>davix2014-capture-ngrep.desktop</Filename>      
       <Filename>davix2014-capture-nmap.desktop</Filename>      
+      <Filename>davix2014-capture-p0f.desktop</Filename>  
       <Filename>davix2014-capture-prads.desktop</Filename>
       <Filename>davix2014-capture-pradsassetreport.desktop</Filename>
       <Filename>davix2014-capture-sagan.desktop</Filename>
@@ -79,11 +80,11 @@
       <Filename>davix2014-process-afterglow.desktop</Filename> 
       <Filename>davix2014-process-argus.desktop</Filename> 
       <Filename>davix2014-process-chaosreader.desktop</Filename>
-      <Filename>davix2014-process-ipsumdump.desktop</Filename>  
+      <Filename>davix2014-process-ipsumdump.desktop</Filename>   
+      <Filename>davix2014-process-ipython.desktop</Filename>  
       <Filename>davix2014-process-logstash.desktop</Filename>  
       <Filename>davix2014-process-nsmconsole.desktop</Filename>
       <Filename>davix2014-process-padsreport.desktop</Filename>
-      <Filename>davix2014-process-p0f.desktop</Filename>  
       <Filename>davix2014-process-sagan.desktop</Filename>  
       <Filename>davix2014-process-scapy.desktop</Filename>  
       <Filename>davix2014-process-tcpreplay.desktop</Filename>  
@@ -129,6 +130,7 @@
       <Filename>davix2014-visualize-rumint.desktop</Filename>
       <Filename>davix2014-visualize-timesearcher1.desktop</Filename>
       <Filename>davix2014-visualize-tnv.desktop</Filename>
+      <Filename>davix2014-visualize-tulip.desktop</Filename>
       <Filename>davix2014-visualize-treemap.desktop</Filename>
       <Filename>davix2014-visualize-zenmap.desktop</Filename>
     </Include>

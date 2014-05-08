@@ -1,0 +1,15 @@
+﻿DAVIX Quick Start Help
+----------------------
+
+
+Example:        cfgmaker --global 'WorkDir: /tmp' \
+                        --global 'Options[_]: bits,growright' \
+                        --output /tmp/mrtg.cfg public@my.router.foo.bar
+
+
+                mrtg /tmp/mrtg.cfg
+                mrtg /tmp/mrtg.cfg
+                mrtg /tmp/mrtg.cfg
+
+
+                The result HTML page can be found in the WorkDir.

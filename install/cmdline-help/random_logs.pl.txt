@@ -1,0 +1,5 @@
+﻿DAVIX Quick Start Help
+----------------------
+
+
+Manual:                random_logs.pl -h

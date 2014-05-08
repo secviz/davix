@@ -1,0 +1,25 @@
+﻿DAVIX Quick Start Help
+----------------------
+
+
+Example:        pl example.ploticus -o example.png
+
+
+example.ploticus:
+                #proc getdata
+                file: data.ploticus
+                fieldnames: time amount
+                #proc areadef
+                   xscaletype: time hh:mm:ss
+                   xrange: 13:39:14 13:39:30
+                   yrange: 0 30
+                #proc xaxis
+                   stubs: inc 2 seconds
+                   minorticinc: 1 second
+                   stubformat: ss
+                #proc yaxis
+                  stubs: inc 10
+                  grid: color=orange
+                #proc scatterplot
+                xfield: time
+                yfield: amount

@@ -1,0 +1,9 @@
+﻿DAVIX Quick Start Help
+----------------------
+
+
+Example:        echo -e "a,b\nc,d\nc,e" > test.csv
+                cat test.csv | afterglow.pl | neato -Tgif -o test.gif
+
+
+Manual:                afterglow.pl -h

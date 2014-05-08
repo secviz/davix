@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=;
 Encoding=UTF-8
-Exec=service rsyslog stop && service syslog-ng start
+Exec=service rsyslog stop; service syslog-ng start
 Hidden=false
 Name=syslog-ng start
 Terminal=false

@@ -1,0 +1,9 @@
+﻿DAVIX Quick Start Help
+----------------------
+
+
+Example:        p0f -i eth0 -o p0f.log
+
+
+Manual:                p0f --help
+                man p0f

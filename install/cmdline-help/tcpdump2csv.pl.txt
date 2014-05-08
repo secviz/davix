@@ -1,0 +1,21 @@
+﻿DAVIX Quick Start Help
+----------------------
+
+
+Example:        tcpdump -vttttnnelr sniff.cap | tcpdump2csv.pl "sip dip dport" > test.csv
+                cat test.csv | afterglow.pl -c color.properties | neato -Tgif -o test.gif
+
+
+color.properties:
+
+
+                color.source="yellow" if ($fields[0]=~/^192\.168\..*/);
+                color.source="greenyellow" if ($fields[0]=~/^10\..*/);
+                color.source="lightyellow4" if ($fields[0]=~/^172\.16\..*/);
+                color.source="red"
+                color.event="yellow" if ($fields[1]=~/^192\.168\..*/)
+                color.event="greenyellow" if ($fields[1]=~/^10\..*/)
+                color.event="lightyellow4" if ($fields[1]=~/^172\.16\..*/)
+                color.event="red"
+                color.target="blue" if ($fields[2]<1024)
+                color.target="lightblue"
