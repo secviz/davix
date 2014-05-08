@@ -22,7 +22,7 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D RStudio parsers maltego
+mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D RStudio parsers maltego picviz ipsumdump
 
 
 ## Afterglow
@@ -355,16 +355,27 @@ cd $DPMI/maltego
 wget -c http://www.paterva.com/malv34/community/MaltegoCE.v3.4.0.5004.deb
 dpkg -i MaltegoCE.v3.4.05004.deb
 
-## Unknown Packages ##
+## PicViz GUI
+cd $DPMI/picviz
+wget -c http://www.picviz.com/downloads/picviz-latest.tar.bz2
+bunzip2 picviz-latest.tar.bz2
+tar -xvf picviz-latest.tar
+cd libpicviz
+find -iname '*cmake*' -not -name CMakeLists.txt -exec rm -rf {} \;
+apt-get install libevent-dev libcairo2-dev
+make
+cd picviz-latest
+cd picviz-gui
+python setup.py install
 
-## PyInline
-#echo "Installing PyInLine"
-#cd $DPMI/PyInline
-#wget -c http://sourceforge.net/projects/pyinline/files/pyinline/0.03/PyInline-0.03.tar.gz
-#tar -xvpf PyInline-0.03.tar.gz
-#cd PyInline-0.03
-# python setup.py build
-# python setup.py install
+# ipsumdump
+cd $DMPI/ipsumdump
+wget -c http://www.read.seas.harvard.edu/~kohler/ipsumdump/ipsumdump-1.84.tar.gz
+tar -xzf ipsumdump-1.84.tar.gz
+cd ipsumpdump-1.84
+./configure
+make
+make install
 
 ## Copy over Run Scripts
 mkdir $DH/scripts
