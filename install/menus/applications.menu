@@ -1,698 +1,355 @@
-<!DOCTYPE Menu
-  PUBLIC '-//freedesktop//DTD Menu 1.0//EN'
-  'http://standards.freedesktop.org/menu-spec/menu-1.0.dtd'>
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN"
+ "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+
 <Menu>
-	<Name>Applications</Name>
-	<MergeFile type="parent">/etc/xdg/menus/gnome-applications.menu</MergeFile>
-	<Menu>
-		<Name>DAVIX</Name>
-		<Directory>davix2014-davix.directory</Directory>
-		s
-		<Menu>
-			<Name>Capture</Name>
-			<Directory>davix2014-davix-capture.directory</Directory>
-			<Menu>
-				<Name>Argus</Name>
-				<Directory>davix2014-capture-argus.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-argusserverstart.desktop</Filename>
-					<Filename>davix2014-capture-argusserverstop.desktop</Filename>
-					<Filename>davix2014-capture-argusserverrestart.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>BroIDS</Name>
-				<Directory>davix2014-capture-broids.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-broids.desktop</Filename>
-					<Filename>davix2014-capture-broidsstart.desktop</Filename>
-					<Filename>davix2014-capture-broidsstop.desktop</Filename>
-				</Include>
-			</Menu>
 
-			<Menu>
-				<Name>Chaosreader</Name>
-				<Directory>davix2014-capture-chaosreader.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-chaosreader.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>dns-browse</Name>
-				<Directory>davix2014-capture-dnsbrowse.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-dnsbrowse.desktop</Filename>
-					<Filename>davix2014-capture-dnstree.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>dnstop</Name>
-				<Directory>davix2014-capture-dnstop.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-dnstop.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>EtherApe</Name>
-				<Directory>davix2014-capture-etherape.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-etherape.desktop</Filename>
-				</Include>
-			</Menu>
+  <Name>Applications</Name>
+  <Directory>X-GNOME-Menu-Applications.directory</Directory>
 
-			<Menu>
-				<Name>EventLog</Name>
-				<Directory>davix2014-capture-eventlog.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-eventlog.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>htdig</Name>
-				<Directory>davix2014-capture-htdig.directory</Directory>
-				<Include>
-					<Filename>Item</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>LogStash</Name>
-				<Directory>davix2014-capture-logstash.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-logstash.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>nfdump</Name>
-				<Directory>davix2014-capture-nfdump.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-nfcapd.desktop</Filename>
-					<Filename>davix2014-capture-nfdump.desktop</Filename>
-					<Filename>davix2014-capture-nfreplay.desktop</Filename>
-					<Filename>davix2014-capture-nfexpire.desktop</Filename>
-					<Filename>davix2014-capture-nfanon.desktop</Filename>
-					<Filename>davix2014-capture-nfprofile.desktop</Filename>
-				</Include>
-			</Menu>
+  <!-- Scan legacy dirs first, as later items take priority -->
+  <LegacyDir>/etc/X11/applnk</LegacyDir>
+  <LegacyDir>/usr/share/gnome/apps</LegacyDir>
 
-			<Menu>
-				<Name>ngrep</Name>
-				<Directory>davix2014-capture-ngrep.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-ngrep.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>nmap</Name>
-				<Directory>davix2014-capture-nmap.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-nmap.desktop</Filename>
-					<Filename>davix2014-capture-ndiff.desktop</Filename>
-					<Filename>davix2014-capture-ncat.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>p0f</Name>
-				<Directory>davix2014-capture-p0f.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-p0f.desktop</Filename>
-					<Filename>davix2014-capture-p0fstart.desktop</Filename>
-					<Filename>davix2014-capture-p0fstop.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>PADS</Name>
-				<Directory>davix2014-capture-pads.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-padsstart.desktop</Filename>
-					<Filename>davix2014-capture-padsstop.desktop</Filename>
-					<Filename>davix2014-capture-padsrestart.desktop</Filename>
-					<Filename>davix2014-capture-padseditconfig.desktop</Filename>
-				</Include>
-			</Menu>
+  <!-- Read standard .directory and .desktop file locations -->
+  <DefaultAppDirs/>
+  <DefaultDirectoryDirs/>
 
-			<Menu>
-				<Name>PRADS</Name>
-				<Directory>davix2014-capture-prads.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-prads.desktop</Filename>
-					<Filename>davix2014-capture-pradsassetreport.desktop</Filename>
-					<Filename>davix2014-capture-prads2snort.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>Sagan</Name>
-				<Directory>davix2014-capture-sagan.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-sagan.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>Scapy</Name>
-				<Directory>davix2014-capture-scapy.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-scapy.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>Snort</Name>
-				<Directory>davix2014-capture-snort.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-snort.desktop</Filename>
-					<Filename>davix2014-capture-snortstart.desktop</Filename>
-					<Filename>davix2014-capture-snortstop.desktop</Filename>
-				</Include>
-			</Menu>
+  <!-- DAVIX submenu -->
+  <Menu>
+    <Name>DAVIX</Name>
+    <Directory>davix2014-davix.directory</Directory>
+    <Include>
+      <Filename>davix2014-visualize-treemap.desktop</Filename>
+    </Include>
+  </Menu>
 
-			<Menu>
-				<Name>syslog-ng</Name>
-				<Directory>davix2014-capture-syslogng.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-syslogng.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>rsyslog</Name>
-				<Directory>davix2014-capture-rsyslog.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-rsyslog.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>tcpdump</Name>
-				<Directory>davix2014-capture-tcpdump.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-tcpdump.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>tcpflow</Name>
-				<Directory>davix2014-capture-tcpflow.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-tcpflow.desktop</Filename>
-				</Include>
-			</Menu>
+  <!-- Accessories submenu -->
+  <Menu>
+    <Name>Accessories</Name>
+    <OnlyUnallocated/>
+    <Directory>Utility.directory</Directory>
+    <Include>
+      <And>
+        <Category>Utility</Category>
+       <!-- Accessibility spec must have either the Utility or Settings
+            category, and we display an accessibility submenu already for
+            the ones that do not have Settings, so don't display accessibility
+            applications here -->
+        <Not><Category>Accessibility</Category></Not>
+        <Not><Category>System</Category></Not>
 
-			<Menu>
-				<Name>tcpstat</Name>
-				<Directory>davix2014-capture-tcpstat.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-tcpstat.desktop</Filename>
-					<Filename>davix2014-capture-tcpprof.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>ttt</Name>
-				<Directory>davix2014-capture-ttt.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-ttt.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>udns-utils</Name>
-				<Directory>davix2014-capture-udnsutils.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-dnsget.desktop</Filename>
-					<Filename>davix2014-capture-rblcheck.desktop</Filename>
-				</Include>
-			</Menu>
+        <!-- Also exclude everything we put in the X-GNOME-Utilities
+             whitelist -->
+        <Not><Filename>file-roller.desktop</Filename></Not>
+        <Not><Filename>gnome-file-roller.desktop</Filename></Not>
+        <Not><Filename>deja-dup-preferences.desktop</Filename></Not>
+        <Not><Filename>gcalctool.desktop</Filename></Not>
+        <Not><Filename>gucharmap.desktop</Filename></Not>
+        <Not><Filename>gnome-gucharmap.desktop</Filename></Not>
+        <Not><Filename>gnome-font-viewer.desktop</Filename></Not>
+        <Not><Filename>seahorse.desktop</Filename></Not>
+        <Not><Filename>gnome-terminal.desktop</Filename></Not>
+        <Not><Filename>gnome-tweak-tool.desktop</Filename></Not>
+        <Not><Filename>gnome-disks.desktop</Filename></Not>
+        <Not><Filename>gnome-screenshot.desktop</Filename></Not>
+        <Not><Filename>gnome-yelp.desktop</Filename></Not>
+        <Not><Filename>yelp.desktop</Filename></Not>
+        <Not><Filename>gnome-control-center.desktop</Filename></Not>
+      </And>
+    </Include>
+  </Menu> <!-- End Accessories -->
 
-			<Menu>
-				<Name>whois</Name>
-				<Directory>davix2014-capture-whois.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-whois.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>Wireshark</Name>
-				<Directory>davix2014-capture-wireshark.directory</Directory>
-				<Include>
-					<Filename>davix2014-capture-wireshark.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Layout>
-				<Merge type="menus"/>
-				<Menuname>davix2014-capture-argus.directory</Menuname>
-				<Menuname>davix2014-capture-broids.directory</Menuname>
-				<Menuname>davix2014-capture-chaosreader.directory</Menuname>
-				<Menuname>davix2014-capture-dnsbrowse.directory</Menuname>
-				<Menuname>davix2014-capture-dnstop.directory</Menuname>
-				<Menuname>davix2014-capture-etherape.directory</Menuname>
-				<Menuname>davix2014-capture-eventlog.directory</Menuname>
-				<Menuname>davix2014-capture-htdig.directory</Menuname>
-				<Menuname>davix2014-capture-logstash.directory</Menuname>
-				<Menuname>davix2014-capture-nfdump.directory</Menuname>
-				<Menuname>davix2014-capture-ngrep.directory</Menuname>
-				<Menuname>davix2014-capture-nmap.directory</Menuname>
-				<Menuname>davix2014-capture-p0f.directory</Menuname>
-				<Menuname>davix2014-capture-pads.directory</Menuname>
-				<Menuname>davix2014-capture-prads.directory</Menuname>
-				<Menuname>davix2014-capture-sagan.directory</Menuname>
-				<Menuname>davix2014-capture-scapy.directory</Menuname>
-				<Menuname>davix2014-capture-snort.directory</Menuname>
-				<Menuname>davix2014-capture-syslogng.directory</Menuname>
-				<Menuname>davix2014-capture-rsyslog.directory</Menuname>
-				<Menuname>davix2014-capture-tcpdump.directory</Menuname>
-				<Menuname>davix2014-capture-tcpflow.directory</Menuname>
-				<Menuname>davix2014-capture-tcpstat.directory</Menuname>
-				<Menuname>davix2014-capture-ttt.directory</Menuname>
-				<Menuname>davix2014-capture-udnsutils.directory</Menuname>
-				<Menuname>davix2014-capture-whois.directory</Menuname>
-				<Menuname>davix2014-capture-wireshark.directory</Menuname>
-				<Merge type="files"/>
-			</Layout>
-		</Menu>
-		<Menu>
-			<Name>Process</Name>
-			<Directory>davix2014-davix-process.directory</Directory>
-			<Menu>
-				<Name>Afterglow</Name>
-				<Directory>davix2014-process-afterglow.directory</Directory>
-				<Include>
-					<Filename>davix2014-process-ipfw2csv.desktop</Filename>
-					<Filename>davix2014-process-mergelogs.desktop</Filename>
-					<Filename>davix2014-process-pf2csv.desktop</Filename>
-					<Filename>davix2014-process-randomlogs.desktop</Filename>
-					<Filename>davix2014-process-sendmailparser.desktop</Filename>
-					<Filename>davix2014-process-snortalert2csv.desktop</Filename>
-					<Filename>davix2014-process-tcpdump2csv.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>Argus</Name>
-				<Directory>davix2014-process-argus.directory</Directory>
-				<Include>
-					<Filename>davix2014-process-ra.desktop</Filename>
-				</Include>
-			</Menu>
 
-			<Menu>
-				<Name>Chaosreader</Name>
-				<Directory>davix2014-process-chaosreader.directory</Directory>
-				<Include>
-					<Filename>davix2014-process-chaosreader.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>LogStash</Name>
-				<Directory>davix2014-process-logstash.directory</Directory>
-				<Include>
-					<Filename>davix2014-process-logstash.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>netsed</Name>
-				<Directory>davix2014-process-netsed.directory</Directory>
-				<Include>
-					<Filename>davix2014-process-netsed.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>nsm-console</Name>
-				<Directory>davix2014-process-nsmconsole.directory</Directory>
-				<Include>
-					<Filename>davix2014-process-nsmconsole.desktop</Filename>
-				</Include>
-			</Menu>
+  <!-- Accessibility submenu -->
+  <Menu>
+    <Name>Universal Access</Name>
+    <OnlyUnallocated/>
+    <Directory>Utility-Accessibility.directory</Directory>
+    <Include>
+      <And>
+        <Category>Accessibility</Category>
+        <Not><Category>Settings</Category></Not>
+      </And>
+    </Include>
+  </Menu> <!-- End Accessibility -->
 
-			<Menu>
-				<Name>PADS</Name>
-				<Directory>davix2014-process-pads.directory</Directory>
-				<Include>
-					<Filename>davix2014-process-padsreport.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>Sagan</Name>
-				<Directory>davix2014-process-sagan.directory</Directory>
-				<Include>
-					<Filename>davix2014-process-sagan.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>Scapy</Name>
-				<Directory>davix2014-process-scapy.directory</Directory>
-				<Include>
-					<Filename>davix2014-process-scapy.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>tcpreplay</Name>
-				<Directory>davix2014-process-tcpreplay.directory</Directory>
-				<Include>
-					<Filename>davix2014-process-tcpreplay.desktop</Filename>
-					<Filename>davix2014-process-tcprewrite.desktop</Filename>
-					<Filename>davix2014-process-tcpprep.desktop</Filename>
-					<Filename>davix2014-process-tcpbridge.desktop</Filename>
-					<Filename>davix2014-process-tcpreplay-edit.desktop</Filename>
-				</Include>
-			</Menu>
+  <!-- Education -->
+  <Menu>
+    <Name>Education</Name>
+    <Directory>Education.directory</Directory>
+    <Include>
+      <And>
+        <Category>Education</Category>
+        <Not><Category>Science</Category></Not>
+      </And>
+    </Include>
+  </Menu> <!-- End Education -->
 
-			<Menu>
-				<Name>tcpslice</Name>
-				<Directory>davix2014-process-tcpslice.directory</Directory>
-				<Include>
-					<Filename>davix2014-process-tcpslice.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>tcpxtract</Name>
-				<Directory>davix2014-process-tcpxtract.directory</Directory>
-				<Include>
-					<Filename>davix2014-process-tcpxtract.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Layout>
-				<Merge type="menus"/>
-				<Menuname>davix2014-process-afterglow.directory</Menuname>
-				<Menuname>davix2014-process-argus.directory</Menuname>
-				<Menuname>davix2014-process-chaosreader.directory</Menuname>
-				<Menuname>davix2014-process-logstash.directory</Menuname>
-				<Menuname>davix2014-process-netsed.directory</Menuname>
-				<Menuname>davix2014-process-nsmconsole.directory</Menuname>
-				<Menuname>davix2014-process-pads.directory</Menuname>
-				<Menuname>davix2014-process-sagan.directory</Menuname>
-				<Menuname>davix2014-process-scapy.directory</Menuname>
-				<Menuname>davix2014-process-tcpreplay.directory</Menuname>
-				<Menuname>davix2014-process-tcpslice.directory</Menuname>
-				<Menuname>davix2014-process-tcpxtract.directory</Menuname>
-				<Merge type="files"/>
-			</Layout>
-		</Menu>
-		<Menu>
-			<Name>Visualize</Name>
-			<Directory>davix2014-davix-visualize.directory</Directory>
-			<Menu>
-				<Name>ChartDirector</Name>
-				<Directory>davix2014-visualize-chartdirector.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-chartdirector.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>Cytoscape</Name>
-				<Directory>davix2014-visualize-cytoscape.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-cytoscape.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>EtherApe</Name>
-				<Directory>davix2014-visualize-etherape.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-etherape.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>FlowTag</Name>
-				<Directory>davix2014-visualize-flowtag.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-flowtag.desktop</Filename>
-				</Include>
-			</Menu>
+  <!-- Internet -->
+  <Menu>
+    <Name>Internet</Name>
+    <OnlyUnallocated/>
+    <Directory>Network.directory</Directory>
+    <Include>
+      <And>
+        <Category>Network</Category>
+	<Not><Category>X-GNOME-WebApplication</Category></Not>
+        <Not><Filename>vinagre.desktop</Filename></Not>
+      </And>
+    </Include>
+  </Menu>   <!-- End Internet -->
 
-			<Menu>
-				<Name>GGobi</Name>
-				<Directory>davix2014-visualize-ggobi.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-ggobi.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>glTail</Name>
-				<Directory>davix2014-visualize-gltail.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-gltail.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>GNUPlot</Name>
-				<Directory>davix2014-visualize-gnuplot.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-gnuplot.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>Google Earth</Name>
-				<Directory>davix2014-visualize-googleearth.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-googleearth.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>GraphViz</Name>
-				<Directory>davix2014-visualize-graphviz.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-dot.desktop</Filename>
-					<Filename>davix2014-visualize-dotty.desktop</Filename>
-					<Filename>davix2014-visualize-neato.desktop</Filename>
-					<Filename>davix2014-visualize-lneato.desktop</Filename>
-																				
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>GUESS</Name>
-				<Directory>davix2014-visualize-guess.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-guess.desktop</Filename>
-				</Include>
-			</Menu>
+  <!-- Web Applications -->
+  <Menu>
+    <Name>Web Applications</Name>
+    <Directory>X-GNOME-WebApplications.directory</Directory>
+    <Include>
+      <And>
+	<Category>Network</Category>
+	<Category>X-GNOME-WebApplication</Category>
+      </And>
+    </Include>
+  </Menu>
 
-			<Menu>
-				<Name>INAV</Name>
-				<Directory>davix2014-visualize-inav.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-inavserver.desktop</Filename>
-					<Filename>davix2014-visualize-inavclient.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>InetVis</Name>
-				<Directory>davix2014-visualize-inetvis.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-inetvis.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>LogStash</Name>
-				<Directory>davix2014-visualize-logstash.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-logstash.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>Mondrian</Name>
-				<Directory>davix2014-visualize-mondrian.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-mondrian.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>MRTG</Name>
-				<Directory>davix2014-visualize-mrtg.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-mrtg.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>Netgrok</Name>
-				<Directory>davix2014-visualize-netgrok.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-netgrok.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>Octave</Name>
-				<Directory>davix2014-visualize-octave.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-octave.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>Parvis</Name>
-				<Directory>davix2014-visualize-parvis.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-parvis.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>PicViz</Name>
-				<Directory>davix2014-visualize-picviz.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-picviz.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>Ploticus</Name>
-				<Directory>davix2014-visualize-ploticus.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-ploticus.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>Processing</Name>
-				<Directory>davix2014-visualize-processing.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-processing.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>R Project</Name>
-				<Directory>davix2014-visualize-rproject.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-r.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>R Studio</Name>
-				<Directory>davix2014-visualize-rstudio.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-rstudio.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>RRDTool</Name>
-				<Directory>davix2014-visualize-rrdtool.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-rrdtool.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>RT Graph 3D</Name>
-				<Directory>davix2014-visualize-rtgraph3d.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-rtgraph3dclient.desktop</Filename>
-					<Filename>davix2014-visualize-rtgraph3dserver.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>rumint</Name>
-				<Directory>davix2014-visualize-rumint.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-rumint.desktop</Filename>
-				</Include>
-			</Menu>
-			
-			<Menu>
-				<Name>Seeds of Contempt</Name>
-				<Directory>davix2014-visualize-seedsofcontempt.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-seedsofcontempt.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>Timesearcher 1</Name>
-				<Directory>davix2014-visualize-timesearcher1.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-timesearcher1.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>tnv</Name>
-				<Directory>davix2014-visualize-tnv.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-tnv.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>Treemap</Name>
-				<Directory>davix2014-visualize-treemap.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-treemap.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>Tulip</Name>
-				<Directory>davix2014-visualize-tulip.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-tulip.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>Walrus</Name>
-				<Directory>davix2014-visualize-walrus.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-walrus.desktop</Filename>
-				</Include>
-			</Menu>
-			<Menu>
-				<Name>ZenMap</Name>
-				<Directory>davix2014-visualize-zenmap.directory</Directory>
-				<Include>
-					<Filename>davix2014-visualize-zenmap.desktop</Filename>
-				</Include>
-			</Menu>		
-			
-			
-			<Layout>
-				<Merge type="menus"/>
-				<Menuname>davix2014-visualize-chartdirector.directory</Menuname>
-				<Menuname>davix2014-visualize-cytoscape.directory</Menuname>
-				<Menuname>davix2014-visualize-etherape.directory</Menuname>
-				<Menuname>davix2014-visualize-flowtag.directory</Menuname>
-				<Menuname>davix2014-visualize-ggobi.directory</Menuname>
-				<Menuname>davix2014-visualize-gltail.directory</Menuname>
-				<Menuname>davix2014-visualize-gnuplot.directory</Menuname>
-				<Menuname>davix2014-visualize-googleearth.directory</Menuname>
-				<Menuname>davix2014-visualize-graphviz.directory</Menuname>
-				<Menuname>davix2014-visualize-guess.directory</Menuname>
-				<Menuname>davix2014-visualize-inav.directory</Menuname>
-				<Menuname>davix2014-visualize-logstash.directory</Menuname>
-				<Menuname>davix2014-visualize-mondrian.directory</Menuname>
-				<Menuname>davix2014-visualize-mrtg.directory</Menuname>
-				<Menuname>davix2014-visualize-netgrok.directory</Menuname>
-				<Menuname>davix2014-visualize-octave.directory</Menuname>
-				<Menuname>davix2014-visualize-parvis.directory</Menuname>
-				<Menuname>davix2014-visualize-picviz.directory</Menuname>
-				<Menuname>davix2014-visualize-ploticus.directory</Menuname>
-				<Menuname>davix2014-visualize-processing.directory</Menuname>
-				<Menuname>davix2014-visualize-rproject.directory</Menuname>				
-				<Menuname>davix2014-visualize-rstudio.directory</Menuname>
-				<Menuname>davix2014-visualize-rrdtool.directory</Menuname>
-				<Menuname>davix2014-visualize-rtgraph3d.directory</Menuname>
-				<Menuname>davix2014-visualize-rumint.directory</Menuname>
-				<Menuname>davix2014-visualize-seedsofcontempt.directory</Menuname>
-				<Menuname>davix2014-visualize-timesearcher1.directory</Menuname>
-				<Menuname>davix2014-visualize-tnv.directory</Menuname>
-				<Menuname>davix2014-visualize-treemap.directory</Menuname>
-				<Menuname>davix2014-visualize-tulip.directory</Menuname>
-				<Menuname>davix2014-visualize-walrus.directory</Menuname>
-				<Menuname>davix2014-visualize-zenmap.directory</Menuname>			
-				<Merge type="files"/>
-			</Layout>
-		</Menu>
-	</Menu>
-</Menu>
+  <!-- Office -->
+  <Menu>
+    <Name>Office</Name>
+    <OnlyUnallocated/>
+    <Directory>Office.directory</Directory>
+    <Include>
+      <And>
+        <Category>Office</Category>
+        <Not><Filename>evince.desktop</Filename></Not>
+        <Not><Filename>gnome-dictionary.desktop</Filename></Not>
+      </And>
+    </Include>
+  </Menu> <!-- End Office -->
+
+  <!-- Sundry -->
+  <Menu>
+    <Name>Sundry</Name>
+    <Directory>X-GNOME-Sundry.directory</Directory>
+    <Include>
+      <Filename>alacarte.desktop</Filename>
+      <Filename>caribou.desktop</Filename>
+      <Filename>dconf-editor.desktop</Filename>
+      <Filename>fedora-im-chooser.desktop</Filename>
+      <Filename>fedora-release-notes.desktop</Filename>
+      <Filename>firewall-config.desktop</Filename>
+      <Filename>flash-player-properties.desktop</Filename>
+      <Filename>gconf-editor.desktop</Filename>
+      <Filename>gnome-abrt.desktop</Filename>
+      <Filename>fedora-abrt.desktop</Filename>
+      <Filename>gnome-orca.desktop</Filename>
+      <Filename>gnome-power-statistics.desktop</Filename>
+      <Filename>gnome-user-share-properties.desktop</Filename>
+      <Filename>ibus.desktop</Filename>
+      <Filename>ibus-daemon.desktop</Filename>
+      <Filename>ibus-setup-anthy.desktop</Filename>
+      <Filename>ibus-setup.desktop</Filename>
+      <Filename>ibus-setup-hangul.desktop</Filename>
+      <Filename>ibus-setup-libbopomofo.desktop</Filename>
+      <Filename>ibus-setup-libpinyin.desktop</Filename>
+      <Filename>ibus-setup-m17n.desktop</Filename>
+      <Filename>ibus-setup-typing-booster.desktop</Filename>
+      <Filename>im-chooser.desktop</Filename>
+      <Filename>itweb-settings.desktop</Filename>
+      <Filename>jhbuild.desktop</Filename>
+      <Filename>javaws.desktop</Filename>
+      <Filename>java-1.7.0-openjdk-jconsole.desktop</Filename>
+      <Filename>java-1.7.0-openjdk-policytool.desktop</Filename>
+      <Filename>log4j-chainsaw.desktop</Filename>
+      <Filename>log4j-logfactor5.desktop</Filename>
+      <Filename>nm-connection-editor.desktop</Filename>
+      <Filename>orca.desktop</Filename>
+      <Filename>setroubleshoot.desktop</Filename>
+      <Filename>authconfig.desktop</Filename>
+      <Filename>system-config-date.desktop</Filename>
+      <Filename>system-config-firewall.desktop</Filename>
+      <Filename>system-config-keyboard.desktop</Filename>
+      <Filename>system-config-language.desktop</Filename>
+      <Filename>system-config-printer.desktop</Filename>
+      <Filename>system-config-users.desktop</Filename>
+      <Filename>vino-preferences.desktop</Filename>
+    </Include>
+  </Menu>
+
+  <!-- System Tools-->
+  <Menu>
+    <Name>System</Name>
+    <OnlyUnallocated/>
+    <Directory>System-Tools.directory</Directory>
+    <Include>
+      <And>
+        <Category>System</Category>
+        <Not><Category>Settings</Category></Not>
+        <Not><Category>Game</Category></Not>
+        <Not><Filename>baobab.desktop</Filename></Not>
+        <Not><Filename>gnome-system-log.desktop</Filename></Not>
+        <Not><Filename>gnome-system-monitor.desktop</Filename></Not>
+      </And>
+    </Include>
+    <Menu>
+      <Name>Preferences</Name>
+      <Directory>Settings.directory</Directory>
+      <Include>
+        <And>
+          <Category>Settings</Category>
+          <Not>
+            <Or>
+              <Category>System</Category>
+              <Category>X-GNOME-Settings-Panel</Category>
+              <Filename>alacarte.desktop</Filename>
+              <Filename>caribou.desktop</Filename>
+              <Filename>dconf-editor.desktop</Filename>
+              <Filename>fedora-im-chooser.desktop</Filename>
+              <Filename>fedora-release-notes.desktop</Filename>
+              <Filename>firewall-config.desktop</Filename>
+              <Filename>flash-player-properties.desktop</Filename>
+              <Filename>gconf-editor.desktop</Filename>
+              <Filename>gnome-abrt.desktop</Filename>
+              <Filename>fedora-abrt.desktop</Filename>
+              <Filename>gnome-orca.desktop</Filename>
+              <Filename>gnome-power-statistics.desktop</Filename>
+              <Filename>gnome-user-share-properties.desktop</Filename>
+              <Filename>ibus.desktop</Filename>
+              <Filename>ibus-daemon.desktop</Filename>
+              <Filename>ibus-setup-anthy.desktop</Filename>
+              <Filename>ibus-setup.desktop</Filename>
+              <Filename>ibus-setup-hangul.desktop</Filename>
+              <Filename>ibus-setup-libbopomofo.desktop</Filename>
+              <Filename>ibus-setup-libpinyin.desktop</Filename>
+              <Filename>ibus-setup-m17n.desktop</Filename>
+              <Filename>ibus-setup-typing-booster.desktop</Filename>
+              <Filename>im-chooser.desktop</Filename>
+              <Filename>itweb-settings.desktop</Filename>
+              <Filename>jhbuild.desktop</Filename>
+              <Filename>javaws.desktop</Filename>
+              <Filename>java-1.7.0-openjdk-jconsole.desktop</Filename>
+              <Filename>java-1.7.0-openjdk-policytool.desktop</Filename>
+              <Filename>log4j-chainsaw.desktop</Filename>
+              <Filename>log4j-logfactor5.desktop</Filename>
+              <Filename>nm-connection-editor.desktop</Filename>
+              <Filename>orca.desktop</Filename>
+              <Filename>setroubleshoot.desktop</Filename>
+              <Filename>authconfig.desktop</Filename>
+              <Filename>system-config-date.desktop</Filename>
+              <Filename>system-config-firewall.desktop</Filename>
+              <Filename>system-config-keyboard.desktop</Filename>
+              <Filename>system-config-language.desktop</Filename>
+              <Filename>system-config-printer.desktop</Filename>
+              <Filename>system-config-users.desktop</Filename>
+              <Filename>vino-preferences.desktop</Filename>
+            </Or>
+          </Not>
+        </And>
+      </Include>
+    </Menu>
+    <Menu>
+      <Name>Administration</Name>
+      <Directory>Settings-System.directory</Directory>
+      <Include>
+        <And>
+          <Category>Settings</Category>
+          <Category>System</Category>
+          <Not>
+            <Or>
+              <Category>X-GNOME-Settings-Panel</Category>
+              <Filename>alacarte.desktop</Filename>
+              <Filename>caribou.desktop</Filename>
+              <Filename>dconf-editor.desktop</Filename>
+              <Filename>fedora-im-chooser.desktop</Filename>
+              <Filename>fedora-release-notes.desktop</Filename>
+              <Filename>firewall-config.desktop</Filename>
+              <Filename>flash-player-properties.desktop</Filename>
+              <Filename>gconf-editor.desktop</Filename>
+              <Filename>gnome-abrt.desktop</Filename>
+              <Filename>fedora-abrt.desktop</Filename>
+              <Filename>gnome-orca.desktop</Filename>
+              <Filename>gnome-power-statistics.desktop</Filename>
+              <Filename>gnome-user-share-properties.desktop</Filename>
+              <Filename>ibus.desktop</Filename>
+              <Filename>ibus-daemon.desktop</Filename>
+              <Filename>ibus-setup-anthy.desktop</Filename>
+              <Filename>ibus-setup.desktop</Filename>
+              <Filename>ibus-setup-hangul.desktop</Filename>
+              <Filename>ibus-setup-libbopomofo.desktop</Filename>
+              <Filename>ibus-setup-libpinyin.desktop</Filename>
+              <Filename>ibus-setup-m17n.desktop</Filename>
+              <Filename>ibus-setup-typing-booster.desktop</Filename>
+              <Filename>im-chooser.desktop</Filename>
+              <Filename>itweb-settings.desktop</Filename>
+              <Filename>jhbuild.desktop</Filename>
+              <Filename>javaws.desktop</Filename>
+              <Filename>java-1.7.0-openjdk-jconsole.desktop</Filename>
+              <Filename>java-1.7.0-openjdk-policytool.desktop</Filename>
+              <Filename>log4j-chainsaw.desktop</Filename>
+              <Filename>log4j-logfactor5.desktop</Filename>
+              <Filename>nm-connection-editor.desktop</Filename>
+              <Filename>orca.desktop</Filename>
+              <Filename>setroubleshoot.desktop</Filename>
+              <Filename>authconfig.desktop</Filename>
+              <Filename>system-config-date.desktop</Filename>
+              <Filename>system-config-firewall.desktop</Filename>
+              <Filename>system-config-keyboard.desktop</Filename>
+              <Filename>system-config-language.desktop</Filename>
+              <Filename>system-config-printer.desktop</Filename>
+              <Filename>system-config-users.desktop</Filename>
+              <Filename>vino-preferences.desktop</Filename>
+            </Or>
+          </Not>
+        </And>
+      </Include>
+    </Menu>
+  </Menu>   <!-- End System Tools -->
+
+  <!-- System Settings -->
+  <Menu>
+    <Name>System Settings</Name>
+    <Directory>X-GNOME-SystemSettings.directory</Directory>
+    <Include>
+      <Category>X-GNOME-Settings-Panel</Category>
+    </Include>
+  </Menu>
+
+  <!-- Utilities submenu -->
+  <Menu>
+    <Name>Utilities</Name>
+    <Directory>X-GNOME-Utilities.directory</Directory>
+    <Include>
+      <Filename>file-roller.desktop</Filename>
+      <Filename>gcalctool.desktop</Filename>
+      <Filename>gnome-font-viewer.desktop</Filename>
+      <Filename>gucharmap.desktop</Filename>
+      <Filename>seahorse.desktop</Filename>
+      <Filename>gnome-terminal.desktop</Filename>
+      <Filename>deja-dup-preferences.desktop</Filename>
+      <Filename>gnome-dictionary.desktop</Filename>
+      <Filename>evince.desktop</Filename>
+      <Filename>eog.desktop</Filename>
+      <Filename>baobab.desktop</Filename>
+      <Filename>gnome-system-log.desktop</Filename>
+      <Filename>gnome-system-monitor.desktop</Filename>
+      <Filename>vinagre.desktop</Filename>
+      <Filename>gnome-tweak-tool.desktop</Filename>
+      <Filename>gnome-disks.desktop</Filename>
+      <Filename>gnome-screenshot.desktop</Filename>
+      <Filename>gnome-yelp.desktop</Filename>
+      <Filename>yelp.desktop</Filename>
+      <Filename>gnome-control-center.desktop</Filename>
+    </Include>
+  </Menu>
+
+<Include>
+  <Filename>ubuntu-software-center.desktop</Filename>
+</Include>
+
+<!-- Separator between menus and gnome-app-install -->
+<Layout>
+  <Merge type="menus"/>
+  <Merge type="files"/>
+  <Separator/>
+  <Filename>ubuntu-software-center.desktop</Filename>
+</Layout>
+
+</Menu> <!-- End Applications -->
