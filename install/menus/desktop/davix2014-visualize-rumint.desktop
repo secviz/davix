@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=;
 Comment=rumint 2.14
-Exec=env WINEPREFIX="/home/davix/.wine" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/davix/.wine/dosdevices/c:/users/davix/Start\\ Menu/Programs/rumint\\ 2.14/rumint\\ 2.14.LNK
+Exec=wine Ò/home/davix/.wine/drive_c/Program Files/rumint/rumint_214.exe"
 Hidden=false
 Icon=14E5_rumint_214.0
 Name=rumint 2.14

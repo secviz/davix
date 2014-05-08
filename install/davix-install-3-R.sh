@@ -29,4 +29,11 @@ wget -c http://cran.r-project.org/src/contrib/ellipse_0.3-8.tar.gz
 	R CMD INSTALL FactoMineR_1.26.tar.gz
 	R CMD INSTALL HH_3.0-4.tar.gz
 
+## R Studio
+mkdir $DPMI/RStudio
+echo "Installing R Studio"
+cd $DPMI/RStudio
+wget -c http://download1.rstudio.org/rstudio-0.98.501-i386.deb
+dpkg -i rstudio-0.98.501-i386.deb
+
 

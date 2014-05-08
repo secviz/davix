@@ -1,0 +1,7 @@
+[Desktop Entry]
+Categories=;
+Exec=maltego_tungsten_ce_
+Hidden=false
+Name=Maltego
+StartupNotify=true
+Type=Application

@@ -6,7 +6,7 @@
 ##                                                ##
 ## Raffael Marty, Amanda Gellhouse, Edward McCabe ##
 ##                                                ##
-## DEVELOPMENT V1.4.03 27 APR 2014                ##
+## DEVELOPMENT V1.5  13 MAY 2014                  ##
 ####################################################
 
 # init
@@ -22,7 +22,7 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D RStudio parsers maltego picviz ipsumdump
+mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D parsers maltego picviz ipsumdump
 
 
 ## Afterglow
@@ -104,6 +104,13 @@ cd flowtag-2.0.5
 ruby setup.rb
 
 
+## Gephi
+cd $DPMI/gephi
+wget -c https://launchpad.net/gephi/0.8/0.8.2beta/+download/gephi-0.8.2-beta.tar.gz
+tar -xzf gephi-0.8.2-beta.tar.gz
+mv gephi $DH
+
+
 ## glTail
 echo "Installing glTail"
 git clone https://github.com/Fudge/gltail $DH/gltail
@@ -114,7 +121,7 @@ echo "Installing GUESS"
 cd $DPMI/GUESS
 wget -c http://sourceforge.net/projects/guess/files/guess/guess-1.0.3-beta/guess-20070813.zip
 unzip guess-20070813.zip
-mv GUESS/guess $DH/guess
+mv guess $DH/guess
 
  echo "#!/bin/sh" >> $DH/guess/guess.sh
  echo "" >> $DH/guess/guess.sh
@@ -146,6 +153,9 @@ echo "Installing InetVis"
 cd $DPMI/InetVis
 wget -c http://www.cs.ru.ac.za/research/g02v2468/inetvis/0.9.3/inetvis-0.9.3.1.tar.gz
 tar -xvpf inetvis-0.9.3.1.tar.gz
+# Dependency
+wget http://mirrors.kernel.org/ubuntu/pool/main/q/qt-x11-free/libqt3-mt_3.3.8-b-6ubuntu2_i386.deb
+dpkg -i libqt3-mt_3.3.8-b-6ubuntu2_i386.deb
 mv inetvis-0.9.3.1 $DH
 
 
@@ -169,6 +179,12 @@ output {
   elasticsearch { embedded => true }
 }
 EOF
+
+
+## Maltego
+cd $DPMI/maltego
+wget -c http://www.paterva.com/malv34/community/MaltegoCE.v3.4.0.5004.deb
+dpkg -i MaltegoCE.v3.4.05004.deb
 
 
 ## Mondrian
@@ -199,6 +215,8 @@ echo "Installing nsm-console"
 cd $DPMI/nsm-console
 wget -c http://writequit.org/projects/nsm-console/files/nsm-console-0.7.tar.gz
 tar -xvpf nsm-console-0.7.tar.gz
+# Patch 
+mv -f $DPMI/davix/install/fixes/nsm/nsm nsm-console/ 
 mv nsm-console $DH
 
 
@@ -248,13 +266,6 @@ tar -xvpf pulledpork-0.7.0.tar.gz
 mv pulledpork-0.7.0 $DH
 cd $DH/pulledpork-0.7.0
 chmod +x pulledpork.pl
-
-
-## R Studio
-echo "Installing R Studio"
-cd $DPMI/RStudio
-wget -c http://download1.rstudio.org/rstudio-0.98.501-i386.deb
-dpkg -i rstudio-0.98.501-i386.deb
 
 
 ## RT Graph 3D

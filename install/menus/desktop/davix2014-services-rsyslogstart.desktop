@@ -1,8 +1,8 @@
 [Desktop Entry]
 Categories=;
 Encoding=UTF-8
-Exec=gnome-terminal
+Exec=service syslog-ng stop && service rsyslog start
 Hidden=false
-Name=PicViz
+Name=rsyslog start
 Terminal=false
 Type=Application

@@ -6,7 +6,7 @@
 ##                                                ##
 ## Raffael Marty, Amanda Gellhouse, Edward McCabe ##
 ##                                                ##
-## DEVELOPMENT v1.1.05 3 MAY 2014                 ##
+## DEVELOPMENT v1.2   13 MAY 2014                 ##
 ####################################################
 
 apt-get update
@@ -35,6 +35,7 @@ apt-get -y install libmagic-dev libgeoip-dev libssl-dev swig2.0 libssl0.9.8
 apt-get -y install libjava3d-java libjava3d-java-doc libjava3d-jni # Walrus
 apt-get -y install python-visual # RT Graph 3D
 apt-get -y install libpcap # Netgrok
+apt-get -y install ruby-dev # Gollum-site static wiki
 
 ## Services
 apt-get -y install apache2-mpm-prefork mysql-client ntp openssh-server

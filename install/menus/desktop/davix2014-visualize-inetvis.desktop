@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=;
 Encoding=UTF-8
-Exec=
+Exec=/opt/davix/inetvis-0.9.3.1 && ./inetvis
 Hidden=false
 Name=InetVis
 Terminal=false
