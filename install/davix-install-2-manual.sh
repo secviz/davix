@@ -165,6 +165,7 @@ mkdir -p $DH/logstash
 cd $DH/logstash
 wget -c https://download.elasticsearch.org/logstash/logstash/packages/debian/logstash_1.4.0-1-c82dc09_all.deb
 dpkg -i logstash_1.4.0-1*.deb
+sed -i -e 's/ -l .*/"/' /etc/init/logstash-web.conf
 
 # Build the base configuration file
 cat << EOF > /etc/logstash/conf.d/logstash.conf
