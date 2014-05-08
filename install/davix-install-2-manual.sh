@@ -166,6 +166,8 @@ cd $DH/logstash
 wget -c https://download.elasticsearch.org/logstash/logstash/packages/debian/logstash_1.4.1-1-bd507eb_all.deb
 dpkg -i logstash_1.4.1-1*.deb
 sed -i -e 's/ -l .*/"/' /etc/init/logstash-web.conf
+sed -i -e 's/^setuid/#setuid/' /etc/init/logstash.conf
+sed -i -e 's/^setgid/#setgid/' /etc/init/logstash.conf
 
 # Build the base configuration file
 cat << EOF > /etc/logstash/conf.d/logstash.conf
