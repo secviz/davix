@@ -232,7 +232,7 @@ cd p0f-3.06b
 ./build.sh
 mkdir -p $DH/p0f/bin
 mv docs $DH/p0f
-mv p0f $DH/p0f/bin
+mv p0f* $DH/p0f/bin
 cd tools/
 make p0f-sendsyn
 make p0f-sendsyn6 
