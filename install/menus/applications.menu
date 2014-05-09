@@ -366,6 +366,10 @@
 
 <!-- Separator between menus and gnome-app-install -->
 <Layout>
+  <Filename>davix2014-davix-capture.directory</Filename>
+  <Filename>davix2014-davix-process.directory</Filename>
+  <Filename>davix2014-davix-visualize.directory</Filename>
+  <Seperator/>
   <Merge type="menus"/>
   <Merge type="files"/>
   <Separator/>
