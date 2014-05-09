@@ -1,3 +1,0 @@
-cd /opt/davix/walrus-0.6.3
-
-java -cp mp.jar:antlrall-mod.jar:libsea.jar:walrus.jar H3Main
