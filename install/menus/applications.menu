@@ -14,11 +14,31 @@
   <DefaultAppDirs/>
   <DefaultDirectoryDirs/>
 
-  <!-- DAVIX submenu -->
+  <!-- DAVIX Capture submenu -->
   <Menu>
-    <Name>DAVIX</Name>
-    <Directory>davix2014-davix.directory</Directory>
+    <Name>Capture</Name>
+    <Directory>davix2014-davix-capture.directory</Directory>
     <Include>
+      <Filename>davix2014-capture-logstashstart.desktop</Filename>
+      <Filename>davix2014-capture-logstashstop.desktop</Filename>
+    </Include>
+  </Menu>
+  
+  <!-- DAVIX Process submenu -->
+  <Menu>
+    <Name>Process</Name>
+    <Directory>davix2014-davix-process.directory</Directory>
+    <Include>
+      <Filename>davix2014-process-afterglow.desktop</Filename>
+    </Include>
+  </Menu>
+  
+  <!-- DAVIX Visualize submenu -->
+  <Menu>
+    <Name>Visualize</Name>
+    <Directory>davix2014-davix-visualize.directory</Directory>
+    <Include>
+      <Filename>davix2014-visualize-gephi.desktop</Filename>
       <Filename>davix2014-visualize-treemap.desktop</Filename>
     </Include>
   </Menu>

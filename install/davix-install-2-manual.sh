@@ -22,7 +22,7 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D RStudio
+gephi mkdir p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D RStudio
 
 
 ## Afterglow
@@ -325,7 +325,6 @@ mv tmp/walruscsv $DH/walrus-0.6.3
 rm -r tmp
 
 ## Gephi
-mkdir $DPMI/gephi
 cd $DPMI/gephi
 wget -c https://launchpad.net/gephi/0.8/0.8.2beta/+download/gephi-0.8.2-beta.tar.gz
 tar -xzf gephi-0.8.2-beta.tar.gz
@@ -341,3 +340,9 @@ mv gephi $DH
 #cd PyInline-0.03
 # python setup.py build
 # python setup.py install
+
+## Copy over Run Scripts
+mkdir $DH/scripts
+cp $DPMI/davix/install/scripts/* $DH/scripts
+
+

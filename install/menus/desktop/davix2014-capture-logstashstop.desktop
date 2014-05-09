@@ -1,0 +1,8 @@
+[Desktop Entry]
+Categories=;
+Encoding=UTF-8
+Exec=service logstash stop
+Hidden=false
+Name=Logstash Stop
+Terminal=false
+Type=Application

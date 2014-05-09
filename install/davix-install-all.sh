@@ -59,7 +59,7 @@ git clone https://github.com/secviz/davix/
 . $DPMI/davix/install/davix-install-1-apt-get.sh
 . $DPMI/davix/install/davix-install-2-manual.sh
 . $DPMI/davix/install/davix-install-3-R.sh
-. $DPMI/davix/install/davix-install-4-menus.sh
+sudo -u davix sh -c . $DPMI/davix/install/davix-install-4-menus.sh
 . $DPMI/davix/install/davix-config.sh
 
 
