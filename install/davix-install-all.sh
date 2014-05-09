@@ -40,6 +40,9 @@ adduser davix sudo
 # set password for davix
 echo 'davix:davix' | chpasswd
 
+# Add path to scripts
+echo "export PATH=$PATH:/opt/davix/scripts" >> ~/.profile
+
 # Setup the directories
 mkdir -p /opt/davix
 export DPMI="/home/davix/davix-packages-manual-install"
