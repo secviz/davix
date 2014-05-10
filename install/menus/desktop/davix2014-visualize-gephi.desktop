@@ -6,6 +6,6 @@ Type=Application
 Terminal=false
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=Gephi
-Exec=gephi
+Exec=bash /opt/davix/gephi/bin/gephi
 Name=Gephi
 Icon=gnome-panel-launcher

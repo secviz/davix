@@ -6,6 +6,6 @@ Type=Application
 Terminal=false
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=Treemap
-Exec=java -jar /opt/davix/Treemap-4.1.2/treemap.sh
+Exec=bash /opt/davix/scripts/treemap
 Name=Treemap
 Icon=gnome-panel-launcher
