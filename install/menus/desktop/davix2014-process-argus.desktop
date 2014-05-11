@@ -1,8 +1,8 @@
 [Desktop Entry]
 Categories=;
 Encoding=UTF-8
-Exec=/opt/davix/broids/bin/broctl stop
+Exec=gnome-terminal --working-directory=/opt/davix/argus-client/bin
 Hidden=false
-Name=BroIDS Stop
+Name=Argus Client
 Terminal=false
 Type=Application

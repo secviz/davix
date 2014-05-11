@@ -20,6 +20,9 @@
     <Directory>davix2014-davix-capture.directory</Directory>
     <Include>
       <Filename>davix2014-documentation-wiki.desktop</Filename> 
+      <Filename>davix2014-capture-broidsstart.desktop</Filename> 
+      <Filename>davix2014-capture-broidsstop.desktop</Filename> 
+      <Filename>davix2014-capture-broids.desktop</Filename>
       <Filename>davix2014-capture-chaosreader.desktop</Filename>  
       <Filename>davix2014-capture-dnsbrowse.desktop</Filename>  
       <Filename>davix2014-capture-dnstop.desktop</Filename>  
@@ -58,6 +61,7 @@
     <Include>
       <Filename>davix2014-documentation-wiki.desktop</Filename> 
       <Filename>davix2014-process-afterglow.desktop</Filename> 
+      <Filename>davix2014-process-argus.desktop</Filename> 
       <Filename>davix2014-process-chaosreader.desktop</Filename> 
       <Filename>davix2014-process-logstash.desktop</Filename>  
       <Filename>davix2014-process-padsreport.desktop</Filename>  
