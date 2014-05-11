@@ -20,8 +20,33 @@
     <Directory>davix2014-davix-capture.directory</Directory>
     <Include>
       <Filename>davix2014-documentation-wiki.desktop</Filename> 
+      <Filename>davix2014-capture-chaosreader.desktop</Filename>  
+      <Filename>davix2014-capture-dnsbrowse.desktop</Filename>  
+      <Filename>davix2014-capture-dnstop.desktop</Filename>  
+      <Filename>davix2014-capture-etherape.desktop</Filename> 
       <Filename>davix2014-capture-logstashstart.desktop</Filename>
-      <Filename>davix2014-capture-logstashstop.desktop</Filename>
+      <Filename>davix2014-capture-logstashstop.desktop</Filename>      
+      <Filename>davix2014-capture-nfdump.desktop</Filename>            
+      <Filename>davix2014-capture-ngrep.desktop</Filename>      
+      <Filename>davix2014-capture-nmap.desktop</Filename>      
+      <Filename>davix2014-capture-padsstart.desktop</Filename>
+      <Filename>davix2014-capture-padsstop.desktop</Filename>
+      <Filename>davix2014-capture-padsrestart.desktop</Filename>
+      <Filename>davix2014-capture-padseditconfig.desktop</Filename>
+      <Filename>davix2014-capture-prads.desktop</Filename>
+      <Filename>davix2014-capture-pradsassetreport.desktop</Filename>
+      <Filename>davix2014-capture-scapy.desktop</Filename>
+      <Filename>davix2014-capture-snort.desktop</Filename>
+      <Filename>davix2014-capture-snortstart.desktop</Filename>
+      <Filename>davix2014-capture-snortstop.desktop</Filename>
+      <Filename>davix2014-capture-syslogng.desktop</Filename>
+      <Filename>davix2014-capture-tcpdump.desktop</Filename>
+      <Filename>davix2014-capture-tcpflow.desktop</Filename>
+      <Filename>davix2014-capture-tcpstat.desktop</Filename>
+      <Filename>davix2014-capture-tcpprof.desktop</Filename>
+      <Filename>davix2014-capture-ttt.desktop</Filename>
+      <Filename>davix2014-capture-wireshark.desktop</Filename>
+      <Filename>davix2014-capture-tshark.desktop</Filename>
     </Include>
   </Menu>
   

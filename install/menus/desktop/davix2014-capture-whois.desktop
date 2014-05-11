@@ -5,6 +5,6 @@ Type=Application
 Terminal=true
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=whois
-Exec=whois
+Exec=gnome-terminal
 Name=whois
 Icon=gnome-panel-launcher

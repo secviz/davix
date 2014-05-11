@@ -5,6 +5,6 @@ Type=Application
 Terminal=true
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=ngrep
-Exec=ngrep
+Exec=gnome-terminal
 Name=ngrep
 Icon=gnome-panel-launcher

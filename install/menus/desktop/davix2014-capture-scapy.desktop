@@ -8,4 +8,4 @@ Icon[en_US]=gnome-panel-launcher
 Name[en_US]=Scapy
 Name=Scapy
 Icon=gnome-panel-launcher
-Exec=/usr/bin/scapy
+Exec=scapy
