@@ -184,6 +184,13 @@ echo "Installing Netgrok"
 cd $DPMI/Netgrok
 wget -c http://netgrok.googlecode.com/files/netgrok20080928.zip
 unzip netgrok20080928.zip
+# TODO Resolve Netgrok issues
+# Fix ini file
+#mv -f $DPMI/davix/install/fixes/netgrok/groups.ini Netgrok/ 
+# Get jpcap
+#wget -c http://sourceforge.net/projects/jpcap/files/jpcap/v0.01.16/jpcap-0.01.16.tar.gz
+#tar -xvpf jpcap-0.01.16.tar.gz
+#cp Netgrok/lib/linux/jpcap.jar /usr/lib/jvm/default-java/jre/lib/ext
 mv Netgrok $DH
 
 
@@ -274,6 +281,10 @@ wget -c http://www.rumint.org/software/rumint/rumint_v.214.zip
 unzip rumint_v.214.zip
 cd rumint_2.14_distro
 wine ./setup.exe
+
+
+## Sagan Fix - configuration file error so copy correct one
+cp -f $DPMI/davix/install/fixes/sagan/sagan.conf /etc
 
 
 ## Seeds of Contempt

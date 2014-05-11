@@ -35,6 +35,7 @@
       <Filename>davix2014-capture-padseditconfig.desktop</Filename>
       <Filename>davix2014-capture-prads.desktop</Filename>
       <Filename>davix2014-capture-pradsassetreport.desktop</Filename>
+      <Filename>davix2014-capture-sagan.desktop</Filename>
       <Filename>davix2014-capture-scapy.desktop</Filename>
       <Filename>davix2014-capture-snort.desktop</Filename>
       <Filename>davix2014-capture-snortstart.desktop</Filename>
@@ -60,6 +61,7 @@
       <Filename>davix2014-process-chaosreader.desktop</Filename> 
       <Filename>davix2014-process-logstash.desktop</Filename>  
       <Filename>davix2014-process-padsreport.desktop</Filename>  
+      <Filename>davix2014-process-sagan.desktop</Filename>  
       <Filename>davix2014-process-scapy.desktop</Filename>  
       <Filename>davix2014-process-tcpreplay.desktop</Filename>  
       <Filename>davix2014-process-tcpslice.desktop</Filename>   
