@@ -255,6 +255,15 @@ echo "Installing RT Graph 3D"
 cd $DPMI/RTGraph3D
 wget -c http://www.secdev.org/projects/rtgraph3d/files/rtgraph3d-0.1.tgz
 tar -xvpf rtgraph3d-0.1.tgz
+# Dependencies - povexport
+wget -c http://www.vpython.org/contents/contributed/povexport-2012-07-10.zip
+unzip povexport-2012-07-10.zip
+mv povexport-2012-07-10/* rtgraph3d-0.1/
+# Dependencies - PyInline
+wget -c http://sourceforge.net/projects/pyinline/files/pyinline/0.03/PyInline-0.03.tar.gz
+tar -xvpf PyInline-0.03.tar.gz
+chmod -R 755 PyInline-0.03
+mv PyInline-0.03/PyInline/*.py rtgraph3d-0.1/
 mv rtgraph3d-0.1 $DH
 
 

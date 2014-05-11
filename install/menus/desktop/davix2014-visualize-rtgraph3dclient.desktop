@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=;
 Encoding=UTF-8
-Exec=/usr/bin/tulip
+Exec=/opt/davix/rtgraph3d-0.1/rtg_cli.py
 Hidden=false
 Name=RT Graph 3D Client
 Terminal=false

@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=;
 Encoding=UTF-8
-Exec=/usr/bin/tulip
+Exec=firefox -new-window http://localhost:9200/
 Hidden=false
 Name=Logstash
 Terminal=false

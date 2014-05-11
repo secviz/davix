@@ -58,6 +58,7 @@
       <Filename>davix2014-documentation-wiki.desktop</Filename> 
       <Filename>davix2014-process-afterglow.desktop</Filename> 
       <Filename>davix2014-process-chaosreader.desktop</Filename> 
+      <Filename>davix2014-process-logstash.desktop</Filename>  
       <Filename>davix2014-process-padsreport.desktop</Filename>  
       <Filename>davix2014-process-scapy.desktop</Filename>  
       <Filename>davix2014-process-tcpreplay.desktop</Filename>  
@@ -83,6 +84,7 @@
       <Filename>davix2014-visualize-dotty.desktop</Filename>
       <Filename>davix2014-visualize-lneato.desktop</Filename>
       <Filename>davix2014-visualize-neato.desktop</Filename>
+      <Filename>davix2014-visualize-logstash.desktop</Filename>
       <Filename>davix2014-visualize-mondrian.desktop</Filename>
       <Filename>davix2014-visualize-mrtg.desktop</Filename>
       <Filename>davix2014-visualize-octave.desktop</Filename>
@@ -92,6 +94,8 @@
       <Filename>davix2014-visualize-r.desktop</Filename>
       <Filename>davix2014-visualize-rstudio.desktop</Filename>
       <Filename>davix2014-visualize-rrdtool.desktop</Filename>
+      <Filename>davix2014-visualize-rtgraph3dserver.desktop</Filename>
+      <Filename>davix2014-visualize-rtgraph3dclient.desktop</Filename>
       <Filename>davix2014-visualize-timesearcher1.desktop</Filename>
       <Filename>davix2014-visualize-tnv.desktop</Filename>
       <Filename>davix2014-visualize-treemap.desktop</Filename>
