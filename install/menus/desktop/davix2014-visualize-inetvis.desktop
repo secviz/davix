@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=;
 Encoding=UTF-8
-Exec=/usr/bin/tulip
+Exec=
 Hidden=false
 Name=InetVis
 Terminal=false
