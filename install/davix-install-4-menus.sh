@@ -42,3 +42,9 @@ cp davix-2014_black.png $DAVEHM
 gsettings set org.gnome.desktop.background primary-color '#000000'
 gsettings set org.gnome.desktop.background picture-uri 'file:///home/davix/davix-2014_black.png'
 gsettings set org.gnome.desktop.background picture-options 'scaled'
+
+# Move the sample data
+cd $DH
+mkdir samples
+cp $DPMI/davix/install/samples /samples
+
