@@ -5,6 +5,6 @@ Type=Application
 Terminal=true
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=MRTG
-Exec=cat
+Exec=gnome-terminal
 Name=MRTG
 Icon=gnome-panel-launcher

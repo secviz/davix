@@ -40,10 +40,31 @@
     <Name>Visualize</Name>
     <Directory>davix2014-davix-visualize.directory</Directory>
     <Include>
-      <Filename>davix2014-documentation-wiki.desktop</Filename> 
+      <Filename>davix2014-documentation-wiki.desktop</Filename>
+      <Filename>davix2014-visualize-chartdirector.desktop</Filename>
+      <Filename>davix2014-visualize-etherape.desktop</Filename>
+      <Filename>davix2014-visualize-flowtag.desktop</Filename>
       <Filename>davix2014-visualize-gephi.desktop</Filename>
+      <Filename>davix2014-visualize-ggobi.desktop</Filename>
+      <Filename>davix2014-visualize-gltail.desktop</Filename>
+      <Filename>davix2014-visualize-gnuplot.desktop</Filename>
+      <Filename>davix2014-visualize-dot.desktop</Filename>
+      <Filename>davix2014-visualize-dotty.desktop</Filename>
+      <Filename>davix2014-visualize-lneato.desktop</Filename>
+      <Filename>davix2014-visualize-neato.desktop</Filename>
       <Filename>davix2014-visualize-mondrian.desktop</Filename>
+      <Filename>davix2014-visualize-mrtg.desktop</Filename>
+      <Filename>davix2014-visualize-octave.desktop</Filename>
+      <Filename>davix2014-visualize-parvis.desktop</Filename>
+      <Filename>davix2014-visualize-ploticus.desktop</Filename>
+      <Filename>davix2014-visualize-processing.desktop</Filename>
+      <Filename>davix2014-visualize-r.desktop</Filename>
+      <Filename>davix2014-visualize-rstudio.desktop</Filename>
+      <Filename>davix2014-visualize-rrdtool.desktop</Filename>
+      <Filename>davix2014-visualize-timesearcher1.desktop</Filename>
+      <Filename>davix2014-visualize-tnv.desktop</Filename>
       <Filename>davix2014-visualize-treemap.desktop</Filename>
+      <Filename>davix2014-visualize-zenmap.desktop</Filename>
     </Include>
   </Menu>
 
@@ -371,10 +392,6 @@
 
 <!-- Separator between menus and gnome-app-install -->
 <Layout>
-  <Menuname>davix2014-davix-capture.directory</Menuname>
-  <Menuname>davix2014-davix-process.directory</Menuname>
-  <Menuname>davix2014-davix-visualize.directory</Menuname>
-  <Seperator/>
   <Merge type="menus"/>
   <Merge type="files"/>
   <Separator/>

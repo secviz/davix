@@ -5,6 +5,6 @@ Type=Application
 Terminal=false
 Icon[en_US]=gnome-panel-launcher
 Name[en_US]=FlowTag
-Exec=flowtag
+Exec=gnome-terminal
 Name=FlowTag
 Icon=gnome-panel-launcher
