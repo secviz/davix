@@ -146,6 +146,9 @@ echo "Installing InetVis"
 cd $DPMI/InetVis
 wget -c http://www.cs.ru.ac.za/research/g02v2468/inetvis/0.9.3/inetvis-0.9.3.1.tar.gz
 tar -xvpf inetvis-0.9.3.1.tar.gz
+# Dependency
+wget http://mirrors.kernel.org/ubuntu/pool/main/q/qt-x11-free/libqt3-mt_3.3.8-b-6ubuntu2_i386.deb
+dpkg -i libqt3-mt_3.3.8-b-6ubuntu2_i386.deb
 mv inetvis-0.9.3.1 $DH
 
 
@@ -199,6 +202,8 @@ echo "Installing nsm-console"
 cd $DPMI/nsm-console
 wget -c http://writequit.org/projects/nsm-console/files/nsm-console-0.7.tar.gz
 tar -xvpf nsm-console-0.7.tar.gz
+# Patch 
+mv -f $DPMI/davix/install/fixes/nsm/* nsm-console/ 
 mv nsm-console $DH
 
 

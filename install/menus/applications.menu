@@ -14,35 +14,43 @@
   <DefaultAppDirs/>
   <DefaultDirectoryDirs/>
 
+   <!-- DAVIX Services submenu -->
+  <Menu>
+    <Name>Services</Name>
+    <Directory>davix2014-davix-services.directory</Directory>
+    <Include>
+      <Filename>davix2014-services-broidsstart.desktop</Filename> 
+      <Filename>davix2014-services-broidsstop.desktop</Filename> 
+      <Filename>davix2014-services-logstashstart.desktop</Filename>
+      <Filename>davix2014-services-logstashstop.desktop</Filename>      
+      <Filename>davix2014-services-padsstart.desktop</Filename>
+      <Filename>davix2014-services-padsstop.desktop</Filename>
+      <Filename>davix2014-services-padsrestart.desktop</Filename>
+      <Filename>davix2014-services-padseditconfig.desktop</Filename>
+      <Filename>davix2014-services-snortstart.desktop</Filename>
+      <Filename>davix2014-services-snortstop.desktop</Filename>
+    </Include>
+  </Menu>
+  
   <!-- DAVIX Capture submenu -->
   <Menu>
     <Name>Capture</Name>
     <Directory>davix2014-davix-capture.directory</Directory>
     <Include>
       <Filename>davix2014-documentation-wiki.desktop</Filename> 
-      <Filename>davix2014-capture-broidsstart.desktop</Filename> 
-      <Filename>davix2014-capture-broidsstop.desktop</Filename> 
       <Filename>davix2014-capture-broids.desktop</Filename>
       <Filename>davix2014-capture-chaosreader.desktop</Filename>  
       <Filename>davix2014-capture-dnsbrowse.desktop</Filename>  
       <Filename>davix2014-capture-dnstop.desktop</Filename>  
       <Filename>davix2014-capture-etherape.desktop</Filename> 
-      <Filename>davix2014-capture-logstashstart.desktop</Filename>
-      <Filename>davix2014-capture-logstashstop.desktop</Filename>      
       <Filename>davix2014-capture-nfdump.desktop</Filename>            
       <Filename>davix2014-capture-ngrep.desktop</Filename>      
       <Filename>davix2014-capture-nmap.desktop</Filename>      
-      <Filename>davix2014-capture-padsstart.desktop</Filename>
-      <Filename>davix2014-capture-padsstop.desktop</Filename>
-      <Filename>davix2014-capture-padsrestart.desktop</Filename>
-      <Filename>davix2014-capture-padseditconfig.desktop</Filename>
       <Filename>davix2014-capture-prads.desktop</Filename>
       <Filename>davix2014-capture-pradsassetreport.desktop</Filename>
       <Filename>davix2014-capture-sagan.desktop</Filename>
       <Filename>davix2014-capture-scapy.desktop</Filename>
       <Filename>davix2014-capture-snort.desktop</Filename>
-      <Filename>davix2014-capture-snortstart.desktop</Filename>
-      <Filename>davix2014-capture-snortstop.desktop</Filename>
       <Filename>davix2014-capture-syslogng.desktop</Filename>
       <Filename>davix2014-capture-tcpdump.desktop</Filename>
       <Filename>davix2014-capture-tcpflow.desktop</Filename>
@@ -95,6 +103,7 @@
       <Filename>davix2014-visualize-mrtg.desktop</Filename>
       <Filename>davix2014-visualize-octave.desktop</Filename>
       <Filename>davix2014-visualize-parvis.desktop</Filename>
+      <Filename>davix2014-visualize-picviz.desktop</Filename>
       <Filename>davix2014-visualize-ploticus.desktop</Filename>
       <Filename>davix2014-visualize-processing.desktop</Filename>
       <Filename>davix2014-visualize-r.desktop</Filename>
