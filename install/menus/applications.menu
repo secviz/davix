@@ -53,6 +53,7 @@
       <Filename>davix2014-capture-nfdump.desktop</Filename>            
       <Filename>davix2014-capture-ngrep.desktop</Filename>      
       <Filename>davix2014-capture-nmap.desktop</Filename>      
+      <Filename>davix2014-capture-p0f.desktop</Filename>  
       <Filename>davix2014-capture-prads.desktop</Filename>
       <Filename>davix2014-capture-pradsassetreport.desktop</Filename>
       <Filename>davix2014-capture-sagan.desktop</Filename>
@@ -83,7 +84,6 @@
       <Filename>davix2014-process-logstash.desktop</Filename>  
       <Filename>davix2014-process-nsmconsole.desktop</Filename>
       <Filename>davix2014-process-padsreport.desktop</Filename>
-      <Filename>davix2014-process-p0f.desktop</Filename>  
       <Filename>davix2014-process-sagan.desktop</Filename>  
       <Filename>davix2014-process-scapy.desktop</Filename>  
       <Filename>davix2014-process-tcpreplay.desktop</Filename>  
