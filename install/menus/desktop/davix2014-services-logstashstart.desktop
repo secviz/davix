@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=;
 Encoding=UTF-8
-Exec=service logstash start
+Exec=service logstash start && service logstash-web start
 Hidden=false
 Name=Logstash Start
 Terminal=false
