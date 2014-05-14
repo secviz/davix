@@ -1,0 +1,9 @@
+﻿DAVIX Quick Start Help
+----------------------
+
+
+Example:        tcpdump -i eth0 -w sniff.cap -s 0
+
+
+Manual:                tcpdump --help
+                man tcpdump

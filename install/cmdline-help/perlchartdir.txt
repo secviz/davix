@@ -1,0 +1,16 @@
+﻿DAVIX Quick Start Help
+----------------------
+
+
+Example:        perl test.pl
+
+
+test.pl:
+                #!/usr/bin/perl
+                use perlchartdir;
+                my $data = [25, 18, 15, 12];
+                my $labels = ["Labor", "Licenses", "Taxes", "Legal"];
+                my $c = new PieChart(360, 300);
+                $c->setPieSize(180, 140, 100);
+                $c->setData($data, $labels);
+                $c->makeChart("test.png")

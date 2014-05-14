@@ -1,0 +1,5 @@
+﻿DAVIX Quick Start Help
+----------------------
+
+
+Manual:                merge_logs.pl -h

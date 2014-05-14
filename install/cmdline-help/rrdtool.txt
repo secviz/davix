@@ -1,0 +1,19 @@
+﻿DAVIX Quick Start Help
+----------------------
+
+
+Example:        rrdtool create test.rrd --start 920804400 \
+                        DS:speed:COUNTER:600:U:U \
+                        RRA:AVERAGE:0.5:1:24 RRA:AVERAGE:0.5:6:10
+
+
+                rrdtool update test.rrd 920804700:12345 920805000:12357
+                rrdtool update test.rrd 920805600:12363 920805900:12363
+                rrdtool update test.rrd 920806500:12383 920806800:12393
+                rrdtool update test.rrd 920807400:12405 920807700:12411
+                rrdtool update test.rrd 920808300:12420 920808600:12422
+
+
+                rrdtool graph speed.png --start 920804400 --end 920808000 \
+                        DEF:myspeed=test.rrd:speed:AVERAGE \
+                        LINE2:myspeed#FF0000
