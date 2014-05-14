@@ -19,6 +19,8 @@
     <Name>Services</Name>
     <Directory>davix2014-davix-services.directory</Directory>
     <Include>
+      <Filename>davix2014-documentation-wiki.desktop</Filename> 
+      <Filename>davix2014-documentation-wikistatic.desktop</Filename> 
       <Filename>davix2014-services-broidsstart.desktop</Filename> 
       <Filename>davix2014-services-broidsstop.desktop</Filename> 
       <Filename>davix2014-services-logstashstart.desktop</Filename>
@@ -27,8 +29,12 @@
       <Filename>davix2014-services-padsstop.desktop</Filename>
       <Filename>davix2014-services-padsrestart.desktop</Filename>
       <Filename>davix2014-services-padseditconfig.desktop</Filename>
+      <Filename>davix2014-services-rsyslogstart.desktop</Filename>
+      <Filename>davix2014-services-rsyslogstop.desktop</Filename>
       <Filename>davix2014-services-snortstart.desktop</Filename>
       <Filename>davix2014-services-snortstop.desktop</Filename>
+      <Filename>davix2014-services-syslogngstart.desktop</Filename>
+      <Filename>davix2014-services-syslogngstop.desktop</Filename>
     </Include>
   </Menu>
   
@@ -38,6 +44,7 @@
     <Directory>davix2014-davix-capture.directory</Directory>
     <Include>
       <Filename>davix2014-documentation-wiki.desktop</Filename> 
+      <Filename>davix2014-documentation-wikistatic.desktop</Filename> 
       <Filename>davix2014-capture-broids.desktop</Filename>
       <Filename>davix2014-capture-chaosreader.desktop</Filename>  
       <Filename>davix2014-capture-dnsbrowse.desktop</Filename>  
@@ -68,11 +75,15 @@
     <Directory>davix2014-davix-process.directory</Directory>
     <Include>
       <Filename>davix2014-documentation-wiki.desktop</Filename> 
+      <Filename>davix2014-documentation-wikistatic.desktop</Filename> 
       <Filename>davix2014-process-afterglow.desktop</Filename> 
       <Filename>davix2014-process-argus.desktop</Filename> 
-      <Filename>davix2014-process-chaosreader.desktop</Filename> 
+      <Filename>davix2014-process-chaosreader.desktop</Filename>
+      <Filename>davix2014-process-ipsumdump.desktop</Filename>  
       <Filename>davix2014-process-logstash.desktop</Filename>  
-      <Filename>davix2014-process-padsreport.desktop</Filename>  
+      <Filename>davix2014-process-nsmconsole.desktop</Filename>
+      <Filename>davix2014-process-padsreport.desktop</Filename>
+      <Filename>davix2014-process-p0f.desktop</Filename>  
       <Filename>davix2014-process-sagan.desktop</Filename>  
       <Filename>davix2014-process-scapy.desktop</Filename>  
       <Filename>davix2014-process-tcpreplay.desktop</Filename>  
@@ -87,6 +98,7 @@
     <Directory>davix2014-davix-visualize.directory</Directory>
     <Include>
       <Filename>davix2014-documentation-wiki.desktop</Filename>
+      <Filename>davix2014-documentation-wikistatic.desktop</Filename> 
       <Filename>davix2014-visualize-chartdirector.desktop</Filename>
       <Filename>davix2014-visualize-etherape.desktop</Filename>
       <Filename>davix2014-visualize-flowtag.desktop</Filename>
@@ -94,11 +106,14 @@
       <Filename>davix2014-visualize-ggobi.desktop</Filename>
       <Filename>davix2014-visualize-gltail.desktop</Filename>
       <Filename>davix2014-visualize-gnuplot.desktop</Filename>
+      <Filename>davix2014-visualize-guess.desktop</Filename>
       <Filename>davix2014-visualize-dot.desktop</Filename>
       <Filename>davix2014-visualize-dotty.desktop</Filename>
       <Filename>davix2014-visualize-lneato.desktop</Filename>
       <Filename>davix2014-visualize-neato.desktop</Filename>
+      <Filename>davix2014-visualize-inetvis.desktop</Filename>
       <Filename>davix2014-visualize-logstash.desktop</Filename>
+      <Filename>davix2014-visualize-maltego.desktop</Filename>
       <Filename>davix2014-visualize-mondrian.desktop</Filename>
       <Filename>davix2014-visualize-mrtg.desktop</Filename>
       <Filename>davix2014-visualize-octave.desktop</Filename>
@@ -111,6 +126,7 @@
       <Filename>davix2014-visualize-rrdtool.desktop</Filename>
       <Filename>davix2014-visualize-rtgraph3dserver.desktop</Filename>
       <Filename>davix2014-visualize-rtgraph3dclient.desktop</Filename>
+      <Filename>davix2014-visualize-rumint.desktop</Filename>
       <Filename>davix2014-visualize-timesearcher1.desktop</Filename>
       <Filename>davix2014-visualize-tnv.desktop</Filename>
       <Filename>davix2014-visualize-treemap.desktop</Filename>

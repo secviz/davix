@@ -5,7 +5,7 @@
 ##                                                ##
 ## Amanda Gellhouse, Raffael Marty                ##
 ##                                                ##
-## DEVELOPMENT V1.0.1 7 MAY 2014                  ##
+## DEVELOPMENT V1.1  13 MAY 2014                  ##
 ####################################################
 
 # TODO: Default to Gnome Classic
@@ -48,3 +48,8 @@ cd $DH
 mkdir samples
 cp $DPMI/davix/install/samples /samples
 
+# Generate the static wiki
+gem install gollum-site
+git clone https://github.com/secviz/davix.wiki.git /opt/davix/wiki
+cd /opt/davix/wiki
+gollum-site generate

@@ -1,8 +1,8 @@
 [Desktop Entry]
 Categories=;
 Encoding=UTF-8
-Exec=firefox -new-window http://localhost:9300/
+Exec=service rsyslog stop
 Hidden=false
-Name=Logstash
+Name=rsyslog stop
 Terminal=false
 Type=Application

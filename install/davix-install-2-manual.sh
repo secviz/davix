@@ -6,7 +6,7 @@
 ##                                                ##
 ## Raffael Marty, Amanda Gellhouse, Edward McCabe ##
 ##                                                ##
-## DEVELOPMENT V1.4.03 27 APR 2014                ##
+## DEVELOPMENT V1.5  13 MAY 2014                  ##
 ####################################################
 
 # init
@@ -104,6 +104,13 @@ cd flowtag-2.0.5
 ruby setup.rb
 
 
+## Gephi
+cd $DPMI/gephi
+wget -c https://launchpad.net/gephi/0.8/0.8.2beta/+download/gephi-0.8.2-beta.tar.gz
+tar -xzf gephi-0.8.2-beta.tar.gz
+mv gephi $DH
+
+
 ## glTail
 echo "Installing glTail"
 git clone https://github.com/Fudge/gltail $DH/gltail
@@ -114,7 +121,7 @@ echo "Installing GUESS"
 cd $DPMI/GUESS
 wget -c http://sourceforge.net/projects/guess/files/guess/guess-1.0.3-beta/guess-20070813.zip
 unzip guess-20070813.zip
-mv GUESS/guess $DH/guess
+mv guess $DH/guess
 
  echo "#!/bin/sh" >> $DH/guess/guess.sh
  echo "" >> $DH/guess/guess.sh
@@ -174,6 +181,12 @@ output {
 EOF
 
 
+## Maltego
+cd $DPMI/maltego
+wget -c http://www.paterva.com/malv34/community/MaltegoCE.v3.4.0.5004.deb
+dpkg -i MaltegoCE.v3.4.05004.deb
+
+
 ## Mondrian
 echo "Installing Mondrian"
 cd $DPMI/Mondrian
@@ -203,7 +216,7 @@ cd $DPMI/nsm-console
 wget -c http://writequit.org/projects/nsm-console/files/nsm-console-0.7.tar.gz
 tar -xvpf nsm-console-0.7.tar.gz
 # Patch 
-mv -f $DPMI/davix/install/fixes/nsm/* nsm-console/ 
+mv -f $DPMI/davix/install/fixes/nsm/nsm nsm-console/ 
 mv nsm-console $DH
 
 
@@ -349,27 +362,6 @@ mv walrus-0.6.3 $DH/walrus-0.6.3
 mv tmp/walruscsv $DH/walrus-0.6.3
 rm -r tmp
 
-## Gephi
-cd $DPMI/gephi
-wget -c https://launchpad.net/gephi/0.8/0.8.2beta/+download/gephi-0.8.2-beta.tar.gz
-tar -xzf gephi-0.8.2-beta.tar.gz
-mv gephi $DH
-
-## Maltego
-cd $DPMI/maltego
-wget -c http://www.paterva.com/malv34/community/MaltegoCE.v3.4.0.5004.deb
-dpkg -i MaltegoCE.v3.4.05004.deb
-
-## Unknown Packages ##
-
-## PyInline
-#echo "Installing PyInLine"
-#cd $DPMI/PyInline
-#wget -c http://sourceforge.net/projects/pyinline/files/pyinline/0.03/PyInline-0.03.tar.gz
-#tar -xvpf PyInline-0.03.tar.gz
-#cd PyInline-0.03
-# python setup.py build
-# python setup.py install
 
 ## Copy over Run Scripts
 mkdir $DH/scripts
