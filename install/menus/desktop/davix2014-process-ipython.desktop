@@ -1,0 +1,8 @@
+[Desktop Entry]
+Categories=;
+Encoding=UTF-8
+Exec=ipython
+Hidden=false
+Name=iPython
+Terminal=false
+Type=Application

@@ -80,7 +80,8 @@
       <Filename>davix2014-process-afterglow.desktop</Filename> 
       <Filename>davix2014-process-argus.desktop</Filename> 
       <Filename>davix2014-process-chaosreader.desktop</Filename>
-      <Filename>davix2014-process-ipsumdump.desktop</Filename>  
+      <Filename>davix2014-process-ipsumdump.desktop</Filename>   
+      <Filename>davix2014-process-ipython.desktop</Filename>  
       <Filename>davix2014-process-logstash.desktop</Filename>  
       <Filename>davix2014-process-nsmconsole.desktop</Filename>
       <Filename>davix2014-process-padsreport.desktop</Filename>
