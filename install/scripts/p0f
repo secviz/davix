@@ -1,0 +1,3 @@
+#!/bin/bash
+
+/opt/davix/p0f/bin/p0f -f /opt/davix/p0f/bin/p0f.fp
