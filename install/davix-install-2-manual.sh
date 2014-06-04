@@ -226,9 +226,9 @@ mv nsm-console $DH
 ## p0f
 echo "Installing p0f"
 cd $DPMI/p0f/
-wget -c http://lcamtuf.coredump.cx/p0f3/releases/p0f-3.06b.tgz
-tar -xvpf p0f-3.06b.tgz
-cd p0f-3.06b
+wget -c http://lcamtuf.coredump.cx/p0f3/releases/p0f-3.07b.tgz
+tar -xvpf p0f-3.07b.tgz
+cd p0f-3.07b
 ./build.sh
 mkdir -p $DH/p0f/bin
 mv docs $DH/p0f
