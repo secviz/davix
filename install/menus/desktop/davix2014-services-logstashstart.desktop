@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=;
 Encoding=UTF-8
-Exec=service logstash start && service logstash-web start
+Exec=pkexec /etc/init.d/logstash start && /etc/init.d/logstash-web start
 Hidden=false
 Name=Logstash Start
 Terminal=false
