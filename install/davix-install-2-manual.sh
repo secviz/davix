@@ -37,17 +37,17 @@ wget -c http://qosient.com/argus/src/argus-clients-3.0.6.2.tar.gz
 tar -xvpf argus-3.0.6.1.tar.gz 
 tar -xvpf argus-clients-3.0.6.2.tar.gz 
 cd argus-3.0.6.1/
- ./configure --prefix=$DH/argus-server
- make
- make install
+./configure
+make
+make install
  
 
 ## Argus Client
 echo "Installing Argus Client"
 cd $DPMI/argus-clients-3.0.6.2/
- ./configure --prefix=$DH/argus-client
- make
- make install
+./configure 
+make
+make install
 
 
 ## BroIDS (requires CMake)
