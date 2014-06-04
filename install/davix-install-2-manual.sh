@@ -168,6 +168,7 @@ dpkg -i logstash_1.4.1-1*.deb
 sed -i -e 's/ -l .*/"/' /etc/init/logstash-web.conf
 sed -i -e 's/^setuid/#setuid/' /etc/init/logstash.conf
 sed -i -e 's/^setgid/#setgid/' /etc/init/logstash.conf
+mv /opt/logstash/vendor/kibana/app/dashbords/logstash.json /opt/logstash/vendor/kibana/app/dashbords/default.json 
 
 # Build the base configuration file
 cat << EOF > /etc/logstash/conf.d/logstash.conf
