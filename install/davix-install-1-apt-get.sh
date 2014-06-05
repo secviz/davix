@@ -36,6 +36,7 @@ apt-get -y install libjava3d-java libjava3d-java-doc libjava3d-jni # Walrus
 apt-get -y install python-visual # RT Graph 3D
 apt-get -y install libpcap # Netgrok
 apt-get -y install ruby-dev # Gollum-site static wiki
+apt-get -y insatll libxml-writer-perl # prads2snort
 
 ## Services
 apt-get -y install apache2-mpm-prefork mysql-client ntp openssh-server
