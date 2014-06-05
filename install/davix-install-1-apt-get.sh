@@ -38,6 +38,7 @@ apt-get -y install libpcap # Netgrok
 apt-get -y install ruby-dev # Gollum-site static wiki
 apt-get -y insatll libxml-writer-perl # prads2snort
 apt-get -y insatll libldns-dev # passivedns
+apt-get -y insatll libestr-dev libjson-c-dev # liblognorm
 
 ## Services
 apt-get -y install apache2-mpm-prefork mysql-client ntp openssh-server

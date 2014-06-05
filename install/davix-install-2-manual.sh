@@ -56,9 +56,9 @@ cd $DPMI/BroIDS
 wget -c http://www.bro.org/downloads/release/bro-2.2.tar.gz
 tar -xvpf bro-2.2.tar.gz
 cd bro-2.2
- ./configure --prefix=$DH/broids
- make
- make install
+./configure --prefix=$DH/broids
+make
+make install
 $DH/broids/bin/broctl install
 
 ## Perl Chart Director
@@ -402,9 +402,19 @@ mkdir -p $DH/passivedns
 mv passivedns $DH/passivedns
 ln -s $DH/passivedns/passivedns $DH/scripts/passivedns
 
+# liblognorm
+cd $DMPI/liblognorm
+wget -c http://www.liblognorm.com/files/download/liblognorm-1.0.1.tar.gz
+tar -xzf liblognorm-1.0.1.tar.gz
+cd liblognorm-1.0.1
+./confiugre --disable-docs
+make
+make install
+
+
 ## Copy over Run Scripts
 mkdir $DH/scripts
 cp $DPMI/davix/install/scripts/* $DH/scripts
 ln -s /opt/davix/gephi/bin/gephi $DH/scripts/gephi
 ln -s /opt/davix/afterglow/afterglow.pl $DH/scripts/afterglow
-
+ln -s /opt/davix/broids/bin/bro $DH/scripts/bro
