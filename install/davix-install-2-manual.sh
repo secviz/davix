@@ -22,7 +22,7 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D parsers maltego picviz ipsumdump
+mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D parsers maltego picviz ipsumdump passivedns
 
 
 ## Afterglow
@@ -391,6 +391,16 @@ cd ipsumpdump-1.84
 ./configure
 make
 make install
+
+# passivedns
+cd $DMPI/passivedns
+wget -c https://github.com/gamelinux/passivedns/archive/1.0.tar.gz
+tar -xzf 1.0.tar.gz
+cd passivedns-1.0/src
+make
+mkdir -p $DH/passivedns
+mv passivedns $DH/passivedns
+ln -s $DH/passivedns/passivedns $DH/scripts/passivedns
 
 ## Copy over Run Scripts
 mkdir $DH/scripts
