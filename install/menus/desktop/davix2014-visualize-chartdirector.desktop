@@ -1,8 +1,0 @@
-[Desktop Entry]
-Categories=;
-Encoding=UTF-8
-Exec=gnome-terminal --working-directory=/usr/lib/perl5/ChartDirector 
-Hidden=false
-Name=ChartDirector
-Terminal=false
-Type=Application
