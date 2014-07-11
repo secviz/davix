@@ -1,7 +1,7 @@
 [Desktop Entry]
-Categories=;
+Categories=Visualize
 Encoding=UTF-8
-Exec=gnome-terminal
+Exec=rrdtool -h; sudo -s
 Hidden=false
 Name=RRDTool
 Terminal=false

@@ -1,7 +1,7 @@
 [Desktop Entry]
-Categories=;
+Categories=Capture
 Encoding=UTF-8
-Exec=sagan
+Exec=sudo sagan
 Hidden=false
 Name=Sagan
 Terminal=false

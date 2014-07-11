@@ -1,8 +1,8 @@
 [Desktop Entry]
-Categories=;
+Categories=Process
 Encoding=UTF-8
 Exec=pads-report
 Hidden=false
 Name=PADS Report
-Terminal=false
+Terminal=true
 Type=Application

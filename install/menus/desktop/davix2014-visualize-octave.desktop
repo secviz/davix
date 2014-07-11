@@ -1,5 +1,5 @@
 [Desktop Entry]
-Categories=;
+Categories=Visualize
 Comment=Scientific Computing using GNU Octave
 Exec=octave
 Hidden=false

@@ -1,11 +1,8 @@
-#!/usr/bin/env xdg-open
-
 [Desktop Entry]
 Version=1.0
 Type=Application
 Terminal=true
-Icon[en_US]=gnome-panel-launcher
-Name[en_US]=Restart Argus Server
 Exec=pkexec /etc/init.d/argus-server restart
-Name=Restart Argus Server
+Name=Argus Server Restart
 Icon=gnome-panel-launcher
+Categories=Service

@@ -1,6 +1,6 @@
 [Desktop Entry]
-Categories=;
-Exec=maltego_tungsten_ce_
+Categories=Visualize
+Exec=maltego_tungsten_ce
 Hidden=false
 Name=Maltego
 StartupNotify=true

@@ -1,5 +1,5 @@
 [Desktop Entry]
-Categories=;
+Categories=Visualize
 Encoding=UTF-8
 Exec=firefox -new-window http://localhost:9292/
 Hidden=false
