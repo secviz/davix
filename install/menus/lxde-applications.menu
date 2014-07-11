@@ -1,0 +1,41 @@
+<!DOCTYPE Menu PUBLIC "-//freedesktop//DTD Menu 1.0//EN" "http://www.freedesktop.org/standards/menu-spec/1.0/menu.dtd">
+<Menu>
+   <Name>DAVIX</Name>
+   <MergeFile type="parent">/etc/xdg/menus/lxde-applications.menu</MergeFile>
+   <Menu>
+      <Name>DAVIX</Name>
+      <Directory>davix.directory</Directory>
+      <Include>
+         <And><Category>DAVIX</Category></And>
+      </Include>
+      <Menu>
+        <Name>Capture</Name>
+        <Directory>capture.directory</Directory>
+        <Include>
+           <And><Category>Capture</Category></And>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Process</Name>
+        <Directory>process.directory</Directory>
+        <Include>
+           <And><Category>Process</Category></And>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Visualize</Name>
+        <Directory>visualize.directory</Directory>
+        <Include>
+           <And><Category>Visualize</Category></And>
+        </Include>
+      </Menu>
+      <Menu>
+        <Name>Service</Name>
+        <Directory>service.directory</Directory>
+        <Include>
+           <And><Category>Service</Category></And>
+        </Include>
+      </Menu>
+   </Menu>
+</Menu>
+
