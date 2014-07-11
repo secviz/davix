@@ -36,6 +36,7 @@ apt-get -y insatll libxml-writer-perl # prads2snort
 apt-get -y insatll libldns-dev # passivedns
 apt-get -y insatll libestr-dev libjson-c-dev # liblognorm
 apt-get -y insatll pyqt4-dev-tools
+apt-get -y install libncurses5-dev # argus
 
 ## Services
 apt-get -y install apache2-mpm-prefork mysql-client ntp openssh-server
