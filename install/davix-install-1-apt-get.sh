@@ -15,7 +15,8 @@ apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 16126D3A3E5C1192
 apt-get -y remove ubuntu-minimal
 
 ## OS Basics
-apt-get -y install geeqie gnome-desktop-environment openjdk-6-jre-lib openjdk-6-jdk recode sharutils sqlite3 \
+# apt-get -y install geeqie gnome-desktop-environment openjdk-6-jre-lib openjdk-6-jdk recode sharutils sqlite3 \
+apt-get -y install openjdk-6-jre-lib openjdk-6-jdk recode sharutils sqlite3 \
            terminator udns-utils default-jre unrar
 apt-get -y install cvs subversion
 apt-get -y install dns-browse exuberant-ctags java3ds-fileloader
@@ -23,11 +24,6 @@ apt-get -y install joe vim
 apt-get -y install ftpd lftp lynx ncftp curl
 apt-get -y install python python-dev python-geoip python-gnuplot ipython
 apt-get -y install subversion tor winbind wine
-
-## Install Application Menu for Gnome
-apt-add-repository ppa:diesch/testing
-apt-get update 
-apt-get -y install classicmenu-indicator
 
 ## Required for Manual Installs
 apt-get -y install flex bison cmake ruby build-essential libjpeg62
