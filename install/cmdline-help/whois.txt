@@ -1,5 +1,10 @@
 ﻿DAVIX Quick Start Help
 ----------------------
 
+gwhois is an intelligent whois client. Just use it like this:
 
-Currently there is no help available for whois
+gwhois <domain>
+
+Example:
+
+gwhois secviz.org
