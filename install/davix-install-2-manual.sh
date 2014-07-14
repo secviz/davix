@@ -53,9 +53,9 @@ make install
 ## BroIDS (requires CMake)
 echo "Installing BroIDS"
 cd $DPMI/BroIDS
-wget -c http://www.bro.org/downloads/release/bro-2.2.tar.gz
-tar -xvpf bro-2.2.tar.gz
-cd bro-2.2
+wget -c http://www.bro.org/downloads/release/bro-2.3.tar.gz
+tar -xvpf bro-2.3.tar.gz
+cd bro-2.3
 ./configure --prefix=$DH/broids
 make
 make install
@@ -67,11 +67,11 @@ cd $DPMI/PerlPackages
 wget -c http://download2.advsofteng.com/chartdir_perl_linux.tar.gz
 tar -xvpf chartdir_perl_linux.tar.gz
 # Add to perl @INC Path
- mv ChartDirector /usr/lib/perl5/
- cpan -i Crypt::SSLeay
- cpan -i IP::Anonymous
- cpan -i Crypt::Rijndael
- cpan -i Test::Manifest
+mv ChartDirector /usr/lib/perl5/
+yes '' | cpan -i Crypt::SSLeay
+cpan -i IP::Anonymous
+cpan -i Crypt::Rijndael
+cpan -i Test::Manifest
 
 
 ## Cytoscape
@@ -188,7 +188,7 @@ EOF
 ## Maltego
 cd $DPMI/maltego
 wget -c http://www.paterva.com/malv34/community/MaltegoCE.v3.4.0.5004.deb
-dpkg -i MaltegoCE.v3.4.05004.deb
+dpkg -i MaltegoCE.v3.4.0.5004.deb
 
 
 ## Mondrian
@@ -197,7 +197,6 @@ cd $DPMI/Mondrian
 wget -c http://stats.math.uni-augsburg.de/mondrian/Mondrian.jar
 mkdir -p $DH/Mondrian
 mv Mondrian.jar $DH/Mondrian/Mondrian.jar
-
 
 ## Netgrok
 echo "Installing Netgrok"
