@@ -29,6 +29,7 @@ echo manual >> /etc/init/logstash-web.override
 sed -i -e 's/^/#/' /etc/cron.d/mrtg
 
 # some other cleanup
+apt-get -y remove cups-common
 apt-get -y autoremove
 
 # just to be sure!
