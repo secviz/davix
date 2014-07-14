@@ -1,8 +1,8 @@
 [Desktop Entry]
 Categories=Service
 Encoding=UTF-8
-Exec=pkexec /etc/init.d/syslog-ng stop
+Exec=sudo /etc/init.d/syslog-ng stop
 Hidden=false
 Name=syslog-ng stop
-Terminal=false
+Terminal=true
 Type=Application

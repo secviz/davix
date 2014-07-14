@@ -2,7 +2,7 @@
 Version=1.0
 Type=Application
 Terminal=true
-Exec=pkexec /etc/init.d/pads restart
+Exec=sudo /etc/init.d/pads restart
 Name=PADS Restart
 Icon=gnome-panel-launcher
 Categories=Service

@@ -1,8 +1,8 @@
 [Desktop Entry]
 Categories=Service
 Encoding=UTF-8
-Exec=pkexec /etc/init.d/logstash start && /etc/init.d/logstash-web start
+Exec=sudo start logstash; sudo start logstash-web
 Hidden=false
 Name=Logstash Start
-Terminal=false
+Terminal=true
 Type=Application

@@ -1,8 +1,8 @@
 [Desktop Entry]
 Categories=Service
 Encoding=UTF-8
-Exec=pkexec /etc/init.d/logstash stop && pkexec /etc/init.d/logstash-web stop
+Exec=sudo stop logstash && sudo stop logstash-web
 Hidden=false
 Name=Logstash Stop
-Terminal=false
+Terminal=true
 Type=Application

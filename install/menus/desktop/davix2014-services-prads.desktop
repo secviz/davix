@@ -2,9 +2,7 @@
 Version=1.0
 Type=Application
 Terminal=true
-Icon[en_US]=gnome-panel-launcher
 Exec=sudo prads -i eth0
-Name[en_US]=prads
 Name=PRADs Start
 Categories=Service
 Icon=gnome-panel-launcher

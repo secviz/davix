@@ -1,8 +1,8 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Terminal=false
-Exec=pkexec /etc/init.d/snort start
+Terminal=true
+Exec=sudo /etc/init.d/snort start
 Name=Snort Start
 Icon=start
 Categories=Service

@@ -1,8 +1,8 @@
 [Desktop Entry]
 Categories=Service
 Encoding=UTF-8
-Exec=pkexec /etc/init.d/syslog-ng stop && /etc/init.d/rsyslog start
+Exec=sudo /etc/init.d/syslog-ng stop && sudo /etc/init.d/rsyslog start
 Hidden=false
 Name=rsyslog start
-Terminal=false
+Terminal=true
 Type=Application

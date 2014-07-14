@@ -1,8 +1,8 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Terminal=false
-Exec=pkexec /etc/init.d/snort stop
+Terminal=true
+Exec=sudo /etc/init.d/snort stop
 Name=Snort Stop
 Icon=gnome-panel-launcher
 Categories=Service

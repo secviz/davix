@@ -1,8 +1,8 @@
 [Desktop Entry]
 Categories=Service
 Encoding=UTF-8
-Exec=/opt/davix/broids/bin/broctl stop
+Exec=sudo /opt/davix/broids/bin/broctl stop
 Hidden=false
 Name=BroIDS Stop
-Terminal=false
+Terminal=true
 Type=Application

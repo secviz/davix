@@ -1,8 +1,8 @@
 [Desktop Entry]
 Categories=Service
 Encoding=UTF-8
-Exec=pkexec /etc/init.d/rsyslog stop
+Exec=sudo /etc/init.d/rsyslog stop
 Hidden=false
 Name=rsyslog stop
-Terminal=false
+Terminal=true
 Type=Application

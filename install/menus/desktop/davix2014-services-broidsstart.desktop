@@ -1,8 +1,8 @@
 [Desktop Entry]
 Categories=Service
 Encoding=UTF-8
-Exec=/opt/davix/broids/bin/broctl start
+Exec=sudo /opt/davix/broids/bin/broctl start
 Hidden=false
 Name=BroIDS Start
-Terminal=false
+Terminal=true
 Type=Application
