@@ -1,8 +1,8 @@
 [Desktop Entry]
-Categories=;
+Categories=Capture
 Encoding=UTF-8
-Exec=bash /opt/davix/scripts/p0f
+Exec=/opt/davix/p0f/bin/p0f -h; sudo -s
 Hidden=false
 Name=p0f
-Terminal=false
+Terminal=true
 Type=Application

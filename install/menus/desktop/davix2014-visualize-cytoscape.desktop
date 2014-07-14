@@ -1,5 +1,5 @@
 [Desktop Entry]
-Categories=;
+Categories=Visualize
 Exec=/bin/sh "/opt/davix/Cytoscape_v3.0.2/Cytoscape"
 Hidden=false
 Icon=/opt/davix/Cytoscape_v3.0.2/.install4j/Cytoscape.png

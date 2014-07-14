@@ -1,8 +1,0 @@
-[Desktop Entry]
-Categories=;
-Encoding=UTF-8
-Exec=syslog-ng
-Hidden=false
-Name=syslog-ng
-Terminal=false
-Type=Application

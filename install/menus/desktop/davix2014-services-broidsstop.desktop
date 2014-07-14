@@ -1,5 +1,5 @@
 [Desktop Entry]
-Categories=;
+Categories=Service
 Encoding=UTF-8
 Exec=/opt/davix/broids/bin/broctl stop
 Hidden=false

@@ -1,5 +1,5 @@
 [Desktop Entry]
-Categories=;
+Categories=Visualize
 Encoding=UTF-8
 Exec=/opt/davix/rtgraph3d-0.1/rtg_cli.py
 Hidden=false

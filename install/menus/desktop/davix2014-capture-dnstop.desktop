@@ -1,8 +1,8 @@
-#!/usr/bin/env xdg-open
 [Desktop Entry]
 Version=1.0
 Type=Application
 Terminal=true
 Name[en_US]=dnstop
-Exec=gnome-terminal
+Exec=dnstop -h; sudo -s
+Categories=Capture
 Name=dnstop

@@ -1,8 +1,8 @@
 [Desktop Entry]
-Categories=;
+Categories=Process
 Encoding=UTF-8
-Exec=gnome-terminal --working-directory=/opt/davix/argus-client/bin
+Exec=argus -h; sudo -s
 Hidden=false
 Name=Argus Client
-Terminal=false
+Terminal=true
 Type=Application

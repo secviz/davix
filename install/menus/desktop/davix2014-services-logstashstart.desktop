@@ -1,5 +1,5 @@
 [Desktop Entry]
-Categories=;
+Categories=Service
 Encoding=UTF-8
 Exec=pkexec /etc/init.d/logstash start && /etc/init.d/logstash-web start
 Hidden=false

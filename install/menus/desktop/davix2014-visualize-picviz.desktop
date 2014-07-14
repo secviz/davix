@@ -1,7 +1,7 @@
 [Desktop Entry]
-Categories=;
+Categories=Visualize
 Encoding=UTF-8
-Exec=gnome-terminal
+Exec=xterm
 Hidden=false
 Name=PicViz
 Terminal=false
