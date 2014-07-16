@@ -9,8 +9,10 @@
 ## DEVELOPMENT v0.1.01 22 APR 2014                ##
 ####################################################
 
-wget -c http://cran.us.r-project.org/bin/linux/ubuntu/saucy/r-base-core_3.0.3-1saucy0_i386.deb
-dpkg -i r-base-core_3.0.3-1saucy0_i386.deb
+wget -c http://mirrors.kernel.org/ubuntu/pool/universe/r/r-base/r-base-core_3.0.2-1ubuntu1_amd64.deb
+
+# r-base dependencies
+dpkg -i r-base-core_3.*.deb
 
 apt-get -y install r-cran-bayesm r-cran-date r-cran-gmaps r-cran-int64 r-cran-its r-cran-latticeextra
 apt-get -y install r-cran-mapdata r-cran-maptools r-cran-mcmcpack r-cran-plotrix r-cran-plyr

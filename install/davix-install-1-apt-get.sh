@@ -39,6 +39,7 @@ apt-get -y insatll libldns-dev # passivedns
 apt-get -y insatll libestr-dev libjson-c-dev # liblognorm
 apt-get -y insatll pyqt4-dev-tools
 apt-get -y install libncurses5-dev # argus
+apt-get -y install lsb-core # google earth
 
 ## Services
 apt-get -y install apache2-mpm-prefork mysql-client ntp openssh-server
@@ -60,3 +61,8 @@ apt-get -y install octave-linear-algebra octave-mapping octave-nan octave-plplot
 apt-get -y install pads picviz ploticus prads python-scapy rrdtool rsyslog sagan snort socat syslog-ng
 apt-get -y install tcpdump tcpflow tcpreplay tcpslice tcpstat tcpxtract tshark ttt tulip tulip-doc wireshark zenmap
 apt-get -y install libtext-csv-perl 
+
+# Installing Google Earth
+make-googleearth-package --force
+dpkg -i google*.deb
+rm -f google*.deb
