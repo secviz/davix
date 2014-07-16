@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Terminal=false
+Terminal=true
 Icon[en_US]=wireshark
 Name[en_US]=Wireshark - tshark
 Exec=tshark --help; sudo -s
