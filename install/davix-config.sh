@@ -29,8 +29,9 @@ echo manual >> /etc/init/logstash-web.override
 sed -i -e 's/^/#/' /etc/cron.d/mrtg
 
 # some other cleanup
-apt-get -y remove cups-common
+apt-get -y remove cups-common xmms2-core
 apt-get -y autoremove
 
 # just to be sure!
 chown -R davix:davix /home/davix
+chmod -R 777 /etc/snort      # for convenience
