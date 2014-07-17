@@ -1,7 +1,7 @@
 [Desktop Entry]
 Categories=Service
 Encoding=UTF-8
-Exec=sudo start logstash; sudo start logstash-web
+Exec=sudo start logstash; sudo start logstash-web; clear; cat /opt/davix/cmdline-help/logstash.txt; sudo -s
 Hidden=false
 Name=Logstash Start
 Terminal=true
