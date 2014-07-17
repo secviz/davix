@@ -39,6 +39,8 @@ fi
 adduser davix sudo
 # set password for davix
 echo 'davix:davix' | chpasswd
+# allow davix to sudo without password
+sed -ie 's/^%sudo.*/%sudo   ALL=(ALL:ALL) NOPASSWD:ALL/' /etc/sudoers
 
 # Add path to scripts
 echo "export PATH=$PATH:/opt/davix/scripts/:/opt/davix/parsers" >> ~/.profile
