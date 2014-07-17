@@ -4,5 +4,5 @@ Encoding=UTF-8
 Exec=rrdtool -h; sudo -s
 Hidden=false
 Name=RRDTool
-Terminal=false
+Terminal=true
 Type=Application
