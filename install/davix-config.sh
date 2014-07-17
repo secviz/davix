@@ -27,6 +27,8 @@ echo manual >> /etc/init/logstash.override
 echo manual >> /etc/init/logstash-web.override
 # turn off mrtg
 sed -i -e 's/^/#/' /etc/cron.d/mrtg
+# turn off ntop
+sed -i -e 's/ENABLED=1/ENABLED=0/' /etc/default/ntop
 
 # some other cleanup
 apt-get -y remove cups-common xmms2-core

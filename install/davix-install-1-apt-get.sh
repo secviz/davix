@@ -41,6 +41,7 @@ apt-get -y insatll pyqt4-dev-tools
 apt-get -y install libncurses5-dev # argus
 apt-get -y install lsb-core # google earth
 apt-get -y install libxtst6:i386 # processing
+apt-get -y install libtext-csv-perl # afterglow
 
 ## Services
 apt-get -y install apache2-mpm-prefork mysql-client ntp openssh-server
@@ -61,7 +62,11 @@ apt-get -y install graphviz gwhois mrtg libpcap-dev netcat netexpect netrw netse
 apt-get -y install octave-linear-algebra octave-mapping octave-nan octave-plplot octave-splines octave-tsa qtoctave
 apt-get -y install pads picviz ploticus prads python-scapy rrdtool rsyslog sagan snort socat syslog-ng
 apt-get -y install tcpdump tcpflow tcpreplay tcpslice tcpstat tcpxtract tshark ttt tulip tulip-doc wireshark zenmap
-apt-get -y install libtext-csv-perl 
+DEBIAN_FRONTEND=noninteractive apt-get -y ntop
+echo "ntop    ntop/admin_password password    davix" >> ntop.conf
+echo "ntop    ntop/admin_password_again   password    davix" >> ntop.conf
+echo "ntop    ntop/interfaces string  eth0" >> ntop.conf
+debconf-set-selections < ntop.conf
 
 # Installing Google Earth
 make-googleearth-package --force
