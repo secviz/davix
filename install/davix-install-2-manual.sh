@@ -22,7 +22,7 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D parsers maltego picviz ipsumdump passivedns
+mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D parsers maltego picviz ipsumdump passivedns graphviz
 
 
 ## Afterglow
@@ -41,6 +41,20 @@ cd argus-3.0.6.1/
 make
 make install
  
+
+## GraphViz New Version
+echo "Installing GraphViz"
+cd $DPMI/graphviz
+wget -c http://www.graphviz.org/pub/graphviz/stable/SOURCES/graphviz-2.38.0.tar.gz
+tar -xzf graphviz-*.tar.gz
+cd graphviz*
+./configure --prefix=/usr --datadir=/usr/share --infodir=/usr/share/info --mandir=/usr/share/man
+make
+make install
+cp $DPMI/davix/install/config/graphviz.conf /etc/ld.so.conf.d/
+ldconfig
+dot -c
+
 
 ## Argus Client
 echo "Installing Argus Client"
