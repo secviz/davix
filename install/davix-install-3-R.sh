@@ -35,5 +35,6 @@ wget -c http://cran.r-project.org/src/contrib/ellipse_0.3-8.tar.gz
 mkdir $DPMI/RStudio
 echo "Installing R Studio"
 cd $DPMI/RStudio
+apt-get -y install libgstreamer-plugins-base0.10-0
 wget -c http://download1.rstudio.org/rstudio-0.98.978-amd64.deb
 dpkg -i rstudio-*.deb
