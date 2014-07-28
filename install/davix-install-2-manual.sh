@@ -22,7 +22,7 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D parsers maltego picviz ipsumdump passivedns graphviz
+mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D parsers maltego picviz ipsumdump passivedns graphviz tulip
 
 
 ## Afterglow
@@ -40,6 +40,13 @@ cd argus-3.0.6.1/
 ./configure
 make
 make install
+
+## Argus Client
+echo "Installing Argus Client"
+cd $DPMI/argus-clients-3.0.6.2/
+./configure 
+make
+make install
  
 
 ## GraphViz New Version
@@ -55,13 +62,15 @@ cp $DPMI/davix/install/config/graphviz.conf /etc/ld.so.conf.d/
 ldconfig
 dot -c
 
-
-## Argus Client
-echo "Installing Argus Client"
-cd $DPMI/argus-clients-3.0.6.2/
-./configure 
-make
-make install
+## Tulip
+#echo "Installing Tulip"
+#cd $DPMI/tulip
+#wget -c 'http://downloads.sourceforge.net/project/auber/tulip/tulip-4.5.0/tulip-4.5.0_src.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fauber%2Ffiles%2Ftulip%2Ftulip-4.5.0%2F&ts=1406498450&use_mirror=hivelocity' -O tulip-4.5.0_src.tar.gz
+#tar -xzf tulip-4.5.0_src.tar.gz
+#cd tulip
+#cmake . 
+#make
+#make install
 
 
 ## BroIDS (requires CMake)
@@ -208,9 +217,9 @@ dpkg -i MaltegoCE.v3.4.0.5004.deb
 ## Mondrian
 echo "Installing Mondrian"
 cd $DPMI/Mondrian
-wget -c http://stats.math.uni-augsburg.de/mondrian/Mondrian.jar
+wget -c http://www.theusrus.de/Mondrian/Mondrian15b.jar
 mkdir -p $DH/Mondrian
-mv Mondrian.jar $DH/Mondrian/Mondrian.jar
+mv Mondrian15b.jar $DH/Mondrian/Mondrian.jar
 
 ## Netgrok
 echo "Installing Netgrok"
