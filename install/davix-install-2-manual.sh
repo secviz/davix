@@ -22,7 +22,7 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D parsers maltego picviz ipsumdump passivedns graphviz tulip
+mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D parsers maltego picviz ipsumdump passivedns graphviz tulip tcp-reduce
 
 
 ## Afterglow
@@ -47,7 +47,16 @@ cd $DPMI/argus-clients-3.0.6.2/
 ./configure 
 make
 make install
- 
+
+# tcp-reduce
+echo "Installing tcp-reduce"
+cd $DPMI/tcp-reduce
+wget -c ftp://ita.ee.lbl.gov/software/tcp-reduce-1.0.tar.Z
+tar -xzf tcp-reduce-1.0.tar.Z
+mv tcp-reduce* /opt/davix
+ln -s /opt/davix/tcp-reduce-1.0/tcp-reduce /opt/davix/scripts/tcp-reduce
+ln -s /opt/davix/tcp-reduce-1.0/tcp-conn /opt/davix/scripts/tcp-conn
+ln -s /opt/davix/tcp-reduce-1.0/tcp-summary /opt/davix/scripts/tcp-summary
 
 ## GraphViz New Version
 echo "Installing GraphViz"
