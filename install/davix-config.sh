@@ -29,6 +29,9 @@ echo manual >> /etc/init/logstash-web.override
 sed -i -e 's/^/#/' /etc/cron.d/mrtg
 # turn off ntop
 sed -i -e 's/ENABLED=1/ENABLED=0/' /etc/default/ntop
+update-rc.d ntop disable
+# turn off sagan
+update-rc.d sagan disable
 
 # some other cleanup
 apt-get -y remove cups-common xmms2-core
