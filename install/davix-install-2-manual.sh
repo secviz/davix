@@ -22,12 +22,22 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 
 # Build the directory structure
 cd $DPMI
-mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D parsers maltego picviz ipsumdump passivedns graphviz tulip tcp-reduce
+mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D parsers maltego picviz ipsumdump passivedns graphviz tulip tcp-reduce 
 
 
 ## Afterglow
 git clone https://github.com/zrlram/afterglow $DH/afterglow
 git clone https://github.com/zrlram/parsers $DH/parsers
+
+## SiLK
+echo "Installing SiLK"
+cd $DPMI/silk
+wget -c https://tools.netsa.cert.org/releases/silk-3.9.0.tar.gz
+tar -xzpf silk-3.9.0.tar.gz
+cd silk-3.9.0
+./configure
+make
+make install
 
 ## Argus Server
 echo "Installing Argus Server"
@@ -201,6 +211,7 @@ sed -i -e 's/ -l .*/"/' /etc/init/logstash-web.conf
 sed -i -e 's/^setuid/#setuid/' /etc/init/logstash.conf
 sed -i -e 's/^setgid/#setgid/' /etc/init/logstash.conf
 mv /opt/logstash/vendor/kibana/app/dashboards/logstash.json /opt/logstash/vendor/kibana/app/dashboards/default.json 
+ln -s /opt/logstash/bin/logstash /opt/davix/scripts/logstash
 
 # Build the base configuration file
 cat << EOF > /etc/logstash/conf.d/logstash.conf
@@ -216,6 +227,8 @@ output {
 }
 EOF
 
+## Python ElasticSearch
+pip install elasticsearch
 
 ## Maltego
 cd $DPMI/maltego
