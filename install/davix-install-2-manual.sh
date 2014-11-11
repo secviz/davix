@@ -212,7 +212,7 @@ sed -i -e 's/^setuid/#setuid/' /etc/init/logstash.conf
 sed -i -e 's/^setgid/#setgid/' /etc/init/logstash.conf
 mv /opt/logstash/vendor/kibana/app/dashboards/logstash.json /opt/logstash/vendor/kibana/app/dashboards/default.json 
 echo "#!/bin/bash" > /opt/davix/scripts/logstash
-echo "/opt/logstash/bin/logstash" >> /opt/davix/scripts/logstash
+echo "/opt/logstash/bin/logstash $@" >> /opt/davix/scripts/logstash
 chmod +x /opt/davix/scripts/logstash
 
 # Build the base configuration file
