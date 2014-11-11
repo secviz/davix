@@ -78,3 +78,6 @@ rm -f google*.deb
 
 # Gollum-site for wiki
 gem install gollum-site
+
+# CSVKit
+pip install csvkit
