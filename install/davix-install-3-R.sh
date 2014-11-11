@@ -18,7 +18,7 @@ apt-get -y install r-cran-bayesm r-cran-date r-cran-gmaps r-cran-int64 r-cran-it
 apt-get -y install r-cran-mapdata r-cran-maptools r-cran-mcmcpack r-cran-plotrix r-cran-plyr
 apt-get -y install r-cran-rcmdr r-cran-reshape2 r-cran-rggobi r-cran-rmysql r-cran-rodbc r-cran-rquantlib
 apt-get -y install r-cran-rserve r-cran-sandwich r-cran-scatterplot3d r-cran-teachingdemos r-cran-timeseries r-cran-tseries
-apt-get -y install r-cran-vcd r-cran-xml r-doc-html r-doc-pdf r-mathlib r-recommended
+apt-get -y install r-cran-vcd r-cran-xml r-doc-html r-doc-pdf r-mathlib r-recommended r-cran-ggplot2
 
 mkdir $DPMI/RPackages
 cd $DPMI/RPackages
