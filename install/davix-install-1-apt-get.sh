@@ -38,11 +38,13 @@ apt-get -y insatll libxml-writer-perl # prads2snort
 apt-get -y insatll libldns-dev # passivedns
 apt-get -y insatll libestr-dev libjson-c-dev # liblognorm
 apt-get -y insatll pyqt4-dev-tools
-apt-get -y install libncurses5-dev # argus
+apt-get -y install libncurses5-dev librrds-perl # argus
 apt-get -y install lsb-core # google earth
 apt-get -y install libxtst6:i386 # processing
 apt-get -y install libtext-csv-perl # afterglow
 apt-get -y install tk-dev tcl-dibgd-dev libjpeg-dev libpng12-dev libxaw7-dev bison flex autotools-dev pdksh libexpat1-dev libfontconfig1-dev libltdl3-dev swig libperl-dev libgd2-noxpm-dev quilt groff-base ghostscript libcairo2-dev libpango1.0-dev guile-1.8-dev d-shlibs librsvg2-dev libgtkglext1-dev libglade2-dev libgts-dev freeglut3-dev liblualib50-dev fonts-liberation libcgraph5 libgvpr1 # graphviz
+apt-get -y install libglew-dev  # tulip
+apt-get -y install python-pip # elasticsearch access
 
 ## Services
 apt-get -y install apache2-mpm-prefork mysql-client ntp openssh-server
@@ -62,7 +64,7 @@ apt-get -y install chaosreader dnstop etherape geoip-database geoip-bin ggobi gn
 apt-get -y install gwhois mrtg libpcap-dev netcat netexpect netrw netsed nfdump ngrep nmap octave octave-image
 apt-get -y install octave-linear-algebra octave-mapping octave-nan octave-plplot octave-splines octave-tsa qtoctave
 apt-get -y install pads picviz ploticus prads python-scapy rrdtool rsyslog sagan snort socat syslog-ng
-apt-get -y install tcpdump tcpflow tcpreplay tcpslice tcpstat tcpxtract tshark ttt tulip tulip-doc wireshark zenmap
+apt-get -y install tcpdump tcpflow tcpreplay tcpslice tcpstat tcpxtract tshark ttt wireshark zenmap
 DEBIAN_FRONTEND=noninteractive apt-get -y ntop
 echo "ntop    ntop/admin_password password    davix" >> ntop.conf
 echo "ntop    ntop/admin_password_again   password    davix" >> ntop.conf
@@ -73,3 +75,6 @@ debconf-set-selections < ntop.conf
 make-googleearth-package --force
 dpkg -i google*.deb
 rm -f google*.deb
+
+# Gollum-site for wiki
+gem install gollum-site
