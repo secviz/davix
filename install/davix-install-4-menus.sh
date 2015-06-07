@@ -41,5 +41,6 @@ sed -i 's/wallpaper=.*/wallpaper=/home/davix/davix-2014_black.png/' /usr/share/l
 
 # Sync and generate the static wiki
 git clone https://github.com/secviz/davix.wiki.git /opt/davix/wiki
+mkdir -p /opt/davix/wiki
 cd /opt/davix/wiki
 gollum-site generate

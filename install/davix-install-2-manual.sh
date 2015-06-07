@@ -205,13 +205,13 @@ mv inetvis-0.9.3.1 $DH
 echo "Installing Logstash"
 mkdir -p $DH/logstash
 cd $DH/logstash
-wget -c https://download.elasticsearch.org/logstash/logstash/packages/debian/logstash_1.4.2-1-2c0f5a1_all.deb
-dpkg -i logstash_1.4.2-1*.deb
-sed -i -e 's/ -l .*/"/' /etc/init/logstash-web.conf
-sed -i -e 's/^setuid/#setuid/' /etc/init/logstash.conf
-sed -i -e 's/^setgid/#setgid/' /etc/init/logstash.conf
-mv /opt/logstash/vendor/kibana/app/dashboards/logstash.json /opt/logstash/vendor/kibana/app/dashboards/default.json 
-echo "#!/bin/bash" > /opt/davix/scripts/logstash
+wget -c http://download.elastic.co/logstash/logstash/packages/debian/logstash_1.5.0-1_all.deb
+dpkg -i logstash_1.5.0-1*.deb
+echo "LS_GROUP=adm" >> /etc/default/logstash
+#sed -i -e 's/^setuid/#setuid/' /etc/init/logstash.conf
+#sed -i -e 's/^setgid/#setgid/' /etc/init/logstash.conf
+#mv /opt/logstash/vendor/kibana/app/dashboards/logstash.json /opt/logstash/vendor/kibana/app/dashboards/default.json 
+echo '#!/bin/bash' > /opt/davix/scripts/logstash
 echo "/opt/logstash/bin/logstash $@" >> /opt/davix/scripts/logstash
 chmod +x /opt/davix/scripts/logstash
 
@@ -228,6 +228,16 @@ output {
   elasticsearch { embedded => true }
 }
 EOF
+# Kibana
+mkdir -p $DH/kibana
+cd $DH/kibana
+wget -c https://download.elastic.co/kibana/kibana/kibana-4.1.0-linux-x64.tar.gz
+tar -xzf kibana-4.1.0-linux-x64.tar.gz
+mv kibana-4.1.0-linux-x64 kibana
+echo '#!/bin/bash' > /opt/davix/scripts/kibana
+echo "/opt/davix/kibana/bin/kibana $@" >> /opt/davix/scripts/kibana
+chmod +x /opt/davix/scripts/kibana
+
 
 ## Python ElasticSearch
 pip install elasticsearch
