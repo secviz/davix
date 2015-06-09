@@ -1,0 +1,2 @@
+#!/bin/bash
+/opt/davix/kibana/bin/kibana 

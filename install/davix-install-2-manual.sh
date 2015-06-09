@@ -119,11 +119,11 @@ cpan -i Test::Manifest
 ## Cytoscape
 echo "Installing Cytoscape"
 cd $DPMI/Cytoscape
-wget -c http://chianti.ucsd.edu/cytoscape-3.0.2/Cytoscape_3_0_2_unix.sh
-chmod +x ./Cytoscape_3_0_2_unix.sh
+wget -c http://chianti.ucsd.edu/cytoscape-3.2.1/Cytoscape_3_2_1_unix.sh
+chmod +x ./Cytoscape_3_2_1_unix.sh
 mkdir -p $DH/Cytoscape
-mv Cytoscape_3_0_2_unix.sh $DH/Cytoscape/Cytoscape_3_0_2_unix.sh
-
+./Cytoscape_3_2_1_unix.sh -q -dir /opt/davix/Cytoscape/
+rm Cytoscape_3_2_1_unix.sh      # remove the installer file. It's huge
 
 # EVENTLOG
 echo "Installing Eventlog"
