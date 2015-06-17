@@ -82,15 +82,14 @@ ldconfig
 dot -c
 
 ## Tulip
-#echo "Installing Tulip"
-#cd $DPMI/tulip
-#wget -c 'http://downloads.sourceforge.net/project/auber/tulip/tulip-4.5.0/tulip-4.5.0_src.tar.gz?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fauber%2Ffiles%2Ftulip%2Ftulip-4.5.0%2F&ts=1406498450&use_mirror=hivelocity' -O tulip-4.5.0_src.tar.gz
-#tar -xzf tulip-4.5.0_src.tar.gz
-#cd tulip
-#cmake . 
-#make
-#make install
-
+echo "Installing Tulip"
+cd $DPMI/tulip
+wget -c 'http://sourceforge.net/projects/auber/files/tulip/tulip-4.7.0/tulip-4.7.0_src.tar.gz/download' -O tulip-4.7.0_src.tar.gz
+tar -xzf tulip-4.7.0_src.tar.gz
+cd tulip
+cmake . 
+make
+make install
 
 ## BroIDS (requires CMake)
 echo "Installing BroIDS"
