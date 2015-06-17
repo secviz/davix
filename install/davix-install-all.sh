@@ -15,9 +15,9 @@ fi
 
 # Checking for correct base version of Base OS
 . /etc/lsb-release
-if [[ "$DISTRIB_ID" -ne "Ubuntu" || "x$DISTRIB_RELEASE" != "x13.10" ]]; then
+if [[ "$DISTRIB_ID" -ne "Ubuntu" || "x$DISTRIB_RELEASE" != "x14.04" ]]; then
     if [ -z "$OVERWRITE_VERSION" ]; then
-        echo "Please use Ubuntu 13.10 as a base release."
+        echo "Please use Ubuntu 14.04 as a base release."
         echo "You can overwrite this requirement by setting OVERWRITE_VERSION to 1"
         exit 1
     fi
