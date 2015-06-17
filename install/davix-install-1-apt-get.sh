@@ -44,6 +44,7 @@ apt-get -y install libxtst6:i386 # processing
 apt-get -y install libtext-csv-perl # afterglow
 apt-get -y install tk-dev tcl-dibgd-dev libjpeg-dev libpng12-dev libxaw7-dev bison flex autotools-dev pdksh libexpat1-dev libfontconfig1-dev libltdl3-dev swig libperl-dev libgd2-noxpm-dev quilt groff-base ghostscript libcairo2-dev libpango1.0-dev guile-1.8-dev d-shlibs librsvg2-dev libgtkglext1-dev libglade2-dev libgts-dev freeglut3-dev liblualib50-dev fonts-liberation libcgraph5 libgvpr1 # graphviz
 apt-get -y install libglew-dev  # tulip
+apt-get -y install circos  # circos
 apt-get -y install python-pip # elasticsearch access
 
 ## Services
