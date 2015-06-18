@@ -36,7 +36,7 @@ apt-get -y install libpcap # Netgrok
 apt-get -y install ruby-dev # Gollum-site static wiki
 apt-get -y insatll libxml-writer-perl # prads2snort
 apt-get -y insatll libldns-dev # passivedns
-apt-get -y insatll libestr-dev libjson-c-dev # liblognorm
+apt-get -y insatll liblognorm-dev # liblognorm
 apt-get -y insatll pyqt4-dev-tools
 apt-get -y install libncurses5-dev librrds-perl # argus
 apt-get -y install lsb-core # google earth

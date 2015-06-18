@@ -458,13 +458,13 @@ mv passivedns $DH/passivedns
 ln -s $DH/passivedns/passivedns $DH/scripts/passivedns
 
 # liblognorm
-cd $DMPI/liblognorm
-wget -c http://www.liblognorm.com/files/download/liblognorm-1.0.1.tar.gz
-tar -xzf liblognorm-1.0.1.tar.gz
-cd liblognorm-1.0.1
-./confiugre --disable-docs
-make
-make install
+#cd $DMPI/liblognorm
+#wget -c http://www.liblognorm.com/files/download/liblognorm-1.0.1.tar.gz
+#tar -xzf liblognorm-1.0.1.tar.gz
+#cd liblognorm-1.0.1
+#./confiugre --disable-docs
+#make
+#make install
 
 
 ## Copy over Run Scripts
