@@ -6,7 +6,7 @@
 ##                                                ##
 ## Raffael Marty, Amanda Gellhouse, Edward McCabe ##
 ##                                                ##
-## DEVELOPMENT v1.2   13 MAY 2014                 ##
+## DEVELOPMENT v1.3   13 MAY 2014                 ##
 ####################################################
 
 apt-get update
@@ -43,7 +43,7 @@ apt-get -y install lsb-core # google earth
 apt-get -y install libxtst6:i386 # processing
 apt-get -y install libtext-csv-perl # afterglow
 apt-get -y install tk-dev tcl-dibgd-dev libjpeg-dev libpng12-dev libxaw7-dev bison flex autotools-dev pdksh libexpat1-dev libfontconfig1-dev libltdl3-dev swig libperl-dev libgd2-noxpm-dev quilt groff-base ghostscript libcairo2-dev libpango1.0-dev guile-1.8-dev d-shlibs librsvg2-dev libgtkglext1-dev libglade2-dev libgts-dev freeglut3-dev liblualib50-dev fonts-liberation libcgraph5 libgvpr1 # graphviz
-apt-get -y install libglew-dev  # tulip
+apt-get -y install libglew-dev  libfreetype6-dev libqt4-dev # tulip
 apt-get -y install circos  # circos
 apt-get -y install python-pip # elasticsearch access
 
@@ -52,7 +52,7 @@ apt-get -y install apache2-mpm-prefork mysql-client ntp openssh-server
 # installing mysql-server
 DEBIAN_FRONTEND=noninteractive apt-get -y install mysql-server
 mysql_install_db 
-sleep 7 
+sleep 3 
 /usr/bin/mysqld_safe &
 sleep 2 
 /usr/bin/mysqladmin -u root password 'davix'
@@ -67,16 +67,16 @@ apt-get -y install octave-linear-algebra octave-mapping octave-nan octave-plplot
 apt-get -y install pads picviz ploticus prads python-scapy rrdtool rsyslog sagan snort socat syslog-ng
 apt-get -y install tcpdump tcpflow tcpreplay tcpslice tcpstat tcpxtract tshark ttt wireshark zenmap
 apt-get -y install gource
-DEBIAN_FRONTEND=noninteractive apt-get -y ntop
+
+DEBIAN_FRONTEND=noninteractive apt-get -y install ntop
 echo "ntop    ntop/admin_password password    davix" >> ntop.conf
 echo "ntop    ntop/admin_password_again   password    davix" >> ntop.conf
 echo "ntop    ntop/interfaces string  eth0" >> ntop.conf
 debconf-set-selections < ntop.conf
 
 # Installing Google Earth
-make-googleearth-package --force
-dpkg -i google*.deb
-rm -f google*.deb
+wget dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
+dpkg -i google-*.deb
 
 # Gollum-site for wiki
 gem install gollum-site
