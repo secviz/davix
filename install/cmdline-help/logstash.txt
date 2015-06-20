@@ -1,11 +1,11 @@
 DAVIX Quick Start Help
 ----------------------
 
-LogStash daemon started.
+LogStash and Kibana daemon started.
 
-To connect to LogStash, navigate to DAVIX -> Capture -> LogStash
+To connect to LogStash, navigate to DAVIX -> Visualize -> LogStash
 
 OR
 
-Open a browser and point it to http://localhost:9292
+Open a browser and point it to http://localhost:5601
 
