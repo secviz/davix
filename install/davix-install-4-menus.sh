@@ -3,12 +3,8 @@
 ####################################################
 ## DAVIX 2014 Menu & Branding Setup Script        ##
 ##                                                ##
-## Amanda Gellhouse, Raffael Marty                ##
-##                                                ##
-## DEVELOPMENT V1.1  13 MAY 2014                  ##
+## V1.2  6 JULY 2015                              ##
 ####################################################
-
-# TODO: Default to Gnome Classic
 
 # Setup
 export DPMI="/home/davix/davix-packages-manual-install"
@@ -37,7 +33,7 @@ cp $DPMI/davix/install/config/lxdm.conf /etc/lxdm/lxdm.conf
 
 # Background
 cp $DPMI/davix/logos/davix-2014_black.png $DAVEHM
-sed -i 's/wallpaper=.*/wallpaper=/home/davix/davix-2014_black.png/' /usr/share/lxde/pcmanfm/LXDE.conf
+sed -i 's/wallpaper=.*/wallpaper=\/home\/davix\/davix-2014_black.png/g' /usr/share/lxde/pcmanfm/LXDE.conf
 
 # Sync and generate the static wiki
 git clone https://github.com/secviz/davix.wiki.git /opt/davix/wiki
