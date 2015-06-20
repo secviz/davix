@@ -4,9 +4,7 @@
 ## DAVIX 2014 Application Installation Script     ##
 ## DAVIX 2014 Core Applications                   ##
 ##                                                ##
-## Raffael Marty, Amanda Gellhouse, Edward McCabe ##
-##                                                ##
-## DEVELOPMENT V1.5  13 MAY 2014                  ##
+## DEVELOPMENT V1.5  6 JULY 2015                  ##
 ####################################################
 
 # init
@@ -23,7 +21,6 @@ export LibMagic_INCLUDE_DIR="/usr/lib/i386-linux-gnu/"
 # Build the directory structure
 cd $DPMI
 mkdir gephi p0f argus pulledpork BroIDS jquery-sparklines nsm-console eventlog TreeMap Cytoscape Mondrian TNV Parvis Timesearcher1 walrus PerlPackages GUESS InetVis processing PyInline Rumint gltail FlowTag INAV Netgrok SeedsOfContempt RTGraph3D parsers maltego picviz ipsumdump passivedns graphviz tulip tcp-reduce 
-
 
 ## Afterglow
 git clone https://github.com/zrlram/afterglow $DH/afterglow
@@ -42,18 +39,18 @@ make install
 ## Argus Server
 echo "Installing Argus Server"
 cd $DPMI/argus
-wget -c http://qosient.com/argus/src/argus-3.0.6.1.tar.gz
-wget -c http://qosient.com/argus/src/argus-clients-3.0.6.2.tar.gz
-tar -xvpf argus-3.0.6.1.tar.gz 
-tar -xvpf argus-clients-3.0.6.2.tar.gz 
-cd argus-3.0.6.1/
+wget -c http://qosient.com/argus/src/argus-3.0.8.1.tar.gz
+wget -c http://qosient.com/argus/src/argus-clients-3.0.8.tar.gz
+tar -xvpf argus-3.0.8.1.tar.gz 
+tar -xvpf argus-clients-3.0.8.tar.gz 
+cd argus-3.0.8.1/
 ./configure
 make
 make install
 
 ## Argus Client
 echo "Installing Argus Client"
-cd $DPMI/argus-clients-3.0.6.2/
+cd $DPMI/argus-clients-3.0.8/
 ./configure 
 make
 make install
@@ -94,9 +91,9 @@ make install
 ## BroIDS (requires CMake)
 echo "Installing BroIDS"
 cd $DPMI/BroIDS
-wget -c http://www.bro.org/downloads/release/bro-2.3.tar.gz
-tar -xvpf bro-2.3.tar.gz
-cd bro-2.3
+wget -c http://www.bro.org/downloads/release/bro-2.4.tar.gz
+tar -xvpf bro-2.4.tar.gz
+cd bro-2.4
 ./configure --prefix=$DH/broids
 make
 make install
@@ -113,7 +110,6 @@ yes '' | cpan -i Crypt::SSLeay
 cpan -i IP::Anonymous
 cpan -i Crypt::Rijndael
 cpan -i Test::Manifest
-
 
 ## Cytoscape
 echo "Installing Cytoscape"
@@ -243,8 +239,8 @@ pip install elasticsearch
 
 ## Maltego
 cd $DPMI/maltego
-wget -c http://www.paterva.com/malv34/community/MaltegoCE.v3.4.0.5004.deb
-dpkg -i MaltegoCE.v3.4.0.5004.deb
+wget -c http://www.paterva.com/malv36/community/MaltegoChlorineCE.v3.6.0.6640.deb
+dpkg -i MaltegoChlorineCE.v3.6.0.6640.deb
 
 
 ## Mondrian
@@ -414,16 +410,7 @@ mv walrus-0.6.3 $DH/walrus-0.6.3
 mv tmp/walruscsv $DH/walrus-0.6.3
 rm -r tmp
 
-## Gephi
-cd $DPMI/gephi
-wget -c https://launchpad.net/gephi/0.8/0.8.2beta/+download/gephi-0.8.2-beta.tar.gz
-tar -xzf gephi-0.8.2-beta.tar.gz
-mv gephi $DH
 
-## Maltego
-cd $DPMI/maltego
-wget -c http://www.paterva.com/malv34/community/MaltegoCE.v3.4.0.5004.deb
-dpkg -i MaltegoCE.v3.4.05004.deb
 
 ## PicViz GUI
 cd $DPMI/picviz
@@ -442,7 +429,7 @@ python setup.py install
 cd $DMPI/ipsumdump
 wget -c http://www.read.seas.harvard.edu/~kohler/ipsumdump/ipsumdump-1.84.tar.gz
 tar -xzf ipsumdump-1.84.tar.gz
-cd ipsumpdump-1.84
+cd ipsumdump-1.84
 ./configure
 make
 make install
