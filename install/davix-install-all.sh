@@ -3,9 +3,6 @@
 ####################################################
 ## DAVIX Installation Script                      ##
 ##                                                ##
-## Raffael Marty, Amanda Gellhouse                ##
-##                                                ##
-## DEVELOPMENT v1.0.2 3 MAY 2014                  ##
 ####################################################
 
 if [[ "$USER" != "root" ]]; then
@@ -22,7 +19,6 @@ if [[ "$DISTRIB_ID" -ne "Ubuntu" || "x$DISTRIB_RELEASE" != "x14.04" ]]; then
         exit 1
     fi
 fi 
-
 
 # create davix group
 if ! getent group davix >/dev/null; then
@@ -46,7 +42,8 @@ sed -ie 's/^%sudo.*/%sudo   ALL=(ALL:ALL) NOPASSWD:ALL/' /etc/sudoers
 echo "export PATH=$PATH:/opt/davix/scripts/:/opt/davix/parsers" >> ~/.profile
 
 # Setup the directories
-mkdir -p /opt/davix
+mkdir -p /opt/davix/scripts
+mkdir -p /opt/davix/parsers
 export DPMI="/home/davix/davix-packages-manual-install"
 mkdir -p $DPMI
 
@@ -54,6 +51,8 @@ mkdir -p $DPMI
 # Install git
 apt-get -y install git
 
+# Install zip
+apt-get -y install zip
 
 # Clone the DAVIX repository
 cd $DPMI
