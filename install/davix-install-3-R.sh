@@ -8,7 +8,7 @@
 ####################################################
 
 apt-get -y install libgomp1
-wget -c http://mirrors.kernel.org/ubuntu/pool/universe/r/r-base/r-base-core_3.2.1-4_amd64.deb
+wget -c https://mirrors.kernel.org/ubuntu/pool/universe/r/r-base/r-base-core_3.2.1-4_amd64.deb
 
 # r-base dependencies
 dpkg -i r-base-core_3.*.deb
@@ -21,10 +21,10 @@ apt-get -y install r-cran-vcd r-cran-xml r-doc-html r-doc-pdf r-mathlib r-recomm
 
 mkdir $DPMI/RPackages
 cd $DPMI/RPackages
-wget -c http://cran.r-project.org/src/contrib/FactoMineR_1.26.tar.gz
-wget -c http://cran.r-project.org/src/contrib/leaps_2.9.tar.gz
-wget -c http://cran.r-project.org/src/contrib/HH_3.0-4.tar.gz
-wget -c http://cran.r-project.org/src/contrib/ellipse_0.3-8.tar.gz
+wget -c https://cran.r-project.org/src/contrib/FactoMineR_1.26.tar.gz
+wget -c https://cran.r-project.org/src/contrib/leaps_2.9.tar.gz
+wget -c https://cran.r-project.org/src/contrib/HH_3.0-4.tar.gz
+wget -c https://cran.r-project.org/src/contrib/ellipse_0.3-8.tar.gz
     R CMD INSTALL leaps_2.9.tar.gz
     R CMD INSTALL ellipse_0.3-8.tar.gz
 	R CMD INSTALL FactoMineR_1.26.tar.gz
@@ -37,5 +37,5 @@ echo "Installing R Studio"
 cd $DPMI/RStudio
 apt-get -y install libgstreamer-plugins-base0.10-0
 
-wget -c http://download1.rstudio.org/rstudio-0.99.451-amd64.deb
+wget -c https://download1.rstudio.org/rstudio-0.99.451-amd64.deb
 dpkg -i rstudio-*.deb
