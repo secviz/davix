@@ -8,10 +8,12 @@ echo manual >> /etc/init/mysql.override
 # gone is ssh and some more
 echo manual >> /etc/init/ssh.override
 echo manual >> /etc/init/cups.override
+echo manual >> /etc/init/smbd.override
+echo manual >> /etc/init/nmbd.override
 mv /etc/inetd.conf /etc/inetd.disabled
 update-rc.d tor disable
 # turn off samba
-echo manual >> /etc/init/winbind
+echo manual >> /etc/init/winbind.override
 
 # turn off new DAVIX installed services
 # turn off snort
