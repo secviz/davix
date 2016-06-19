@@ -58,7 +58,8 @@ make install
 # tcp-reduce
 echo "Installing tcp-reduce"
 cd $DPMI/tcp-reduce
-wget -c ftp://ita.ee.lbl.gov/software/tcp-reduce-1.0.tar.Z
+#wget -c ftp://ita.ee.lbl.gov/software/tcp-reduce-1.0.tar.Z
+wget -c https://packetstormsecurity.com/files/download/13104/tcp-reduce-1.0.tar.Z
 tar -xzf tcp-reduce-1.0.tar.Z
 mv tcp-reduce* /opt/davix
 ln -s /opt/davix/tcp-reduce-1.0/tcp-reduce /opt/davix/scripts/tcp-reduce
@@ -81,7 +82,7 @@ dot -c
 ## Tulip
 echo "Installing Tulip"
 cd $DPMI/tulip
-wget -c 'http://sourceforge.net/projects/auber/files/tulip/tulip-4.7.0/tulip-4.7.0_src.tar.gz/download' -O tulip-4.7.0_src.tar.gz
+wget -c 'https://sourceforge.net/projects/auber/files/tulip/tulip-4.7.0/tulip-4.7.0_src.tar.gz/download' -O tulip-4.7.0_src.tar.gz
 tar -xzf tulip-4.7.0_src.tar.gz
 cd tulip
 cmake . 
@@ -91,7 +92,7 @@ make install
 ## BroIDS (requires CMake)
 echo "Installing BroIDS"
 cd $DPMI/BroIDS
-wget -c http://www.bro.org/downloads/release/bro-2.4.tar.gz
+wget -c https://www.bro.org/downloads/release/bro-2.4.tar.gz
 tar -xvpf bro-2.4.tar.gz
 cd bro-2.4
 ./configure --prefix=$DH/broids
@@ -102,7 +103,7 @@ $DH/broids/bin/broctl install
 ## Perl Chart Director
 echo "Installing ChartDirector"
 cd $DPMI/PerlPackages
-wget -c http://download2.advsofteng.com/chartdir_perl_linux.tar.gz
+wget -c https://download2.advsofteng.com/chartdir_perl_linux.tar.gz
 tar -xvpf chartdir_perl_linux.tar.gz
 # Add to perl @INC Path
 mv ChartDirector /usr/lib/perl5/
@@ -135,7 +136,7 @@ cd eventlog-0.2.4
 ## FlowTag
 echo "Installing FlowTag"
 cd $DPMI/FlowTag
-wget -c http://chrislee.dhs.org/projects/flowtag/flowtag-2.0.5.tgz
+wget -c https://chrislee.dhs.org/projects/flowtag/flowtag-2.0.5.tgz
 tar -xvpf flowtag-2.0.5.tgz
 cd flowtag-2.0.5
 ruby setup.rb
@@ -158,7 +159,7 @@ git clone https://github.com/Fudge/gltail $DH/gltail
 ## GUESS
 echo "Installing GUESS"
 cd $DPMI/GUESS
-wget -c http://sourceforge.net/projects/guess/files/guess/guess-1.0.3-beta/guess-20070813.zip
+wget -c https://downloads.sourceforge.net/project/guess/guess/guess-1.0.3-beta/guess-20070813.zip
 unzip guess-20070813.zip
 mv guess $DH/guess
 
@@ -193,7 +194,7 @@ cd $DPMI/InetVis
 wget -c http://www.cs.ru.ac.za/research/g02v2468/inetvis/0.9.3/inetvis-0.9.3.1.tar.gz
 tar -xvpf inetvis-0.9.3.1.tar.gz
 # Dependency
-wget http://mirrors.kernel.org/ubuntu/pool/main/q/qt-x11-free/libqt3-mt_3.3.8-b-6ubuntu2_i386.deb
+wget https://mirrors.kernel.org/ubuntu/pool/main/q/qt-x11-free/libqt3-mt_3.3.8-b-6ubuntu2_i386.deb
 dpkg -i libqt3-mt_3.3.8-b-6ubuntu2_i386.deb
 mv inetvis-0.9.3.1 $DH
 
@@ -234,27 +235,27 @@ pip install elasticsearch
 
 ## Maltego
 cd $DPMI/maltego
-wget -c http://www.paterva.com/malv36/community/MaltegoChlorineCE.v3.6.0.6640.deb
+wget -c https://www.paterva.com/malv36/community/MaltegoChlorineCE.v3.6.0.6640.deb
 dpkg -i MaltegoChlorineCE.v3.6.0.6640.deb
 
 
 ## Mondrian
 echo "Installing Mondrian"
 cd $DPMI/Mondrian
-wget -c http://www.theusrus.de/Mondrian/Mondrian15b.jar
+wget -c https://www.theusrus.de/Mondrian/Mondrian15b.jar
 mkdir -p $DH/Mondrian
 mv Mondrian15b.jar $DH/Mondrian/Mondrian.jar
 
 ## Netgrok
 echo "Installing Netgrok"
 cd $DPMI/Netgrok
-wget -c http://netgrok.googlecode.com/files/netgrok20080928.zip
+wget -c https://netgrok.googlecode.com/files/netgrok20080928.zip
 unzip netgrok20080928.zip
 # TODO Resolve Netgrok issues
 # Fix ini file
 #mv -f $DPMI/davix/install/fixes/netgrok/groups.ini Netgrok/ 
 # Get jpcap
-#wget -c http://sourceforge.net/projects/jpcap/files/jpcap/v0.01.16/jpcap-0.01.16.tar.gz
+#wget -c https://sourceforge.net/projects/jpcap/files/jpcap/v0.01.16/jpcap-0.01.16.tar.gz
 #tar -xvpf jpcap-0.01.16.tar.gz
 #cp Netgrok/lib/linux/jpcap.jar /usr/lib/jvm/default-java/jre/lib/ext
 mv Netgrok $DH
@@ -263,7 +264,7 @@ mv Netgrok $DH
 # nsm-console
 echo "Installing nsm-console"
 cd $DPMI/nsm-console
-wget -c http://writequit.org/projects/nsm-console/files/nsm-console-0.7.tar.gz
+wget -c https://writequit.org/projects/nsm-console/files/nsm-console-0.7.tar.gz
 tar -xvpf nsm-console-0.7.tar.gz
 # Patch 
 mv -f $DPMI/davix/install/fixes/nsm/nsm nsm-console/ 
@@ -273,7 +274,7 @@ mv nsm-console $DH
 ## p0f
 echo "Installing p0f"
 cd $DPMI/p0f/
-wget -c http://lcamtuf.coredump.cx/p0f3/releases/p0f-3.07b.tgz
+wget -c https://lcamtuf.coredump.cx/p0f3/releases/p0f-3.07b.tgz
 tar -xvpf p0f-3.07b.tgz
 cd p0f-3.07b
 ./build.sh
@@ -292,7 +293,7 @@ mv p0f-client $DH/p0f/bin
 ## Parvis
 echo "Installing Parvis"
 cd $DPMI/Parvis
-wget -c http://www.mediavirus.org/parvis/parvis-0.3.1.zip
+wget -c https://www.mediavirus.org/parvis/parvis-0.3.1.zip
 unzip parvis-0.3.1.zip
 cp parvis.bat parvish.sh
 chmod +x parvish.sh
@@ -303,7 +304,7 @@ mv Parvis $DH
 ## Processing
 echo "Installing Processing"
 cd $DPMI/processing
-wget -c http://download.processing.org/processing-2.1-linux32.tgz
+wget -c https://download.processing.org/processing-2.1-linux32.tgz
 tar -xvpf processing-2.1-linux32.tgz
 mv processing-2.1 $DH
 
@@ -311,7 +312,7 @@ mv processing-2.1 $DH
 ## pulledpork: snort rules updater
 echo "Installing PulledPork"
 cd $DPMI/pulledpork/
-wget -c http://pulledpork.googlecode.com/files/pulledpork-0.7.0.tar.gz
+wget -c https://pulledpork.googlecode.com/files/pulledpork-0.7.0.tar.gz
 tar -xvpf pulledpork-0.7.0.tar.gz
 mv pulledpork-0.7.0 $DH
 cd $DH/pulledpork-0.7.0
@@ -321,14 +322,14 @@ chmod +x pulledpork.pl
 ## RT Graph 3D
 echo "Installing RT Graph 3D"
 cd $DPMI/RTGraph3D
-wget -c http://www.secdev.org/projects/rtgraph3d/files/rtgraph3d-0.1.tgz
+wget -c https://www.secdev.org/projects/rtgraph3d/files/rtgraph3d-0.1.tgz
 tar -xvpf rtgraph3d-0.1.tgz
 # Dependencies - povexport
-wget -c http://www.vpython.org/contents/contributed/povexport-2012-07-10.zip
+wget -c https://www.vpython.org/contents/contributed/povexport-2012-07-10.zip
 unzip povexport-2012-07-10.zip
 mv povexport-2012-07-10/* rtgraph3d-0.1/
 # Dependencies - PyInline
-wget -c http://sourceforge.net/projects/pyinline/files/pyinline/0.03/PyInline-0.03.tar.gz
+wget -c https://sourceforge.net/projects/pyinline/files/pyinline/0.03/PyInline-0.03.tar.gz
 tar -xvpf PyInline-0.03.tar.gz
 chmod -R 755 PyInline-0.03
 mv PyInline-0.03/PyInline/*.py rtgraph3d-0.1/
@@ -338,7 +339,7 @@ mv rtgraph3d-0.1 $DH
 ## rumint
 echo "Installing rumint"
 cd $DPMI/Rumint
-wget -c http://www.rumint.org/software/rumint/rumint_v.214.zip
+wget -c https://www.rumint.org/software/rumint/rumint_v.214.zip
 unzip rumint_v.214.zip
 cd rumint_2.14_distro
 wine ./setup.exe
@@ -358,9 +359,9 @@ mv seedsofcontempt-read-only $DH/seedsofcontempt
 ## Timesearcher 1
 echo "Installing Timesearcher 1"
 cd $DPMI/Timesearcher1
-wget -c http://www.cs.umd.edu/hcil/timesearcher/dist/ts1.3.7.tar.gz
+wget -c https://www.cs.umd.edu/hcil/timesearcher/dist/ts1.3.7.tar.gz
 tar -xvpf ts1.3.7.tar.gz
-wget -c http://www.cs.umd.edu/hcil/timesearcher/dist2/demos_4Gf5x/ts-2.4.zip
+wget -c https://www.cs.umd.edu/hcil/timesearcher/dist2/demos_4Gf5x/ts-2.4.zip
 unzip ts-2.4.zip
 mv ts1.3.7 $DH
 mv ts-2.4 $DH/ts1.3.7/demos
@@ -369,7 +370,7 @@ mv ts-2.4 $DH/ts1.3.7/demos
 ## TNV
 echo "Installing TNV"
 cd $DPMI/TNV
-wget -c http://sourceforge.net/projects/tnv/files/tnv/0.3.9/tnv_java_0.3.9.zip
+wget -c https://sourceforge.net/projects/tnv/files/tnv/0.3.9/tnv_java_0.3.9.zip
 unzip tnv_java_0.3.9.zip
 mv tnv-0.3.9 $DH
 
@@ -377,7 +378,7 @@ mv tnv-0.3.9 $DH
 ## TreeMap
 echo "Installing TreeMap"
 cd $DPMI/TreeMap
-wget -c http://www.cs.umd.edu/hcil/treemap/demos/Treemap-4.1.2.zip
+wget -c https://www.cs.umd.edu/hcil/treemap/demos/Treemap-4.1.2.zip
 unzip Treemap-4.1.2.zip
 mv Treemap-4.1.2 $DH
 
@@ -393,13 +394,13 @@ mv lib/i386/* /usr/lib/jvm/java-1.6.0-openjdk-i386/jre/lib/i386/
 # Get Walrus Test Data
 mkdir tmp
 cd tmp
-wget -c http://www.soa-world.de/dev/walruscsv/walruscsv.zip
+wget -c https://www.soa-world.de/dev/walruscsv/walruscsv.zip
 unzip walruscsv.zip
 g++ wlink.cpp main.cpp wtree.cpp -o walruscsv
-wget -c http://www.soa-world.de/dev/walruscsv/testdata.zip
+wget -c https://www.soa-world.de/dev/walruscsv/testdata.zip
 unzip testdata.zip
 # Get Walrus
-wget -c http://www.caida.org/tools/visualization/walrus/download/walrus-0.6.3.tar.gz
+wget -c https://www.caida.org/tools/visualization/walrus/download/walrus-0.6.3.tar.gz
 tar -xvpf walrus-0.6.3.tar.gz
 mv walrus-0.6.3 $DH/walrus-0.6.3
 mv tmp/walruscsv $DH/walrus-0.6.3
@@ -409,7 +410,7 @@ rm -r tmp
 
 ## PicViz GUI
 cd $DPMI/picviz
-wget -c http://www.picviz.com/downloads/picviz-latest.tar.bz2
+wget -c https://www.picviz.com/downloads/picviz-latest.tar.bz2
 bunzip2 picviz-latest.tar.bz2
 tar -xvf picviz-latest.tar
 cd libpicviz
@@ -422,7 +423,7 @@ python setup.py install
 
 # ipsumdump
 cd $DMPI/ipsumdump
-wget -c http://www.read.seas.harvard.edu/~kohler/ipsumdump/ipsumdump-1.84.tar.gz
+wget -c https://www.read.seas.harvard.edu/~kohler/ipsumdump/ipsumdump-1.84.tar.gz
 tar -xzf ipsumdump-1.84.tar.gz
 cd ipsumdump-1.84
 ./configure
@@ -441,7 +442,7 @@ ln -s $DH/passivedns/passivedns $DH/scripts/passivedns
 
 # liblognorm
 #cd $DMPI/liblognorm
-#wget -c http://www.liblognorm.com/files/download/liblognorm-1.0.1.tar.gz
+#wget -c https://www.liblognorm.com/files/download/liblognorm-1.0.1.tar.gz
 #tar -xzf liblognorm-1.0.1.tar.gz
 #cd liblognorm-1.0.1
 #./confiugre --disable-docs

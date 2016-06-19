@@ -4,9 +4,9 @@
 ## DAVIX Base Application Installation Script     ##
 ## DAVIX Core Applications                        ##
 ##                                                ##
-## Raffael Marty, Amanda Gellhouse, Edward McCabe ##
+## Raffael Marty                                  ##
 ##                                                ##
-## DEVELOPMENT v1.3   13 MAY 2014                 ##
+## DEVELOPMENT v1.4   4 JULY 2016                 ##
 ####################################################
 
 apt-get update
@@ -36,10 +36,10 @@ apt-get -y install libjava3d-java libjava3d-java-doc libjava3d-jni # Walrus
 apt-get -y install python-visual # RT Graph 3D
 apt-get -y install libpcap # Netgrok
 apt-get -y install ruby-dev # Gollum-site static wiki
-apt-get -y insatll libxml-writer-perl # prads2snort
-apt-get -y insatll libldns-dev # passivedns
-apt-get -y insatll liblognorm-dev # liblognorm
-apt-get -y insatll pyqt4-dev-tools
+apt-get -y install libxml-writer-perl # prads2snort
+apt-get -y install libldns-dev # passivedns
+apt-get -y install liblognorm-dev # liblognorm
+apt-get -y install pyqt4-dev-tools
 apt-get -y install libncurses5-dev librrds-perl # argus
 apt-get -y install lsb-core # google earth
 apt-get -y install libxtst6:i386 # processing
@@ -77,7 +77,7 @@ echo "ntop    ntop/interfaces string  eth0" >> ntop.conf
 debconf-set-selections < ntop.conf
 
 # Installing Google Earth
-wget dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
+wget https://dl.google.com/dl/earth/client/current/google-earth-stable_current_amd64.deb
 dpkg -i google-*.deb
 
 # Gollum-site for wiki
