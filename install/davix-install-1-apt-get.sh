@@ -16,7 +16,9 @@ apt-get -y remove ubuntu-minimal
 
 ## OS Basics
 # apt-get -y install geeqie gnome-desktop-environment 
-apt-get -y install openjdk-6-jre-lib openjdk-6-jdk recode sharutils sqlite3 \
+apt-get -y install software-properties-common
+add-apt-repository -y ppa:openjdk-r/ppa
+apt-get -y install openjdk-8-jre-lib openjdk-8-jdk recode sharutils sqlite3 \
            terminator udns-utils default-jre unrar
 apt-get -y install cvs subversion
 apt-get -y install dns-browse exuberant-ctags java3ds-fileloader
