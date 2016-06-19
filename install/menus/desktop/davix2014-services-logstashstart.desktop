@@ -1,8 +1,8 @@
 [Desktop Entry]
 Categories=Service
 Encoding=UTF-8
-Exec=/opt/davix/scripts/logstash_kibana.start; sudo -s
+Exec=sudo sh -c 'service elasticsearch start; service logstash start; service kibana start'
 Hidden=false
-Name=Logstash Start
+Name=ElasticStack Start
 Terminal=true
 Type=Application

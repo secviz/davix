@@ -1,8 +1,8 @@
 [Desktop Entry]
 Categories=Service
 Encoding=UTF-8
-Exec=sudo stop logstash && sudo stop logstash-web
+Exec=sudo sh -c 'service elasticsearch stop; service logstash stop; service kibana stop'
 Hidden=false
-Name=Logstash Stop
+Name=ElasticStack Stop
 Terminal=true
 Type=Application
