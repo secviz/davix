@@ -143,10 +143,12 @@ ruby setup.rb
 
 ## Gephi
 cd $DPMI/gephi
-wget -c https://launchpad.net/gephi/0.8/0.8.2beta/+download/gephi-0.8.2-beta.tar.gz
-tar -xzf gephi-0.8.2-beta.tar.gz
-mv gephi $DH
-
+wget -c https://github.com/gephi/gephi/releases/download/v0.9.1/gephi-0.9.1-linux.tar.gz
+tar -xzf gephi-0.9.1-linux.tar.gz
+mv gephi-0.9.1 $DH/gephi
+echo '#!/bin/bash' > /opt/davix/scripts/gephi
+echo "sudo /opt/davix/gephi/bin/gephi --jdkhome /usr/lib/jvm/java-8-openjdk-amd64/jre" >> /opt/davix/scripts/gephi
+chmod +x /opt/davix/scripts/gephi
 
 ## glTail
 echo "Installing glTail"
@@ -197,17 +199,17 @@ mv inetvis-0.9.3.1 $DH
 
 
 # Logstash
-echo "Installing Logstash"
-mkdir -p $DH/logstash
-cd $DH/logstash
-wget -c http://download.elastic.co/logstash/logstash/packages/debian/logstash_1.5.0-1_all.deb
-dpkg -i logstash_1.5.0-1*.deb
+echo "Installing ElasticSearch LogStash Kibana"
+cd /tmp
+wget -c https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/5.0.0-alpha4/elasticsearch-5.0.0-alpha4.deb
+wget -c https://download.elastic.co/logstash/logstash/packages/debian/logstash-5.0.0-alpha4.deb
+dpkg -i elasticsearch-5.0.0-alpha4.deb
+dpkg -i logstash-5.0.0-alpha4.deb
+
 echo "LS_GROUP=adm" >> /etc/default/logstash
-#sed -i -e 's/^setuid/#setuid/' /etc/init/logstash.conf
-#sed -i -e 's/^setgid/#setgid/' /etc/init/logstash.conf
-#mv /opt/logstash/vendor/kibana/app/dashboards/logstash.json /opt/logstash/vendor/kibana/app/dashboards/default.json 
+
 echo '#!/bin/bash' > /opt/davix/scripts/logstash
-echo "/opt/logstash/bin/logstash $@" >> /opt/davix/scripts/logstash
+echo "sudo /opt/logstash/bin/logstash --path.settings=/etc/logstash $@" >> /opt/davix/scripts/logstash
 chmod +x /opt/davix/scripts/logstash
 
 # Build the base configuration file
@@ -220,19 +222,12 @@ input {
 }
 output {
   stdout { }
-  elasticsearch { embedded => true }
+  elasticsearch { hosts => ["localhost:9200"] }
 }
 EOF
 # Kibana
-mkdir -p $DH/kibana
-cd $DH/kibana
-wget -c https://download.elastic.co/kibana/kibana/kibana-4.1.0-linux-x64.tar.gz
-tar -xzf kibana-4.1.0-linux-x64.tar.gz
-mv kibana-4.1.0-linux-x64 kibana
-echo '#!/bin/bash' > /opt/davix/scripts/kibana
-echo "/opt/davix/kibana/bin/kibana $@" >> /opt/davix/scripts/kibana
-chmod +x /opt/davix/scripts/kibana
-
+wget -c https://download.elastic.co/kibana/kibana/kibana-5.0.0-alpha4-amd64.deb
+dpkb -i kibana-5.0.0-alpha4-amd64.deb
 
 ## Python ElasticSearch
 pip install elasticsearch
@@ -457,6 +452,5 @@ ln -s $DH/passivedns/passivedns $DH/scripts/passivedns
 ## Copy over Run Scripts
 mkdir $DH/scripts
 cp $DPMI/davix/install/scripts/* $DH/scripts
-ln -s /opt/davix/gephi/bin/gephi $DH/scripts/gephi
 ln -s /opt/davix/afterglow/afterglow.pl $DH/scripts/afterglow
 ln -s /opt/davix/broids/bin/bro $DH/scripts/bro
