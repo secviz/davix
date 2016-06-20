@@ -81,7 +81,7 @@ wget https://dl.google.com/dl/earth/client/current/google-earth-stable_current_a
 dpkg -i google-*.deb
 
 # Gollum-site for wiki
-gem install gollum-site
+gem install gollum-site RedCloth
 
 # CSVKit
 pip install csvkit

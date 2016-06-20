@@ -36,7 +36,8 @@ cp $DPMI/davix/logos/davix-2014_black.png $DAVEHM
 sed -i 's/wallpaper=.*/wallpaper=\/home\/davix\/davix-2014_black.png/g' /usr/share/lxde/pcmanfm/LXDE.conf
 
 # Sync and generate the static wiki
-git clone https://github.com/secviz/davix.wiki.git /opt/davix/wiki
 mkdir -p /opt/davix/wiki
+git clone https://github.com/secviz/davix.wiki.git /opt/davix/wiki
 cd /opt/davix/wiki
-gollum-site generate
+gollum-site import
+gollum-site generate --working
