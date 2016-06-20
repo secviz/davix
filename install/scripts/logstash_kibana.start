@@ -1,6 +1,0 @@
-#!/bin/bash
-sudo service logstash start
-sudo /opt/davix/kibana/bin/kibana &
-clear
-cat /opt/davix/cmdline-help/logstash.txt
-
