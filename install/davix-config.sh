@@ -34,6 +34,9 @@ update-rc.d ntop disable
 # turn off sagan
 update-rc.d sagan disable
 
+# fixing some permissions
+echo "session required pam_systemd.so" >> /etc/pam.d/lxdm 
+
 # some other cleanup
 apt-get -y remove cups-common xmms2-core
 apt-get -y autoremove
