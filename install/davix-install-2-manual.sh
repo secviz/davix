@@ -202,10 +202,10 @@ mv inetvis-0.9.3.1 $DH
 # Logstash
 echo "Installing ElasticSearch LogStash Kibana"
 cd /tmp
-wget -c https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/5.0.0-alpha4/elasticsearch-5.0.0-alpha4.deb
-wget -c https://download.elastic.co/logstash/logstash/packages/debian/logstash-5.0.0-alpha4.deb
-dpkg -i elasticsearch-5.0.0-alpha4.deb
-dpkg -i logstash-5.0.0-alpha4.deb
+wget -c https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.4.3.deb
+wget -c https://artifacts.elastic.co/downloads/logstash/logstash-5.4.3.deb
+dpkg -i elasticsearch-5.4.3.deb 
+dpkg -i logstash-5.4.3.deb
 
 echo "LS_GROUP=adm" >> /etc/default/logstash
 
@@ -227,8 +227,8 @@ output {
 }
 EOF
 # Kibana
-wget -c https://download.elastic.co/kibana/kibana/kibana-5.0.0-alpha4-amd64.deb
-dpkb -i kibana-5.0.0-alpha4-amd64.deb
+wget -c https://artifacts.elastic.co/downloads/kibana/kibana-5.4.3-amd64.deb
+dpkg -i kibana-5.4.3-amd64.deb
 
 ## Python ElasticSearch
 pip install elasticsearch
